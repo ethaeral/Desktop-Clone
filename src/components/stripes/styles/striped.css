@@ -1,0 +1,41 @@
+.stripe-container {
+	display: flex;
+	transform: skewY(12deg);
+	transform-origin: bottom right 70px;
+	overflow: hidden;
+	background: #282a36;
+	/* linear-gradient(
+    90deg,
+    rgba(40,42,54,1) 0%, rgba(44,47,60,1) 100%
+  ); */
+  top: 0;
+  border-radius: 0px 0px 0px 70px;
+}
+.stripe-container span {
+	height: 90px;
+	background: linear-gradient(
+		90deg,
+		rgba(37, 39, 51, 1) 0%,
+		rgba(43, 44, 56, 1) 100%
+	);
+	width: 50%;
+}
+
+.stripe-container span:nth-child(even) {
+	background: linear-gradient(
+		90deg,
+		rgba(37,39,51,1) 0%, rgba(37,38,50,1) 100%
+  );
+
+}
+
+.bottom {
+  border-radius: 0px 0px 0px 70px;
+  flex-direction: row-reverse;
+}
+
+.contianer-stripe div:nth-child(even) {
+  display: flex;
+  margin-left: 3em;
+  flex-direction: row-reverse;
+}
