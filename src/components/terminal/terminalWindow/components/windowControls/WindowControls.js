@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 import styled from "styled-components";
 
 const Bar = styled.div`
@@ -60,30 +60,29 @@ const MaxWindow = styled.div`
 	margin-left: 0.1em;
 `;
 
-export default function WindowBar(props) {
-	return (
-		<Bar>
-			<Title>
-				{props.currentPage ? props.currentPage : "currentPage.js"} -
-				richanyNguonPortfolio - Visual Studio Code
-			</Title>
-			<WindowOptions>
-				<a href='#1'>
-					<CircleButtons>
-						<ButtonText>&#8722;</ButtonText>
-					</CircleButtons>
-				</a>
-				<a href='#2'>
-					<CircleButtons>
-						<MaxWindow> </MaxWindow>
-					</CircleButtons>
-				</a>
-				<a href='#3'>
-					<ExitButton>
-						<ButtonText>&#215;</ButtonText>
-					</ExitButton>
-				</a>
-			</WindowOptions>
-		</Bar>
-	);
+export default function WindowControls() {
+  return (
+    <Bar>
+    <Title>
+      visitor@guest:~
+    </Title>
+    <WindowOptions>
+      <a href='#1'>
+        <CircleButtons>
+          <ButtonText>&#8722;</ButtonText>
+        </CircleButtons>
+      </a>
+      <a href='#2'>
+        <CircleButtons>
+          <MaxWindow> </MaxWindow>
+        </CircleButtons>
+      </a>
+      <a href='#3'>
+        <ExitButton>
+          <ButtonText>&#215;</ButtonText>
+        </ExitButton>
+      </a>
+    </WindowOptions>
+  </Bar>
+  )
 }

@@ -5,14 +5,16 @@ import ExpandedUtilityBar from './components/expandedUtilityBar/ExpandedUtilityB
 import CodeEditior from './components/codeEditor/CodeEditior'
 
 const Test = styled.div`
-  border: 1px red solid;
+
   display: flex;
+  width: 100%;
+  height: 100%;
 `;
 
 export default function MainViewport() {
   return (
     <Test>
-      MainViewport
+
       <SideUtilityBar/>
       <ExpandedUtilityBar/>
       <CodeEditior/>

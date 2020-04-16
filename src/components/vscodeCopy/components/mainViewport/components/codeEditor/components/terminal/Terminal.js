@@ -2,7 +2,9 @@ import React from "react";
 import styled from "styled-components";
 
 const Test = styled.div`
-	border: 1px red solid;
+
+	background: #282a36;
+	height: 30%;
 `;
 
 export default function Terminal() {

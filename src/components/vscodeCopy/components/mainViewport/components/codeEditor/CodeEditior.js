@@ -6,15 +6,16 @@ import Terminal from "./components/terminal/Terminal";
 
 
 const Test = styled.div`
-	border: 1px red solid;
+
 	display: flex;
 	flex-direction: column;
+	width: 100%;
+	height: 100%;
 `;
 
 export default function CodeEditior() {
 	return (
 		<Test>
-			CodeEditior
 			<CodeBox />
 			<Terminal />
 		</Test>

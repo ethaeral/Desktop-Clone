@@ -1,14 +1,10 @@
-import React from 'react'
-import styled from 'styled-components'
-
+import React from "react";
+import styled from "styled-components";
 
 const Test = styled.div`
-	border: 1px red solid;
+	
+	background: #3e3d39;
 `;
 export default function FileNavBar() {
-  return (
-    <Test>
-      FileNavBar
-    </Test>
-  )
+	return <Test>FileNavBar</Test>;
 }
