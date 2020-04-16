@@ -1,16 +1,11 @@
 import React from 'react'
-import styled from 'styled-components'
+import { Display } from './styles/codeDisplayStyles'
 
-
-const Test = styled.div`
-  background: #282a36;
-  width: 50%;
-`;
 
 export default function CodeDisplay() {
   return (
-    <Test>
+    <Display>
      CodeDisplay 
-    </Test>
+    </Display>
   )
 }

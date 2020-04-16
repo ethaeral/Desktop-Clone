@@ -1,20 +1,16 @@
 import React from 'react'
-import  styled from 'styled-components'
 
 import CodeDisplay from'./components/codeDisplay/CodeDisplay'
 import VisualPreview from'./components/visualPreview/VisualPreview'
+import { CodeStyles } from './styles/codeBoxStyles'
 
-const Test = styled.div`
 
-  display: flex;
-  height: 100%;
-`;
 
 export default function CodeBox() {
   return (
-    <Test>
+    <CodeStyles>
       <CodeDisplay/>
       <VisualPreview/>
-    </Test>
+    </CodeStyles>
   )
 }

@@ -1,12 +1,7 @@
 import React from "react";
-import styled from "styled-components";
+import { TerminalContainer } from "./styles/terminalStyles";
 
-const Test = styled.div`
-
-	background: #282a36;
-	height: 30%;
-`;
 
 export default function Terminal() {
-	return <Test>Terminal</Test>;
+	return <TerminalContainer>Terminal</TerminalContainer>;
 }

@@ -1,23 +1,16 @@
-import React from 'react'
-import  styled from 'styled-components'
-import SideUtilityBar from './components/sideUtlityBar/SideUtilityBar'
-import ExpandedUtilityBar from './components/expandedUtilityBar/ExpandedUtilityBar'
-import CodeEditior from './components/codeEditor/CodeEditior'
+import React from "react";
 
-const Test = styled.div`
-
-  display: flex;
-  width: 100%;
-  height: 100%;
-`;
+import SideUtilityBar from "./components/sideUtlityBar/SideUtilityBar";
+import ExpandedUtilityBar from "./components/expandedUtilityBar/ExpandedUtilityBar";
+import CodeEditior from "./components/codeEditor/CodeEditior";
+import { MainViewContainer } from "./styles/mainViewStyles";
 
 export default function MainViewport() {
-  return (
-    <Test>
-
-      <SideUtilityBar/>
-      <ExpandedUtilityBar/>
-      <CodeEditior/>
-    </Test>
-  )
+	return (
+		<MainViewContainer>
+			<SideUtilityBar />
+			<ExpandedUtilityBar />
+			<CodeEditior />
+		</MainViewContainer>
+	);
 }

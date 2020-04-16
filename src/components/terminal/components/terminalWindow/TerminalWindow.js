@@ -1,11 +1,11 @@
 import React from "react";
-import WindowControls from "./components/windowControls/WindowControls";
+import WindowBar from '../../../windowBar/WindowBar'
 import TerminalOptions from "./components/terminalOptions/TerminalOptions";
 
 export default function TerminalWindow() {
 	return (
 		<div>
-			<WindowControls />
+			<WindowBar title={`vistor@guest:~`}/>
 			<TerminalOptions />
 		</div>
 	);

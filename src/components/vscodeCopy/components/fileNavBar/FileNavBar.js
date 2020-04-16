@@ -1,10 +1,6 @@
 import React from "react";
-import styled from "styled-components";
+import { NavContainer } from "./styles/fileNavStyles";
 
-const Test = styled.div`
-	
-	background: #3e3d39;
-`;
 export default function FileNavBar() {
-	return <Test>FileNavBar</Test>;
+	return <NavContainer>FileNavBar</NavContainer>;
 }

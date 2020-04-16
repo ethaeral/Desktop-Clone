@@ -1,23 +1,18 @@
 import React from "react";
-import styled from 'styled-components'
+
 
 import CodeBox from "./components/codeBox/CodeBox";
 import Terminal from "./components/terminal/Terminal";
+import { CodeContainer } from "./styles/codeEditiorStyles";
 
 
-const Test = styled.div`
 
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	height: 100%;
-`;
 
 export default function CodeEditior() {
 	return (
-		<Test>
+		<CodeContainer>
 			<CodeBox />
 			<Terminal />
-		</Test>
+		</CodeContainer>
 	);
 }
