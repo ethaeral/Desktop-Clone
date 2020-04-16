@@ -21,6 +21,7 @@ export const Title = styled.div`
 export const WindowOptions = styled.div`
 	height: 1.5em;
 	display: flex;
+	margin-right: 0.5em;
 `;
 export const CircleButtons = styled.div`
 	border: 1px #3d3c37 solid;
@@ -36,7 +37,7 @@ export const CircleButtons = styled.div`
 	padding: 0.1em;
 	height: 0.75em;
 	width: 0.75em;
-	margin: 0.3em 0.2em 0.3em 0em;
+	
 `;
 
 export const ExitButton = styled(CircleButtons)`

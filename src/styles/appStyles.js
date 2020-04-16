@@ -7,9 +7,14 @@ export const AppContainer = styled.div`
 	height: 100%;
 	justify-content: space-between;
 	button {
+		width: 0.5em;
+		background: inherit;
+	
+		all: unset;
 		:hover {
 			cursor: pointer;
 		}
+			margin: 0.3em 0.1em 0.3em 0em;
 	}
 `;
 
@@ -47,5 +52,6 @@ export const BackgroundImage = styled.div`
 		width: 25%;
 		margin: 0 auto;
 		margin-top: 5em;
+	
 	}
 `;

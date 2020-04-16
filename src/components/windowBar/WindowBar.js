@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
 	Bar,
 	Title,
@@ -10,25 +11,26 @@ import {
 } from "./styles/windowBarStyle";
 
 export default function WindowControls(props) {
+	const { title, type } = props;
 	return (
 		<Bar>
-			<Title>{props.title}</Title>
+			<Title>{title}</Title>
 			<WindowOptions>
-				<a href='#1'>
+				<button onClick={() => {}}>
 					<CircleButtons>
 						<ButtonText>&#8722;</ButtonText>
 					</CircleButtons>
-				</a>
-				<a href='#2'>
+				</button>
+				<button onClick={() => {}}>
 					<CircleButtons>
 						<MaxWindow> </MaxWindow>
 					</CircleButtons>
-				</a>
-				<a href='#3'>
+				</button>
+				<button onClick={() => {}}>
 					<ExitButton>
 						<ButtonText>&#215;</ButtonText>
 					</ExitButton>
-				</a>
+				</button>
 			</WindowOptions>
 		</Bar>
 	);
