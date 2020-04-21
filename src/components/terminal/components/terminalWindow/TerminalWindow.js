@@ -5,7 +5,7 @@ import TerminalOptions from "./components/terminalOptions/TerminalOptions";
 export default function TerminalWindow() {
 	return (
 		<div>
-			<WindowBar title={`vistor@guest:~`} type={'terminal'}/>
+			<WindowBar title={`vistor@guest:~`} type={'terminal'} tabbedTitle={"Terminal"}/>
 			<TerminalOptions />
 		</div>
 	);

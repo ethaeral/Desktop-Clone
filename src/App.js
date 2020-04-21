@@ -20,10 +20,7 @@ import MinimizedTab from "./components/minimizedTab/MinimizedTab";
 
 function App() {
 	const [statefulWindows, setWindowState] = useState({
-		tabbedWindows: [
-			{ title: `Terminal`, type: "terminal" },
-			{ title: `Ghibli Studio Code`, type: "code" },
-		],
+		tabbedWindows: [],
 		terminal: {
 			minimized: false,
 			maximized: false,

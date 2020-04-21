@@ -9,8 +9,9 @@ export const CodeContainer = styled.div`
 	left: 0;
 	right: 0;
 	margin: auto;
-	width: 85vw;
-	height: 85vh;
+	width: ${(props) => (props.maximized ? "100%" : "85vw")};
+	height:${(props) => (props.maximized ? "100%" : "85vh")};
 	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 	z-index: 1;
+	visibility: ${(props) => (props.hidden ? "hidden" : "visible")};
 `;
