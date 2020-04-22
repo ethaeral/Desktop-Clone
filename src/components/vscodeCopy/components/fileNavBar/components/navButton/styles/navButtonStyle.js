@@ -3,7 +3,19 @@ import styled from "styled-components";
 export const ButtonContainer = styled.div`
 	position: relative;
 	display: inline-block;
+	@keyframes shade {
+		0% {
+			background-color: #3e3d39;
+		}
+		100% {
+			background-color: #4a4946;
+		}
+	}
 	&:hover {
+		animation-name: ${(props) => (props.active ? "shade" : "none")};
+		animation-duration: 0.5s;
+		animation-iteration-count: 1;
+		animation-fill-mode: forwards;
 		div {
 			display: ${(props) => (props.active ? "flex" : "none")};
 		}

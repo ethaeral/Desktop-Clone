@@ -801,6 +801,7 @@ export const codeHelp = [
 	},
 ];
 export const terminalFile = [
+	"File",
 	{
 		actionTitle: "New Tab",
 		shortCut: "",
@@ -822,11 +823,12 @@ export const terminalFile = [
 	{
 		actionTitle: "Close Window",
 		shortCut: "Shift+Ctrl+Q",
-		active: false,
+		active: true,
 		callback: undefined,
 	},
 ];
 export const terminalEdit = [
+	"Edit",
 	{
 		actionTitle: "Copy",
 		shortCut: "Shift+Ctrl+C",
@@ -859,6 +861,7 @@ export const terminalEdit = [
 	},
 ];
 export const terminalView = [
+	"View",
 	{
 		actionTitle: "Show Menubar",
 		shortCut: "",
@@ -869,7 +872,7 @@ export const terminalView = [
 		actionTitle: "Full Screen",
 		shortCut: "F11",
 		active: false,
-		callback: undefined,
+		callback: true,
 	},
 	{
 		actionTitle: "Zoom In",
@@ -880,7 +883,7 @@ export const terminalView = [
 	{
 		actionTitle: "Normal Size",
 		shortCut: "Ctrl+0",
-		active: false,
+		active: true,
 		callback: undefined,
 	},
 	{
@@ -891,6 +894,7 @@ export const terminalView = [
 	},
 ];
 export const terminalSearch = [
+	"Search",
 	{
 		actionTitle: "Find...",
 		shortCut: "Shift+Ctrl+F",
@@ -917,6 +921,7 @@ export const terminalSearch = [
 	},
 ];
 export const terminalTerminal = [
+	"Terminal",
 	{
 		actionTitle: "Set Character Encoding",
 		shortCut: "",
@@ -949,6 +954,7 @@ export const terminalTerminal = [
 	},
 ];
 export const terminalHelp = [
+	"Help",
 	{
 		actionTitle: "Contents",
 		shortCut: "",
@@ -958,7 +964,7 @@ export const terminalHelp = [
 	{
 		actionTitle: "About",
 		shortCut: "",
-		active: false,
+		active: true,
 		callback: undefined,
 	},
 ];
