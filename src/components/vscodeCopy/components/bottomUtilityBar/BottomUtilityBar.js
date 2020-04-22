@@ -27,7 +27,7 @@ export default function BottomUtilityBar() {
 			<IconHolder>
 				<Icon>
 					<img src={branch} alt='gitbranch icon' />
-					master*
+	         master*
 					<ToolTip>
 						<ToolTipContainer>portfolio (Git) - master*</ToolTipContainer>
 					</ToolTip>

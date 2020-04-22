@@ -6,7 +6,6 @@ export const SideUtility = styled.div`
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
-	padding: 0.5em 0.5em 0em 0.5em;
 `;
 
 export const SideIconHolder = styled.div`
@@ -14,22 +13,26 @@ export const SideIconHolder = styled.div`
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+	width: 100%;
 `;
 
 export const SideIcon = styled.div`
+	border-left: ${(props) => (props.isActive ? `2px solid #97618a` : `none`)};
+	background-color: ${(props) => (props.isActive ? `#393c4d` : `#343746`)};
 	width: 100%;
-	height: 29px;
+	height: 50px;
 	background-position: center;
-	background-image: ${(props) => `url(${props.image})`};
+	background-image: ${(props) =>
+		props.isActive ? `url(${props.active})` : `url(${props.image})`};
 	background-repeat: no-repeat;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-bottom: 1.5em;
 	&:last-child {
 		margin-bottom: 0.5em;
 	}
-	&:hover{
-		background-image: ${(props) => `url(${props.hover})`};
+	&:hover {
+		background-image: ${(props) =>
+			props.isActive ? `url(${props.active})` : `url(${props.hover})`};
 	}
 `;

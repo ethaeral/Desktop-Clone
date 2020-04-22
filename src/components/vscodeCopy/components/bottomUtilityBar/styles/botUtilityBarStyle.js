@@ -21,6 +21,9 @@ export const Icon = styled.div`
 	margin-left: 1em;
 	display: flex;
 	align-items: center;
+	img {
+		margin-right: 0.3em;
+	}
 	&:hover {
 		span {
 			visibility: visible;
