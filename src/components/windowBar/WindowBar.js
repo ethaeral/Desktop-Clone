@@ -20,7 +20,8 @@ export default function WindowControls(props) {
 			<Title>{title}</Title>
 			<WindowOptions>
 				<button
-					onClick={() => {
+					onClick={(e) => {
+						e.stopPropagation()
 						setWindowState({
 							...statefulWindows,
 							tabbedWindows: [
@@ -40,7 +41,8 @@ export default function WindowControls(props) {
 					</CircleButtons>
 				</button>
 				<button
-					onClick={() => {
+					onClick={(e) => {
+						e.stopPropagation()
 						setWindowState({
 							...statefulWindows,
 							[type]: {
@@ -48,16 +50,17 @@ export default function WindowControls(props) {
 								maximized: !statefulWindows[type].maximized,
 								minimized: false,
 								closed: false,
+								active: true,
 							},
 						});
-						console.log("switch")
 					}}>
 					<CircleButtons>
 						<MaxWindow> </MaxWindow>
 					</CircleButtons>
 				</button>
 				<button
-					onClick={() => {
+					onClick={(e) => {
+						e.stopPropagation()
 						setWindowState({
 							...statefulWindows,
 							[type]: {

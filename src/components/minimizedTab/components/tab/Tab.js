@@ -23,6 +23,7 @@ export default function Tab(props) {
 							...[type],
 							minimized: false,
 							closed: false,
+							active: true,
 						},
 						tabbedWindows: statefulWindows.tabbedWindows.filter(
 							(entry) => entry.type !== type

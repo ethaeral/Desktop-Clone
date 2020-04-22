@@ -31,7 +31,7 @@ function App() {
 			minimized: false,
 			maximized: false,
 			closed: false,
-			active: true,
+			active: false,
 		},
 	});
 	return (
@@ -47,9 +47,11 @@ function App() {
 						setWindowState({
 							...statefulWindows,
 							terminal: {
-								...terminal,
+								...statefulWindows.terminal,
 								closed: false,
+								active: true,
 							},
+							code: { ...statefulWindows.code, active: false },
 						});
 					}}>
 					<TerminalIcon>

@@ -3,25 +3,30 @@ import styled from "styled-components";
 export const Bar = styled.div`
 	background: linear-gradient(
 		0deg,
-		rgba(79, 77, 70, 1) 0%,
-		rgba(58, 57, 53, 1) 80%
+		rgba(58, 57, 53, 1) 00%,
+		rgba(79, 77, 70, 1) 50%
 	);
 	display: flex;
 	justify-content: flex-end;
-	border-radius: 0.25em 0.25em 0em 0em;
+	border-radius: 0.35em 0.35em 0em 0em;
+	height: 2em;
+	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.02);
+
 `;
 export const Title = styled.div`
-	color: #dfdbd2;
+	color: #E5E2D9;
 	margin: 0 auto;
 	align-self: center;
-	font-family: "roboto";
+	font-family: 'Ubuntu', sans-serif;
 	font-weight: 700;
-	font-size: 0.75em;
+	font-size: 0.85em;
+	letter-spacing: 0.1em;
+	text-shadow: -1px 0 #383733, 0 1px #383733, 1px 0 #383733, 0 -1px #383733;
 `;
 export const WindowOptions = styled.div`
 	height: 1.5em;
 	display: flex;
-	margin-right: 0.5em;
+	margin-right: 0.4em;
 `;
 export const CircleButtons = styled.div`
 	border: 1px #3d3c37 solid;

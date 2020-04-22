@@ -12,6 +12,6 @@ export const CodeContainer = styled.div`
 	width: ${(props) => (props.maximized ? "100%" : "85vw")};
 	height:${(props) => (props.maximized ? "100%" : "85vh")};
 	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
-	z-index: 1;
+	z-index: ${props=>props.active? 2: 1};
 	visibility: ${(props) => (props.hidden ? "hidden" : "visible")};
 `;

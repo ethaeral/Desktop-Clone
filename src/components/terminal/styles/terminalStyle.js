@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Window = styled.div`
 	position: absolute;
-	z-index: 2;
+	z-index: ${props=>props.active? 2: 1};
 	top: 0;
 	bottom: 0;
 	left: 0;

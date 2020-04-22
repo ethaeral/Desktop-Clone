@@ -12,12 +12,23 @@ import { CodeContainer } from "./styles/codeContainerStyle";
 import WindowsContext from "../../modules/windowContext";
 
 export default function VscodeContainer() {
-	const { statefulWindows } = useContext(WindowsContext);
-	console.log(statefulWindows.terminal.maximized)
+	const { statefulWindows, setWindowState } = useContext(WindowsContext);
 	return (
 		<CodeContainer
 			hidden={statefulWindows.code.minimized || statefulWindows.code.closed}
-			maximized={statefulWindows.code.maximized}>
+			maximized={statefulWindows.code.maximized}
+			active={statefulWindows.code.active}
+			onClick={() => {
+		
+				setWindowState({
+					...statefulWindows,
+					code: {
+						...statefulWindows.code,
+						active: true,
+					},
+					terminal: { ...statefulWindows.terminal, active: false },
+				});
+			}}>
 			<WindowsBar
 				title={"currentFile.js - richannyNguonPortfolio - Ghibli Studio Code"}
 				type={"code"}
