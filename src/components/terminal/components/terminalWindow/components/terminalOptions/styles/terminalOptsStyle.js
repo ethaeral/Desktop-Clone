@@ -11,5 +11,5 @@ export const TerminalContainer = styled.div`
 `;
 
 export const TerminalNavButtons = styled(NavButton)`
-	min-width: 0;
+	min-width: 200px;
 `;

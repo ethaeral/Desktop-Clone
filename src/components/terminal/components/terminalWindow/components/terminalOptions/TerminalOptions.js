@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { TerminalContainer, TerminalNavButtons } from "./styles/terminalOptsStyle";
+import { TerminalContainer} from "./styles/terminalOptsStyle";
 import {
 	terminalEdit,
 	terminalFile,
@@ -8,6 +8,7 @@ import {
 	terminalView,
 	terminalTerminal,
 } from "../../../../../../data/fileNavBar";
+import TerminalButtons from "./components/terminalButtons/TerminalButtons";
 
 
 export default function TerminalOptions() {
@@ -26,7 +27,7 @@ export default function TerminalOptions() {
 				const title = option[0];
 				const tabs = option.slice(1, option.length);
 				return (
-					<TerminalNavButtons
+					<TerminalButtons
 						state={isActive}
 						setState={setIsActive}
 						key={title}

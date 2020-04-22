@@ -6,7 +6,8 @@ export default function ListItem(props) {
 	return (
 		<ItemContainer
 			active={active}
-			onClick={() => {
+			onClick={(e) => {
+				e.stopPropagation()
 				cb ? cb(state, setState) : console.log();
 			}}>
 			<div>{actionTitle}</div>

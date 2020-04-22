@@ -11,7 +11,10 @@ import WindowsContext from "../../../../modules/windowContext";
 export default function Tab(props) {
 	const { statefulWindows, setWindowState } = useContext(WindowsContext);
 	const { title, type } = props;
-
+	const reverseWindows = {
+		terminal: "code",
+		code: "terminal",
+	};
 	return (
 		<TabBox>
 			<Title> {title}</Title>
@@ -24,6 +27,10 @@ export default function Tab(props) {
 							minimized: false,
 							closed: false,
 							active: true,
+						},
+						[reverseWindows[type]]: {
+							...[reverseWindows[type]],
+							active: false,
 						},
 						tabbedWindows: statefulWindows.tabbedWindows.filter(
 							(entry) => entry.type !== type

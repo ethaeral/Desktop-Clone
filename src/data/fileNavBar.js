@@ -10,6 +10,18 @@ const exitCode = (state, setState) => {
 	});
 };
 
+const exitTerminal = (state, setState)=>{
+	setState({
+		...state,
+		terminal: {
+			...state.terminal,
+			maximized: false,
+			minimized: false,
+			closed: true,
+		},
+	});
+}
+
 const twitter = () => {
 	window.open("https://twitter.com/Richanynguon", "_blank");
 };
@@ -824,7 +836,7 @@ export const terminalFile = [
 		actionTitle: "Close Window",
 		shortCut: "Shift+Ctrl+Q",
 		active: true,
-		callback: undefined,
+		callback:  exitTerminal,
 	},
 ];
 export const terminalEdit = [
@@ -871,8 +883,8 @@ export const terminalView = [
 	{
 		actionTitle: "Full Screen",
 		shortCut: "F11",
-		active: false,
-		callback: true,
+		active: true,
+		callback: undefined,
 	},
 	{
 		actionTitle: "Zoom In",
