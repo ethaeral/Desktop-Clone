@@ -14,4 +14,5 @@ export const CodeContainer = styled.div`
 	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 	z-index: ${props=>props.active? 2: 1};
 	visibility: ${(props) => (props.hidden ? "hidden" : "visible")};
+	overflow: hidden;
 `;

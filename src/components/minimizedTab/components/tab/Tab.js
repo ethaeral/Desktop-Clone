@@ -15,6 +15,7 @@ export default function Tab(props) {
 		terminal: "code",
 		code: "terminal",
 	};
+	const otherWindow = reverseWindows[type];
 	return (
 		<TabBox>
 			<Title> {title}</Title>
@@ -22,20 +23,21 @@ export default function Tab(props) {
 				onClick={() => {
 					setWindowState({
 						...statefulWindows,
+						tabbedWindows: statefulWindows.tabbedWindows.filter(
+							(entry) => entry.type !== type
+						),
 						[type]: {
-							...[type],
+							...statefulWindows[type],
 							minimized: false,
 							closed: false,
 							active: true,
 						},
-						[reverseWindows[type]]: {
-							...[reverseWindows[type]],
+						[otherWindow]: {
+							...statefulWindows[otherWindow],
 							active: false,
 						},
-						tabbedWindows: statefulWindows.tabbedWindows.filter(
-							(entry) => entry.type !== type
-						),
 					});
+					console.log(statefulWindows);
 				}}>
 				<CircleButtons>
 					<ButtonText>&#10138;</ButtonText>
@@ -46,7 +48,7 @@ export default function Tab(props) {
 					setWindowState({
 						...statefulWindows,
 						[type]: {
-							...[type],
+							...statefulWindows[type],
 							maximized: false,
 							minimized: false,
 							closed: true,
