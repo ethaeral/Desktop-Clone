@@ -19,7 +19,6 @@ export default function VscodeContainer() {
 			maximized={statefulWindows.code.maximized}
 			active={statefulWindows.code.active}
 			onClick={() => {
-		
 				setWindowState({
 					...statefulWindows,
 					code: {
@@ -27,6 +26,7 @@ export default function VscodeContainer() {
 						active: true,
 					},
 					terminal: { ...statefulWindows.terminal, active: false },
+					sideNavActive: { ...statefulWindows.sideNavActive, setting: false },
 				});
 			}}>
 			<WindowsBar

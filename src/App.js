@@ -26,7 +26,9 @@ function App() {
 			branch:false,
 			bug:false,
 			ext: false,
-			projects: false,
+			projects: true,
+			setting: false,
+			
 		},
 		terminal: {
 			minimized: false,

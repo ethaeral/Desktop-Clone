@@ -3,6 +3,9 @@ import {
 	SideUtility,
 	SideIconHolder,
 	SideIcon,
+	SettingIcon,
+	SettingIconHolder,
+	SettingMenu,
 } from "./styles/sideUtilityStyles";
 
 import bug from "../../../../../../assets/sideNav/bug.png";
@@ -26,6 +29,9 @@ import settingHover from "../../../../../../assets/sideNav/settingHover.png";
 
 import WindowsContext from "../../../../../../modules/windowContext";
 
+import ListItem from "../../../fileNavBar/components/navButton/components/listItems/ListItem";
+import { settingPopOutCode } from "../../../../../../data/fileNavBar";
+
 export default function SideUtilityBar() {
 	const { statefulWindows, setWindowState } = useContext(WindowsContext);
 	const { sideNavActive } = statefulWindows;
@@ -35,6 +41,7 @@ export default function SideUtilityBar() {
 		bug: false,
 		ext: false,
 		projects: false,
+		setting: false,
 	};
 	const switchActive = (property) => {
 		const newObj = {};
@@ -99,14 +106,39 @@ export default function SideUtilityBar() {
 					}}
 				/>
 			</SideIconHolder>
-			<SideIconHolder>
-				<SideIcon
+			<SettingIconHolder active={sideNavActive.setting}>
+				<SettingIcon
 					image={setting}
 					active={settingActive}
 					hover={settingHover}
-					onClick={() => {}}
+					isActive={sideNavActive.setting}
+					onClick={(e) => {
+						e.stopPropagation();
+						setWindowState({
+							...statefulWindows,
+							sideNavActive: {
+								...statefulWindows.sideNavActive,
+								setting: true,
+							},
+						});
+					}}
 				/>
-			</SideIconHolder>
+				<SettingMenu>
+					{settingPopOutCode.map((obj) => (
+						<ListItem
+							state={statefulWindows}
+							setState={setWindowState}
+							cb={obj.callback}
+							active={obj.active}
+							key={obj.actionTitle}
+							actionTitle={obj.actionTitle}
+							shortCut={obj.shortCut}
+						/>
+					))}
+				</SettingMenu>
+			</SettingIconHolder>
 		</SideUtility>
 	);
 }
+
+// #1 Clean this up please it could be a bit drier otherwise good job chunky

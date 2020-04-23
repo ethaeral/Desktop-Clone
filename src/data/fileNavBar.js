@@ -10,7 +10,7 @@ const exitCode = (state, setState) => {
 	});
 };
 
-const exitTerminal = (state, setState)=>{
+const exitTerminal = (state, setState) => {
 	setState({
 		...state,
 		terminal: {
@@ -20,7 +20,7 @@ const exitTerminal = (state, setState)=>{
 			closed: true,
 		},
 	});
-}
+};
 
 const twitter = () => {
 	window.open("https://twitter.com/Richanynguon", "_blank");
@@ -836,7 +836,7 @@ export const terminalFile = [
 		actionTitle: "Close Window",
 		shortCut: "Shift+Ctrl+Q",
 		active: true,
-		callback:  exitTerminal,
+		callback: exitTerminal,
 	},
 ];
 export const terminalEdit = [
@@ -977,6 +977,69 @@ export const terminalHelp = [
 		actionTitle: "About",
 		shortCut: "",
 		active: true,
+		callback: undefined,
+	},
+];
+
+export const settingPopOutCode = [
+	{
+		actionTitle: "Command Palette...",
+		shortCut: "Ctrl+Shift+P",
+		active: false,
+		callback: undefined,
+	},
+	{
+		actionTitle: "Settings",
+		shortCut: "Ctrl+Comma",
+		active: false,
+		callback: undefined,
+	},
+	{
+		actionTitle: "Online Services Settings",
+		shortCut: "",
+		active: false,
+		callback: undefined,
+	},
+	{
+		actionTitle: "Extensions",
+		shortCut: "Ctrl+Shift+X",
+		active: false,
+		callback: undefined,
+	},
+	{
+		actionTitle: "Keyboard Shortcuts[Ctrl+K Ctrl+S]",
+		shortCut: "",
+		active: false,
+		callback: undefined,
+	},
+	{
+		actionTitle: "Keymaps[Ctrl+K Ctrl+M]",
+		shortCut: "",
+		active: false,
+		callback: undefined,
+	},
+	{
+		actionTitle: "User Snippets",
+		shortCut: "",
+		active: false,
+		callback: undefined,
+	},
+	{
+		actionTitle: "Color Theme[Ctrl+K Ctrl+T]",
+		shortCut: "",
+		active: false,
+		callback: undefined,
+	},
+	{
+		actionTitle: "File Icon Theme",
+		shortCut: "",
+		active: false,
+		callback: undefined,
+	},
+	{
+		actionTitle: "Check for Updates...",
+		shortCut: "",
+		active: false,
 		callback: undefined,
 	},
 ];
