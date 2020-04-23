@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+
 import {
 	SideUtility,
 	SideIconHolder,
@@ -118,7 +119,7 @@ export default function SideUtilityBar() {
 							...statefulWindows,
 							sideNavActive: {
 								...statefulWindows.sideNavActive,
-								setting: true,
+								setting: !statefulWindows.sideNavActive.setting,
 							},
 						});
 					}}

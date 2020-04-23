@@ -21,14 +21,13 @@ import MinimizedTab from "./components/minimizedTab/MinimizedTab";
 function App() {
 	const [statefulWindows, setWindowState] = useState({
 		tabbedWindows: [],
-		sideNavActive:{
+		sideNavActive: {
 			search: false,
-			branch:false,
-			bug:false,
+			branch: false,
+			bug: false,
 			ext: false,
 			projects: true,
 			setting: false,
-			
 		},
 		terminal: {
 			minimized: false,
