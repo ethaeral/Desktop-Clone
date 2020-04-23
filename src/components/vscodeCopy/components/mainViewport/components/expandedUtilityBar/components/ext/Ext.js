@@ -1,9 +1,10 @@
 import React from 'react'
+import { ExtSideContainer } from './styles/extStyle'
 
-export default function Ext() {
+export default function Ext(props) {
   return (
-    <div>
+    <ExtSideContainer active={props.active}>
       Ext
-    </div>
+    </ExtSideContainer>
   )
 }

@@ -1,9 +1,10 @@
 import React from 'react'
+import { SearchSideContainer } from './styles/searchStyles'
 
-export default function Search() {
+export default function Search(props) {
   return (
-    <div>
+    <SearchSideContainer active={props.active}>
       Search
-    </div>
+    </SearchSideContainer>
   )
 }

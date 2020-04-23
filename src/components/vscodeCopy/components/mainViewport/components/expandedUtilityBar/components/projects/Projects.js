@@ -1,9 +1,10 @@
 import React from 'react'
+import { ProjectsSideContainer } from './styles/projectsStyles'
 
-export default function Projects() {
+export default function Projects(props) {
   return (
-    <div>
+    <ProjectsSideContainer active={props.active}>
       Project
-    </div>
+    </ProjectsSideContainer>
   )
 }

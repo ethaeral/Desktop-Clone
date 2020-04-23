@@ -1,9 +1,10 @@
 import React from 'react'
+import { BranchSideContainer } from './styles/branchStyles'
 
-export default function Branch() {
+export default function Branch(props) {
   return (
-    <div>
+    <BranchSideContainer active={props.active}>
       Branch
-    </div>
+    </BranchSideContainer>
   )
 }

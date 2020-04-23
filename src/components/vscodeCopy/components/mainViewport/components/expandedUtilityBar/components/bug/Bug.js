@@ -1,9 +1,10 @@
 import React from 'react'
+import { BugSideContainer } from './styles/bugStyles'
 
-export default function Bug() {
+export default function Bug(props) {
   return (
-    <div>
+    <BugSideContainer active={props.active}>
       Bug
-    </div>
+    </BugSideContainer>
   )
 }
