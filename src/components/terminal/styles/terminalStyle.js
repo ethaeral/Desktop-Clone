@@ -10,7 +10,7 @@ export const Window = styled.div`
 	margin: 0 auto;
 	margin-top: ${(props) => (props.maximized ? 0 : "6em")};
 	width: ${(props) => (props.maximized ? "100%" : "50vw")};
-	height: ${(props) => (props.maximized ? "100%" : "50vh")};
+	height: ${(props) => (props.maximized ? "95.5%" : "50vh")};
 	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 	visibility: ${(props) => (props.hidden ? "hidden" : "visible")};
 `;

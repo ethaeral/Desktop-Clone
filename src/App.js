@@ -17,16 +17,18 @@ import {
 } from "./styles/appStyles";
 
 import MinimizedTab from "./components/minimizedTab/MinimizedTab";
+import WebPageView from "./components/webpageView/WebPageView";
 
 function App() {
+	const [webPageView, setWebPageView] = useState(true);
 	const [statefulWindows, setWindowState] = useState({
 		tabbedWindows: [],
 		sideNavActive: {
-			search: false,
+			search: true,
 			branch: false,
 			bug: false,
 			ext: false,
-			projects: true,
+			projects: false,
 			setting: false,
 		},
 		terminal: {
@@ -44,33 +46,37 @@ function App() {
 	});
 	return (
 		<AppContainer>
-			<WindowsContext.Provider value={{ statefulWindows, setWindowState }}>
-				<StripeContainer />
-				<BackgroundImage>
-					<img src={mask} alt='princess mononoke mask' />
-				</BackgroundImage>
-				<Background />
-				<button
-					onClick={() => {
-						setWindowState({
-							...statefulWindows,
-							terminal: {
-								...statefulWindows.terminal,
-								closed: false,
-								active: true,
-							},
-							code: { ...statefulWindows.code, active: false },
-						});
-					}}>
-					<TerminalIcon>
-						<img src={terminal} alt='terminal-icon' />
-						Terminal
-					</TerminalIcon>
-				</button>
-				<Terminal />
-				<VscodeContainer />
-				<MinimizedTab />
-			</WindowsContext.Provider>
+			<StripeContainer />
+			{webPageView ? (
+				<WebPageView />
+			) : (
+				<WindowsContext.Provider value={{ statefulWindows, setWindowState }}>
+					<BackgroundImage>
+						<img src={mask} alt='princess mononoke mask' />
+					</BackgroundImage>
+					<Background />
+					<button
+						onClick={() => {
+							setWindowState({
+								...statefulWindows,
+								terminal: {
+									...statefulWindows.terminal,
+									closed: false,
+									active: true,
+								},
+								code: { ...statefulWindows.code, active: false },
+							});
+						}}>
+						<TerminalIcon>
+							<img src={terminal} alt='terminal-icon' />
+							Terminal
+						</TerminalIcon>
+					</button>
+					<Terminal />
+					<VscodeContainer />
+					<MinimizedTab />
+				</WindowsContext.Provider>
+			)}
 		</AppContainer>
 	);
 }

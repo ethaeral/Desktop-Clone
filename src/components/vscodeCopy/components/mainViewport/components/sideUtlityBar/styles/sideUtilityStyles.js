@@ -3,10 +3,11 @@ import { DropDown } from "../../../../fileNavBar/components/navButton/styles/nav
 
 export const SideUtility = styled.div`
 	background-color: #343746;
-	width: 3.25em;
+	width: 4.5em;
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
+	border-right: 1px #191a21 solid;
 `;
 
 export const SideIconHolder = styled.div`
@@ -18,10 +19,11 @@ export const SideIconHolder = styled.div`
 `;
 
 export const SideIcon = styled.span`
+	
 	border-left: ${(props) => (props.isActive ? `2px solid #97618a` : `none`)};
 	background-color: ${(props) => (props.isActive ? `#393c4d` : `#343746`)};
-	width: 100%;
-	height: 50px;
+	width: 90%;
+	height: 63px;
 	background-position: center;
 	background-image: ${(props) =>
 		props.isActive ? `url(${props.active})` : `url(${props.image})`};
@@ -40,6 +42,7 @@ export const SideIcon = styled.span`
 
 export const SettingIcon = styled(SideIcon)`
 	border-left: none;
+
 	background-color: inherit;
 	background-image: ${(props) =>
 		props.isActive ? `url(${props.image})` : `url(${props.image})`};
