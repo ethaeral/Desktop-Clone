@@ -4,9 +4,15 @@ export const StripedContainer = styled.div`
 	height: 100%;
 	width: 100%;
 	position: absolute;
-	background-color: #fff;
 	overflow: hidden;
 `;
+export const WhiteBackground = styled.div`
+	height: 100vh;
+	width: 100%;
+	position: absolute;
+	background-color: #fff;
+`;
+
 export const RevealAnimation = styled.div`
 	height: 100%;
 	width: 100%;

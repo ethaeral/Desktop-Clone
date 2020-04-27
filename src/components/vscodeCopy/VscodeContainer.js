@@ -1,3 +1,4 @@
+// Libraries
 import React, { useContext } from "react";
 
 // Components
@@ -9,6 +10,7 @@ import MainViewport from "./components/mainViewport/MainViewport";
 // Styles
 import { CodeContainer } from "./styles/codeContainerStyle";
 
+// Context
 import WindowsContext from "../../modules/windowContext";
 
 export default function VscodeContainer() {

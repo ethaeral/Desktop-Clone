@@ -43,40 +43,48 @@ function App() {
 			closed: false,
 			active: false,
 		},
+		homepage: {
+			minimized: false,
+			maximized: true,
+			closed: false,
+			active: false,
+		},
 	});
 	return (
 		<AppContainer>
-			<StripeContainer />
-			{webPageView ? (
-				<WebPageView />
-			) : (
-				<WindowsContext.Provider value={{ statefulWindows, setWindowState }}>
-					<BackgroundImage>
-						<img src={mask} alt='princess mononoke mask' />
-					</BackgroundImage>
-					<Background />
-					<button
-						onClick={() => {
-							setWindowState({
-								...statefulWindows,
-								terminal: {
-									...statefulWindows.terminal,
-									closed: false,
-									active: true,
-								},
-								code: { ...statefulWindows.code, active: false },
-							});
-						}}>
-						<TerminalIcon>
-							<img src={terminal} alt='terminal-icon' />
-							Terminal
-						</TerminalIcon>
-					</button>
-					<Terminal />
-					<VscodeContainer />
-					<MinimizedTab />
-				</WindowsContext.Provider>
-			)}
+			<WindowsContext.Provider value={{ statefulWindows, setWindowState }}>
+				<StripeContainer />
+				{webPageView ? (
+					<WebPageView  state={webPageView} set={setWebPageView}/>
+				) : (
+					<div>
+						<BackgroundImage>
+							<img src={mask} alt='princess mononoke mask' />
+						</BackgroundImage>
+						<Background />
+						<button
+							onClick={() => {
+								setWindowState({
+									...statefulWindows,
+									terminal: {
+										...statefulWindows.terminal,
+										closed: false,
+										active: true,
+									},
+									code: { ...statefulWindows.code, active: false },
+								});
+							}}>
+							<TerminalIcon>
+								<img src={terminal} alt='terminal-icon' />
+								Terminal
+							</TerminalIcon>
+						</button>
+						<Terminal />
+						<VscodeContainer />
+						<MinimizedTab />
+					</div>
+				)}
+			</WindowsContext.Provider>
 		</AppContainer>
 	);
 }

@@ -1,10 +1,15 @@
 import styled from "styled-components";
 
-
-
 export const PageContainer = styled.div`
-  position: absolute;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+
+`;
+
+export const MainContent = styled.div`
 	height: 100%;
   width: 100%;
-  background-color: #fff;
+  position: absolute;
+  z-index: 5;
 `;
