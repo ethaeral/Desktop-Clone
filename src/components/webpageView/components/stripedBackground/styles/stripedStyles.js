@@ -28,7 +28,7 @@ export const RevealAnimation = styled.div`
 		}
 	}
 	animation-name: reveal;
-	animation-duration: 2.5s;
+	animation-duration: 5s;
 	animation-fill-mode: forwards;
 `;
 

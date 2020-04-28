@@ -1,13 +1,20 @@
+// Libraries
 import React, { useState } from "react";
 
+// Components
 import StripeContainer from "./components/stripes/StripeContainer";
 import VscodeContainer from "./components/vscodeCopy/VscodeContainer";
 import Terminal from "./components/terminal/Terminal";
 
+// Assets
 import terminal from "./assets/02-terminal.png";
 import mask from "./assets/mononoke.png";
 
+// Context
 import WindowsContext from "./modules/windowContext";
+
+// Data
+import { allProjects } from "./data/projectsData";
 
 import {
 	AppContainer,
@@ -23,6 +30,11 @@ function App() {
 	const [webPageView, setWebPageView] = useState(true);
 	const [statefulWindows, setWindowState] = useState({
 		tabbedWindows: [],
+		projects: allProjects.filter((project) => project.nonWeb === false),
+		exts: allProjects.filter((project) => project.isExt === true),
+		otherProjects: allProjects.filter(
+			(project) => project.nonWeb === true && project.isExt === false
+		),
 		sideNavActive: {
 			search: true,
 			branch: false,
@@ -50,12 +62,22 @@ function App() {
 			active: false,
 		},
 	});
+	console.log(
+		"projects",
+		allProjects.filter((project) => project.nonWeb === false),
+		"	exts",
+		allProjects.filter((project) => project.isExt === true),
+		"otherProjects",
+		allProjects.filter(
+			(project) => project.nonWeb === true && project.isExt === false
+		)
+	);
 	return (
 		<AppContainer>
 			<WindowsContext.Provider value={{ statefulWindows, setWindowState }}>
 				<StripeContainer />
 				{webPageView ? (
-					<WebPageView  state={webPageView} set={setWebPageView}/>
+					<WebPageView state={webPageView} set={setWebPageView} />
 				) : (
 					<div>
 						<BackgroundImage>
