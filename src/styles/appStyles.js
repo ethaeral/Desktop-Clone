@@ -9,12 +9,12 @@ export const AppContainer = styled.div`
 	button {
 		width: 0.5em;
 		background: inherit;
-	
+
 		all: unset;
 		:hover {
 			cursor: pointer;
 		}
-			margin: 0.3em 0.1em 0.3em 0em;
+		margin: 0.3em 0.1em 0.3em 0em;
 	}
 `;
 
@@ -52,7 +52,12 @@ export const BackgroundImage = styled.div`
 		width: 25%;
 		margin: 0 auto;
 		margin-top: 5em;
-	
 	}
 `;
 
+export const DisplayNone = styled.div`
+	display: ${(props) => (props.none ? "none" : "flex")};
+	@media (max-width: 580px) {
+		display: none;
+	}
+`;

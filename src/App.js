@@ -21,13 +21,13 @@ import {
 	Background,
 	TerminalIcon,
 	BackgroundImage,
+	DisplayNone,
 } from "./styles/appStyles";
 
 import MinimizedTab from "./components/minimizedTab/MinimizedTab";
 import WebPageView from "./components/webpageView/WebPageView";
 
 function App() {
-	const [webPageView, setWebPageView] = useState(true);
 	const [statefulWindows, setWindowState] = useState({
 		tabbedWindows: [],
 		projects: allProjects.filter((project) => project.nonWeb === false),
@@ -59,53 +59,40 @@ function App() {
 			minimized: false,
 			maximized: true,
 			closed: false,
-			active: false,
+			active: true,
 		},
 	});
-	console.log(
-		"projects",
-		allProjects.filter((project) => project.nonWeb === false),
-		"	exts",
-		allProjects.filter((project) => project.isExt === true),
-		"otherProjects",
-		allProjects.filter(
-			(project) => project.nonWeb === true && project.isExt === false
-		)
-	);
 	return (
 		<AppContainer>
 			<WindowsContext.Provider value={{ statefulWindows, setWindowState }}>
-				<StripeContainer />
-				{webPageView ? (
-					<WebPageView state={webPageView} set={setWebPageView} />
-				) : (
-					<div>
-						<BackgroundImage>
-							<img src={mask} alt='princess mononoke mask' />
-						</BackgroundImage>
-						<Background />
-						<button
-							onClick={() => {
-								setWindowState({
-									...statefulWindows,
-									terminal: {
-										...statefulWindows.terminal,
-										closed: false,
-										active: true,
-									},
-									code: { ...statefulWindows.code, active: false },
-								});
-							}}>
-							<TerminalIcon>
-								<img src={terminal} alt='terminal-icon' />
-								Terminal
-							</TerminalIcon>
-						</button>
-						<Terminal />
-						<VscodeContainer />
-						<MinimizedTab />
-					</div>
-				)}
+				<DisplayNone none={statefulWindows.homepage.maximized}>
+					<StripeContainer />
+					<BackgroundImage>
+						<img src={mask} alt='princess mononoke mask' />
+					</BackgroundImage>
+					<Background />
+					<button
+						onClick={() => {
+							setWindowState({
+								...statefulWindows,
+								terminal: {
+									...statefulWindows.terminal,
+									closed: false,
+									active: true,
+								},
+								code: { ...statefulWindows.code, active: false },
+							});
+						}}>
+						<TerminalIcon>
+							<img src={terminal} alt='terminal-icon' />
+							Terminal
+						</TerminalIcon>
+					</button>
+					<Terminal />
+					<VscodeContainer />
+				</DisplayNone>
+				<MinimizedTab />
+				<WebPageView />
 			</WindowsContext.Provider>
 		</AppContainer>
 	);

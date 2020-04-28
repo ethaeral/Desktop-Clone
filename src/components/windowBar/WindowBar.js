@@ -1,7 +1,7 @@
+// Libraries
 import React, { useContext } from "react";
 
-import WindowsContext from "../../modules/windowContext";
-
+// Styles
 import {
 	Bar,
 	Title,
@@ -11,6 +11,10 @@ import {
 	MaxWindow,
 	ExitButton,
 } from "./styles/windowBarStyle";
+
+// Context
+import WindowsContext from "../../modules/windowContext";
+
 
 export default function WindowControls(props) {
 	const { statefulWindows, setWindowState } = useContext(WindowsContext);
