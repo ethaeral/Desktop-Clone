@@ -12,6 +12,8 @@ import {
 	IpBarIcons,
 	BackButton,
 	Separator,
+  LocalText,
+  PortText,
 } from "./styles/ipBarStyles";
 
 // Assets
@@ -42,9 +44,10 @@ export default function IpBar() {
 			<IPAddressBar>
 				<RightIPBar>
 					<IpBarIcons src={IPRTracker} />
-					<Separator />
+					<Separator ip={true} />
 					<IpBarIcons src={IPRInfo} />
-					Words
+					<LocalText>localhost</LocalText>
+					<PortText>:3000</PortText>
 				</RightIPBar>
 				<LeftIPBar>
 					<IpBarIcons src={IPLActions} />

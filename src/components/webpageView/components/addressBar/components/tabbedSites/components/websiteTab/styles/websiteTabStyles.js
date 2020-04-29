@@ -5,7 +5,7 @@ export const SiteTabContainer = styled.div`
 	border-bottom: ${(props) => (!props.isActive ? "1px solid #1a1a1b" : "none")};
 	display: flex;
 	flex-direction: column;
-	color: #fff;
+	color: #f9f9fa;
 	max-width: 225px;
 	width: 100%;
 	margin-left: -0.5px;
@@ -99,10 +99,8 @@ export const TitleContainer = styled.div`
 export const TitleText = styled.div`
 	display: flex;
 	align-items: center;
-	position: relative;
 	font-family: "Ubuntu";
 	font-size: 0.95em;
-	left: 0;
 	img {
 		width: 15px;
 		margin-right: 5px;
