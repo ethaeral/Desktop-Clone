@@ -1,12 +1,24 @@
+// Libraries
 import React, { useState, useEffect } from "react";
-import { TabSiteContainer, NegativeSpace } from "./styles/tabbedSitesStyles";
+
+// Styles
+import {
+	TabSiteContainer,
+	NegativeSpace,
+	NewTabIcon,
+} from "./styles/tabbedSitesStyles";
+
+// Components
 import WebsiteTab from "./components/websiteTab/WebsiteTab";
+
+// Assets
+import NewTab from "../../../../../../assets/webpage/newTab.png";
 
 export default function TabbedSites() {
 	const [counter, setCounter] = useState(["1"]);
 	const [active, setActive] = useState("");
 	useEffect(() => {
-    let lastNum = counter[counter.length - 1];
+		let lastNum = counter[counter.length - 1];
 		setActive(lastNum);
 	}, [counter]);
 	return (
@@ -22,14 +34,14 @@ export default function TabbedSites() {
 				/>
 			))}
 			<NegativeSpace>
-				<button
+				<NewTabIcon
 					onClick={(e) => {
 						e.stopPropagation();
 						const nextNum = parseInt(counter[counter.length - 1]) + 1;
 						setCounter([...counter, nextNum.toString()]);
-					}}>
-					click
-				</button>
+					}}
+					img={NewTab}
+				/>
 			</NegativeSpace>
 		</TabSiteContainer>
 	);

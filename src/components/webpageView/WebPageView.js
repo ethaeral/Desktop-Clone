@@ -34,7 +34,7 @@ export default function WebPageView(props) {
 				});
 			}}>
 			<WindowBar
-				title={"Firefox Developer Edition"}
+				title={"Richany Nguon - Firefox Developer Edition"}
 				type={"homepage"}
 				tabbedTitle={"Firefox"}
 			/>
