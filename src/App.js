@@ -21,7 +21,7 @@ import {
 	Background,
 	TerminalIcon,
 	BackgroundImage,
-	DisplayNone,
+
 } from "./styles/appStyles";
 
 import MinimizedTab from "./components/minimizedTab/MinimizedTab";
@@ -62,35 +62,35 @@ function App() {
 			active: true,
 		},
 	});
+	const isWebPageMax =statefulWindows.homepage.maximized
 	return (
 		<AppContainer>
 			<WindowsContext.Provider value={{ statefulWindows, setWindowState }}>
-				<DisplayNone none={statefulWindows.homepage.maximized}>
-					<StripeContainer />
-					<BackgroundImage>
-						<img src={mask} alt='princess mononoke mask' />
-					</BackgroundImage>
-					<Background />
-					<button
-						onClick={() => {
-							setWindowState({
-								...statefulWindows,
-								terminal: {
-									...statefulWindows.terminal,
-									closed: false,
-									active: true,
-								},
-								code: { ...statefulWindows.code, active: false },
-							});
-						}}>
-						<TerminalIcon>
-							<img src={terminal} alt='terminal-icon' />
-							Terminal
-						</TerminalIcon>
-					</button>
-					<Terminal />
-					<VscodeContainer />
-				</DisplayNone>
+				<StripeContainer />
+
+				<BackgroundImage none={isWebPageMax}>
+					<img src={mask} alt='princess mononoke mask' />
+				</BackgroundImage>
+				<Background />
+				<button
+					onClick={() => {
+						setWindowState({
+							...statefulWindows,
+							terminal: {
+								...statefulWindows.terminal,
+								closed: false,
+								active: true,
+							},
+							code: { ...statefulWindows.code, active: false },
+						});
+					}}>
+					<TerminalIcon none={isWebPageMax}>
+						<img src={terminal} alt='terminal-icon' />
+						Terminal
+					</TerminalIcon>
+				</button>
+				<Terminal none={isWebPageMax} />
+				<VscodeContainer none={isWebPageMax} />
 				<MinimizedTab />
 				<WebPageView />
 			</WindowsContext.Provider>

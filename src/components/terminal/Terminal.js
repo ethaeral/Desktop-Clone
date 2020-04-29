@@ -5,10 +5,11 @@ import TerminalWindow from "./components/terminalWindow/TerminalWindow";
 import { Window } from "./styles/terminalStyle";
 import WindowsContext from "../../modules/windowContext";
 
-export default function Terminal() {
+export default function Terminal(props) {
 	const { statefulWindows, setWindowState } = useContext(WindowsContext);
 	return (
 		<Window
+		none={props.none}
 			hidden={
 				statefulWindows.terminal.minimized || statefulWindows.terminal.closed
 			}

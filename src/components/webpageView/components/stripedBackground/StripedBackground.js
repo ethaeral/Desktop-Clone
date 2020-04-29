@@ -21,7 +21,7 @@ import {
 
 export default function StripedBackground() {
 	return (
-		<StripedContainer>
+		<StripedContainer >
 			<RevealAnimation>
 			</RevealAnimation>
 				<UpperContainer>

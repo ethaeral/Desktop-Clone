@@ -5,6 +5,7 @@ export const StripedContainer = styled.div`
 	width: 100%;
 	position: absolute;
 	overflow: hidden;
+
 `;
 export const WhiteBackground = styled.div`
 	height: 100vh;

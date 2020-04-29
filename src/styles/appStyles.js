@@ -16,6 +16,7 @@ export const AppContainer = styled.div`
 		}
 		margin: 0.3em 0.1em 0.3em 0em;
 	}
+	overflow: hidden;
 `;
 
 export const Background = styled.div`
@@ -37,6 +38,11 @@ export const TerminalIcon = styled.div`
 	align-items: center;
 	width: 5%;
 	color: #dfdbd2;
+	display: ${(props) => (props.none ? "none" : "flex")};
+
+	@media (max-width: 580px) {
+		display: none;
+	}
 	img {
 		width: 100%;
 	}
@@ -52,12 +58,10 @@ export const BackgroundImage = styled.div`
 		width: 25%;
 		margin: 0 auto;
 		margin-top: 5em;
-	}
-`;
+		display: ${(props) => (props.none ? "none" : "inherit")};
 
-export const DisplayNone = styled.div`
-	display: ${(props) => (props.none ? "none" : "flex")};
-	@media (max-width: 580px) {
-		display: none;
+		@media (max-width: 580px) {
+			display: none;
+		}
 	}
 `;

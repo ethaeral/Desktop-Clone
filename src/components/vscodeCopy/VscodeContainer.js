@@ -13,10 +13,11 @@ import { CodeContainer } from "./styles/codeContainerStyle";
 // Context
 import WindowsContext from "../../modules/windowContext";
 
-export default function VscodeContainer() {
+export default function VscodeContainer(props) {
 	const { statefulWindows, setWindowState } = useContext(WindowsContext);
 	return (
 		<CodeContainer
+		none={props.none}
 			hidden={statefulWindows.code.minimized || statefulWindows.code.closed}
 			maximized={statefulWindows.code.maximized}
 			active={statefulWindows.code.active}
