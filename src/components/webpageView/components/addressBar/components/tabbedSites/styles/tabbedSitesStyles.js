@@ -20,6 +20,7 @@ export const NewTabIcon = styled.div`
 	height: 14px;
 	background-image: ${(props) => `url(${props.img})`};
 	margin: 0px 10px 0px 10px;
+	cursor: pointer;
 `;
 
 

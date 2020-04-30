@@ -7,7 +7,7 @@ import AddressBar from "./components/addressBar/AddressBar";
 
 // Styles
 import MainContentWebPage from "./components/mainContentWebPage/MainContentWebPage";
-import { PageContainer} from "./styles/webPageStyle";
+import { PageContainer } from "./styles/webPageStyle";
 
 // Context
 import WindowsContext from "../../modules/windowContext";
@@ -20,16 +20,19 @@ export default function WebPageView(props) {
 				statefulWindows.homepage.minimized || statefulWindows.homepage.closed
 			}
 			maximized={statefulWindows.homepage.maximized}
-			active={statefulWindows.homepage.active}
+			z={statefulWindows.homepage.z}
 			onClick={() => {
+				const addCounter = statefulWindows.zCounter++;
+				setWindowState({
+					...setWindowState,
+					zCounter: addCounter,
+				});
 				setWindowState({
 					...statefulWindows,
 					homepage: {
 						...statefulWindows.homepage,
-						active: true,
+						z: statefulWindows.zCounter,
 					},
-					terminal: { ...statefulWindows.terminal, active: false },
-					code: { ...statefulWindows.code, active: false },
 				});
 			}}>
 			<WindowBar

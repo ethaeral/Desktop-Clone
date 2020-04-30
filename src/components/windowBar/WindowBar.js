@@ -15,17 +15,17 @@ import {
 // Context
 import WindowsContext from "../../modules/windowContext";
 
-
 export default function WindowControls(props) {
 	const { statefulWindows, setWindowState } = useContext(WindowsContext);
 	const { title, type, tabbedTitle } = props;
 	return (
-		<Bar >
+		<Bar>
 			<Title>{title}</Title>
 			<WindowOptions>
 				<button
 					onClick={(e) => {
-						e.stopPropagation()
+						e.stopPropagation();
+
 						setWindowState({
 							...statefulWindows,
 							tabbedWindows: [
@@ -46,7 +46,7 @@ export default function WindowControls(props) {
 				</button>
 				<button
 					onClick={(e) => {
-						e.stopPropagation()
+						e.stopPropagation();
 						setWindowState({
 							...statefulWindows,
 							[type]: {
@@ -64,7 +64,7 @@ export default function WindowControls(props) {
 				</button>
 				<button
 					onClick={(e) => {
-						e.stopPropagation()
+						e.stopPropagation();
 						setWindowState({
 							...statefulWindows,
 							[type]: {

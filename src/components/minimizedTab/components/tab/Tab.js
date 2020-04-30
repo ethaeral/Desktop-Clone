@@ -11,16 +11,17 @@ import WindowsContext from "../../../../modules/windowContext";
 export default function Tab(props) {
 	const { statefulWindows, setWindowState } = useContext(WindowsContext);
 	const { title, type } = props;
-	const reverseWindows = {
-		terminal: "code",
-		code: "terminal",
-	};
-	const otherWindow = reverseWindows[type];
+
 	return (
 		<TabBox>
 			<Title> {title}</Title>
 			<button
 				onClick={() => {
+					const addCounter = statefulWindows.zCounter++;
+					setWindowState({
+						...setWindowState,
+						zCounter: addCounter,
+					});
 					setWindowState({
 						...statefulWindows,
 						tabbedWindows: statefulWindows.tabbedWindows.filter(
@@ -30,14 +31,9 @@ export default function Tab(props) {
 							...statefulWindows[type],
 							minimized: false,
 							closed: false,
-							active: true,
-						},
-						[otherWindow]: {
-							...statefulWindows[otherWindow],
-							active: false,
+							z: statefulWindows.zCounter,
 						},
 					});
-					console.log(statefulWindows);
 				}}>
 				<CircleButtons>
 					<ButtonText>&#10138;</ButtonText>

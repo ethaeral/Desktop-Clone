@@ -9,20 +9,23 @@ export default function Terminal(props) {
 	const { statefulWindows, setWindowState } = useContext(WindowsContext);
 	return (
 		<Window
-		none={props.none}
+			none={props.none}
 			hidden={
 				statefulWindows.terminal.minimized || statefulWindows.terminal.closed
 			}
 			maximized={statefulWindows.terminal.maximized}
-			active={statefulWindows.terminal.active}
+			z={statefulWindows.terminal.z}
 			onClick={(e) => {
+				setWindowState({
+					...setWindowState,
+					zCounter: statefulWindows.zCounter + 1,
+				});
 				setWindowState({
 					...statefulWindows,
 					code: {
 						...statefulWindows.code,
-						active: false,
+						z: statefulWindows.zCounter,
 					},
-					terminal: { ...statefulWindows.terminal, active: true },
 				});
 			}}>
 			<TerminalWindow />

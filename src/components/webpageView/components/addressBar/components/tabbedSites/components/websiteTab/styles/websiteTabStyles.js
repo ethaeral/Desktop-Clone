@@ -13,6 +13,7 @@ export const SiteTabContainer = styled.div`
 	z-index: ${(props) => (props.isActive ? "2" : "0")};
 	background-color: ${(props) => (!props.isActive ? "inherit" : "#323234")};
 	.removeTab {
+		cursor: pointer;
 		background-image: ${(props) =>
 			props.isActive ? `url(${props.activeImage})` : `url(${props.img})`};
 	}

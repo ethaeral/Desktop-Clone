@@ -35,10 +35,12 @@ export default function TabbedSites() {
 			))}
 			<NegativeSpace>
 				<NewTabIcon
-					onClick={(e) => {
+					onClick={async (e) => {
 						e.stopPropagation();
-						const nextNum = parseInt(counter[counter.length - 1]) + 1;
-						setCounter([...counter, nextNum.toString()]);
+						const nextNum = await parseInt(counter[counter.length - 1]) + 1;
+						await setCounter([...counter, nextNum.toString()]);
+						const el = await document.getElementById(`scroll`);
+						el.scrollTop=0;
 					}}
 					img={NewTab}
 				/>

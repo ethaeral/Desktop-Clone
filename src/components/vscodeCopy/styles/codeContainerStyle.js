@@ -10,14 +10,14 @@ export const CodeContainer = styled.div`
 	right: 0;
 	margin: auto;
 	width: ${(props) => (props.maximized ? "100%" : "85vw")};
-	height:${(props) => (props.maximized ? "100%" : "85vh")};
+	height: ${(props) => (props.maximized ? "100%" : "85vh")};
 	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
-	z-index: ${props=>props.active? 2: 1};
+	z-index: ${(props) => props.z};
 	visibility: ${(props) => (props.hidden ? "hidden" : "visible")};
 	overflow: hidden;
 	display: ${(props) => (props.none ? "none" : "flex")};
 
-@media (max-width: 580px) {
-	display: none;
-}
+	@media (max-width: 580px) {
+		display: none;
+	}
 `;

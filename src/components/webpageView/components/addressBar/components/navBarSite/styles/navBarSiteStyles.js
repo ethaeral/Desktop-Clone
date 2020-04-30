@@ -15,7 +15,9 @@ export const NavBarSiteContainer = styled.div`
 	font-family: "Ubuntu";
 	font-size: 0.95em;
 	padding-top: 3px;
+
 	@media (max-width: 580px) {
 		height: 50%;
 	}
+	
 `;

@@ -1,5 +1,5 @@
 // Libraries
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // Components
 import StripeContainer from "./components/stripes/StripeContainer";
@@ -21,7 +21,6 @@ import {
 	Background,
 	TerminalIcon,
 	BackgroundImage,
-
 } from "./styles/appStyles";
 
 import MinimizedTab from "./components/minimizedTab/MinimizedTab";
@@ -29,6 +28,7 @@ import WebPageView from "./components/webpageView/WebPageView";
 
 function App() {
 	const [statefulWindows, setWindowState] = useState({
+		zCounter: 1,
 		tabbedWindows: [],
 		projects: allProjects.filter((project) => project.nonWeb === false),
 		exts: allProjects.filter((project) => project.isExt === true),
@@ -47,22 +47,30 @@ function App() {
 			minimized: false,
 			maximized: false,
 			closed: true,
-			active: false,
+			z: 0,
 		},
 		code: {
 			minimized: false,
 			maximized: false,
 			closed: false,
-			active: false,
+			z: 0,
 		},
 		homepage: {
 			minimized: false,
 			maximized: true,
 			closed: false,
-			active: true,
+			z: 1,
 		},
 	});
-	const isWebPageMax =statefulWindows.homepage.maximized
+	const isWebPageMax = statefulWindows.homepage.maximized;
+	useEffect(() => {
+		console.log(statefulWindows.zCounter);
+		console.log({
+			homepage: statefulWindows.homepage.z,
+			terminal: statefulWindows.terminal.z,
+			code: statefulWindows.code.z,
+		});
+	}, [statefulWindows]);
 	return (
 		<AppContainer>
 			<WindowsContext.Provider value={{ statefulWindows, setWindowState }}>
@@ -74,14 +82,18 @@ function App() {
 				<Background />
 				<button
 					onClick={() => {
+						const addCounter = statefulWindows.zCounter++;
+						setWindowState({
+							...setWindowState,
+							zCounter: addCounter,
+						});
 						setWindowState({
 							...statefulWindows,
 							terminal: {
 								...statefulWindows.terminal,
 								closed: false,
-								active: true,
+								z: statefulWindows.zCounter,
 							},
-							code: { ...statefulWindows.code, active: false },
 						});
 					}}>
 					<TerminalIcon none={isWebPageMax}>
