@@ -6,12 +6,11 @@ import WindowBar from "../windowBar/WindowBar";
 import AddressBar from "./components/addressBar/AddressBar";
 
 // Styles
-import StripedBackground from "./components/stripedBackground/StripedBackground";
-import { PageContainer, MainContent } from "./styles/webPageStyle";
+import MainContentWebPage from "./components/mainContentWebPage/MainContentWebPage";
+import { PageContainer} from "./styles/webPageStyle";
 
 // Context
 import WindowsContext from "../../modules/windowContext";
-import { WhiteBackground } from "./components/stripedBackground/styles/stripedStyles";
 
 export default function WebPageView(props) {
 	const { statefulWindows, setWindowState } = useContext(WindowsContext);
@@ -38,22 +37,8 @@ export default function WebPageView(props) {
 				type={"homepage"}
 				tabbedTitle={"Firefox"}
 			/>
-			<WhiteBackground>
-				<AddressBar />
-				<StripedBackground />
-				<MainContent>
-					<nav>Styled like chrom bars - the book marks will be the nav</nav>
-					<header>
-						Full Name -Picture - Contact info - Personal mission what I do and
-						why
-					</header>
-					<main>
-						<section>Skills</section>
-						<section>Projects</section>
-					</main>
-					<footer>Please look at my website desktop version</footer>
-				</MainContent>
-			</WhiteBackground>
+			<AddressBar />
+			<MainContentWebPage />
 		</PageContainer>
 	);
 }

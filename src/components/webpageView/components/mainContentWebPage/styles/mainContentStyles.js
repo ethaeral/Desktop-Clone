@@ -4,33 +4,14 @@ export const StripedContainer = styled.div`
 	height: 100%;
 	width: 100%;
 	position: absolute;
-	overflow: hidden;
+	overflow-y: scroll;
+	background: #fff;
 
 `;
-export const WhiteBackground = styled.div`
-	height: 100vh;
+export const MainContent = styled.div`
 	width: 100%;
+	z-index: 100;
 	position: absolute;
-	background-color: #fff;
-`;
-
-export const RevealAnimation = styled.div`
-	height: 100%;
-	width: 100%;
-	position: absolute;
-	background-color: #fff;
-	z-index: 1;
-	@keyframes reveal {
-		from {
-			top: 0;
-		}
-		to {
-			top: 100%;
-		}
-	}
-	animation-name: reveal;
-	animation-duration: 5s;
-	animation-fill-mode: forwards;
 `;
 
 export const UpperContainer = styled.div`
@@ -47,6 +28,7 @@ export const UpperContainer = styled.div`
 	}
 `;
 export const LowerContainer = styled.div`
+
 	height: 100%;
 	position: absolute;
 	top: 365px;
@@ -143,6 +125,5 @@ export const OrangeBottom = styled.div`
 	width: 100%;
 	border-style: solid;
 	background-color: #de6600;
-
 	border-radius: 10%;
 `;

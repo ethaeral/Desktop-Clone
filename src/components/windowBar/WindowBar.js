@@ -20,7 +20,7 @@ export default function WindowControls(props) {
 	const { statefulWindows, setWindowState } = useContext(WindowsContext);
 	const { title, type, tabbedTitle } = props;
 	return (
-		<Bar>
+		<Bar >
 			<Title>{title}</Title>
 			<WindowOptions>
 				<button

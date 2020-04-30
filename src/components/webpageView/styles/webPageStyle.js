@@ -13,14 +13,5 @@ export const PageContainer = styled.div`
 	z-index: ${(props) => (props.active ? 2 : 1)};
 	visibility: ${(props) => (props.hidden ? "hidden" : "visible")};
 	overflow: hidden;
-	
 `;
-
-export const MainContent = styled.div`
-	height: 100%;
-	width: 100%;
-	position: absolute;
-	z-index: 5;
-`;
-
 

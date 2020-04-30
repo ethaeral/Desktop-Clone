@@ -9,9 +9,9 @@ import TabbedSites from "./components/tabbedSites/TabbedSites";
 import IpBar from "./components/ipBar/IpBar";
 import NavBarSite from "./components/navBarSite/NavBarSite";
 
-export default function AddressBar() {
+export default function AddressBar(props) {
 	return (
-		<AddressBarContainer>
+		<AddressBarContainer maximized={props.maximized}>
 			<TabbedSites />
 			<IpBar />
 			<NavBarSite />

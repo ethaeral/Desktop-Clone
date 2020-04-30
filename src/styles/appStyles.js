@@ -17,6 +17,7 @@ export const AppContainer = styled.div`
 		margin: 0.3em 0.1em 0.3em 0em;
 	}
 	overflow: hidden;
+
 `;
 
 export const Background = styled.div`
