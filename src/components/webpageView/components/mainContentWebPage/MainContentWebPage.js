@@ -29,10 +29,12 @@ import {
 	H1,
 	H3,
 	NameTitle,
-	HeaderContainer,
 	ContentContainer,
 	SideContent,
 	IconHolder,
+	H6,
+	H2,
+	H4,
 } from "./styles/mainContentStyles";
 
 // Components
@@ -74,19 +76,43 @@ export default function MainContentWebPaged() {
 					</SideContent>
 					<NameTitle>
 						<H1>Richany Nguon</H1>
-						<H3 bold>&lt;FullStackDeveloper/&gt;</H3>
-						<br/>
-						<H3></H3>
+						<H3 bold>
+							&lt;FullStackDeveloper mission=&#123;continuous
+							learning&#125;/&gt;
+						</H3>
+						<br />
+						<H3>Looking for the right questions to ask. Passionate creator.</H3>
 					</NameTitle>
 				</header>
 				<MainContent>
 					<main>
-						<section id='skills'>Skills</section>
-						<section id='projects'>Projects</section>
-						<section id='about'>About</section>
-						<section id='contact'>Contact</section>
+						<section id='skills'>
+							<H2>Skills</H2>
+							<H4>
+								• Javascript • Redux • NodeJS • Express • Jest • Postgresql •
+								Python • Django • Flask • Typescript • NestJs • Apollo GraphQL •
+								TypeOrm •
+							</H4>
+						</section>
+						<section id='projects'>
+							<H2>Projects</H2>
+						</section>
+						<section id='contact'>
+							<H2>Contact</H2>
+						</section>
+						<section id='about'>
+							<H2>About</H2>
+						</section>
 					</main>
-					<footer>Please look at my website desktop version</footer>
+					<footer>
+						<H6>
+							for maximum enjoyment please consume on a desktop and/or laptop -
+							made with
+							<span role='img' aria-label='tea emoji'>
+								🍵
+							</span>{" "}
+						</H6>
+					</footer>
 				</MainContent>
 			</ContentContainer>
 			<UpperContainer>

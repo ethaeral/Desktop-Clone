@@ -8,39 +8,66 @@ export const StripedContainer = styled.div`
 	background: #fff;
 `;
 export const ContentContainer = styled.div`
+	border: 1px red solid;
 	display: flex;
 	flex-direction: column;
-	width: 80%;
+	width: 70%;
 	z-index: 100;
 	position: relative;
 	margin: 0 auto;
-	margin-top: 5em;
 	font-family: "Montserrat", sans-serif;
+	.skills {
+		text-align: center;
+		background-color: #fff;
+	}
 	header {
+		border: 1px red solid;
 		display: flex;
 		align-items: center;
+		height: 70vh;
 	}
 `;
 
 export const H1 = styled.h1`
 	font-size: 4em;
 	font-weight: 700;
+	line-height: 1.5em;
+`;
+
+export const H2 = styled.h2`
+	font-size: 2.5em;
+	font-weight: 700;
+	line-height: 1.5em;
 `;
 
 export const H3 = styled.h3`
+	line-height: 2em;
 	font-size: 1em;
 	font-weight: ${(props) => (props.bold ? 700 : 400)};
 `;
 
+export const H4 = styled.h4`
+	line-height: 2em;
+	font-size: 0.8em;
+`;
+
+export const H6 = styled.h6`
+	line-height: 1.25em;
+	font-size: 0.7em;
+`;
+
 export const MainContent = styled.div`
 	margin: 0 auto;
+	margin-top: 4em;
 	width: 75%;
-	border: 1px red solid;
 `;
 
 export const NameTitle = styled.div`
-	margin-left: 3em;
-	padding-bottom:5em;
+	text-align: center;
+	border: 1px red solid;
+	width: 100%;
+	padding: 5em;
+	justify-content: center;
 `;
 
 export const SideContent = styled.div`

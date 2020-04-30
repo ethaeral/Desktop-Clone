@@ -7,5 +7,5 @@ export const IconContainer = styled.div`
     width: 20px;
     margin-right:0px;
 	}
-	font-size: 0.7em;
+	font-size: 0.8em;
 `;
