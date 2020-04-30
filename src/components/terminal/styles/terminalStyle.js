@@ -13,7 +13,7 @@ export const Window = styled.div`
 	height: ${(props) => (props.maximized ? "95.5%" : "50vh")};
 	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 	visibility: ${(props) => (props.hidden ? "hidden" : "visible")};
-	display: ${(props) => (props.none ? "none" : "flex")};
+	display: flex;
 	flex-direction: column;
 
 	@media (max-width: 580px) {

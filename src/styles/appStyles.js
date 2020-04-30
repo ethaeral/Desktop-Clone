@@ -17,7 +17,6 @@ export const AppContainer = styled.div`
 		margin: 0.3em 0.1em 0.3em 0em;
 	}
 	overflow: hidden;
-
 `;
 
 export const Background = styled.div`
@@ -39,7 +38,7 @@ export const TerminalIcon = styled.div`
 	align-items: center;
 	width: 5%;
 	color: #dfdbd2;
-	display: ${(props) => (props.none ? "none" : "flex")};
+	display: flex;
 
 	@media (max-width: 580px) {
 		display: none;
@@ -59,7 +58,6 @@ export const BackgroundImage = styled.div`
 		width: 25%;
 		margin: 0 auto;
 		margin-top: 5em;
-		display: ${(props) => (props.none ? "none" : "inherit")};
 
 		@media (max-width: 580px) {
 			display: none;

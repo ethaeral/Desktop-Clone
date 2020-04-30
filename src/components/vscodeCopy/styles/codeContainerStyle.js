@@ -15,7 +15,7 @@ export const CodeContainer = styled.div`
 	z-index: ${(props) => props.z};
 	visibility: ${(props) => (props.hidden ? "hidden" : "visible")};
 	overflow: hidden;
-	display: ${(props) => (props.none ? "none" : "flex")};
+
 
 	@media (max-width: 580px) {
 		display: none;

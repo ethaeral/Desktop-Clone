@@ -1,5 +1,5 @@
 // Libraries
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 // Components
 import StripeContainer from "./components/stripes/StripeContainer";
@@ -62,21 +62,13 @@ function App() {
 			z: 1,
 		},
 	});
-	const isWebPageMax = statefulWindows.homepage.maximized;
-	useEffect(() => {
-		console.log(statefulWindows.zCounter);
-		console.log({
-			homepage: statefulWindows.homepage.z,
-			terminal: statefulWindows.terminal.z,
-			code: statefulWindows.code.z,
-		});
-	}, [statefulWindows]);
+
 	return (
 		<AppContainer>
 			<WindowsContext.Provider value={{ statefulWindows, setWindowState }}>
 				<StripeContainer />
 
-				<BackgroundImage none={isWebPageMax}>
+				<BackgroundImage>
 					<img src={mask} alt='princess mononoke mask' />
 				</BackgroundImage>
 				<Background />
@@ -96,13 +88,13 @@ function App() {
 							},
 						});
 					}}>
-					<TerminalIcon none={isWebPageMax}>
+					<TerminalIcon>
 						<img src={terminal} alt='terminal-icon' />
 						Terminal
 					</TerminalIcon>
 				</button>
-				<Terminal none={isWebPageMax} />
-				<VscodeContainer none={isWebPageMax} />
+				<Terminal />
+				<VscodeContainer />
 				<MinimizedTab />
 				<WebPageView />
 			</WindowsContext.Provider>
