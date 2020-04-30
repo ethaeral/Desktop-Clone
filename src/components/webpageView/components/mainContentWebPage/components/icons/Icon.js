@@ -1,5 +1,6 @@
 import React from "react";
 import { IconContainer } from "./styles/iconStyles";
+import { P } from "../siteContent/styles/siteContentStyles";
 
 export default function Icon(props) {
 	return (
@@ -8,7 +9,7 @@ export default function Icon(props) {
 			{props.link ? (
 				<a href={props.link}>{props.linkTitle}</a>
 			) : (
-				props.linkTitle
+				<P>{props.linkTitle}</P>
 			)}
 		</IconContainer>
 	);

@@ -41,7 +41,7 @@ export default function WebPageView(props) {
 				tabbedTitle={"Firefox"}
 			/>
 			<AddressBar />
-			<MainContentWebPage />
+			<MainContentWebPage state={statefulWindows.homepage}/>
 		</PageContainer>
 	);
 }
