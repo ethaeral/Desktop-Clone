@@ -21,6 +21,7 @@ import {
 	Background,
 	TerminalIcon,
 	BackgroundImage,
+	Credit,
 } from "./styles/appStyles";
 
 import MinimizedTab from "./components/minimizedTab/MinimizedTab";
@@ -97,6 +98,9 @@ function App() {
 				<VscodeContainer />
 				<MinimizedTab />
 				<WebPageView />
+				<Credit>
+					<a href='https://icons8.com/'>Icon Credit - Icons8</a>
+				</Credit>
 			</WindowsContext.Provider>
 		</AppContainer>
 	);

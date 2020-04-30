@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const AppContainer = styled.div`
+
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
@@ -9,9 +10,8 @@ export const AppContainer = styled.div`
 	button {
 		width: 0.5em;
 		background: inherit;
-
 		all: unset;
-		:hover {
+		&:hover {
 			cursor: pointer;
 		}
 		margin: 0.3em 0.1em 0.3em 0em;
@@ -64,3 +64,16 @@ export const BackgroundImage = styled.div`
 		}
 	}
 `;
+
+export const Credit = styled.div`	a {
+	position:absolute;
+	right: 0;
+	bottom:0;
+	text-decoration: none;
+	font-family: "Ubuntu";
+	font-size: 0.5em;
+	color: #000;
+	&:hover {
+		cursor: pointer;
+	}
+}`
