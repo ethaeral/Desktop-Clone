@@ -47,6 +47,11 @@ export default function WindowControls(props) {
 				<button
 					onClick={(e) => {
 						e.stopPropagation();
+						const addCounter = statefulWindows.zCounter++;
+						setWindowState({
+							...setWindowState,
+							zCounter: addCounter,
+						});
 						setWindowState({
 							...statefulWindows,
 							[type]: {
@@ -54,7 +59,7 @@ export default function WindowControls(props) {
 								maximized: !statefulWindows[type].maximized,
 								minimized: false,
 								closed: false,
-								active: true,
+								z: statefulWindows.zCounter,
 							},
 						});
 					}}>
