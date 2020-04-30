@@ -13,6 +13,7 @@ export const Bar = styled.div`
 	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.02);
 `;
 export const Title = styled.div`
+	padding: 0em 2em 0em 2em;
 	color: #e5e2d9;
 	margin: 0 auto;
 	align-self: center;
@@ -21,6 +22,9 @@ export const Title = styled.div`
 	font-size: 0.85em;
 	letter-spacing: 0.1em;
 	text-shadow: -1px 0 #383733, 0 1px #383733, 1px 0 #383733, 0 -1px #383733;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 `;
 export const WindowOptions = styled.div`
 	height: 1.5em;

@@ -20,6 +20,9 @@ export const RightNavButtons = styled.div`
 	display: flex;
 	align-items: center;
 	margin-right: 3px;
+	@media (max-width: 580px) {
+		width: 30%;
+	}
 `;
 
 export const IpBarIcons = styled.div`
@@ -55,6 +58,9 @@ export const RightIPBar = styled.div`
 export const LeftIPBar = styled.div`
 	display: flex;
 	align-items: center;
+	@media (max-width: 580px) {
+		display: none;
+	}
 `;
 
 export const LeftUtilityButtons = styled.div`
@@ -62,6 +68,9 @@ export const LeftUtilityButtons = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
+	@media (max-width: 580px) {
+		display: none;
+	}
 `;
 
 export const Separator = styled.div`
