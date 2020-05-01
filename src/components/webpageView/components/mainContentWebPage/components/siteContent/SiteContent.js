@@ -56,10 +56,10 @@ export default function SiteContent(props) {
 						<GradientSplitter />
 						<AboutSection state={props.state} src={Introduction} />
 					</section>
-					<section id='contact'>
+					{/* <section id='contact'>
 						<H2>Contact</H2>
 						<GradientSplitter />
-					</section>
+					</section> */}
 				</main>
 				<footer>
 					<GradientSplitter />

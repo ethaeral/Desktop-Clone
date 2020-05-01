@@ -8,7 +8,7 @@ export default function AboutSection(props) {
 		<AboutContainer>
 			<ContactBlock state={props.state} fixed={false} />
 			<H3>
-				Thanks for coming by! I hope you enjoy tinkering around on my site. 
+		 I'm an advocate for transparent relationships, vulnerability, self-development,	and continuous learning. I am looking to continuously expand, cultivate, and refine	current skills in software development in financial technology.
 			</H3>
 			<img className='codeSnippet' src={props.src} alt='codesnippet' />
 		</AboutContainer>
