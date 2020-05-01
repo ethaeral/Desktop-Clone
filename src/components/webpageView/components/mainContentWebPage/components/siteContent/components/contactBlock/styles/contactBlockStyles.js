@@ -1,12 +1,14 @@
 import styled from "styled-components";
 
 export const BlockHolder = styled.div`
-	width: 100%;
-	height: 100%;
-	display: ${(props) => (props.fixed ? "block" : "none")};
+	border: 1px red solid;
+	width: ${(props) => (props.top ? "40%" : "100%")};
+	height: ${(props) => (props.top ? "60%" : "100%")};
+	display: ${(props) => (props.top ? "block" : "none")};
 	position: ${(props) => (!props.fixed ? "static" : "absolute")};
-	left: -20%;
+	left: ${(props) => (props.fixed ? "-20%" : "inherit")};
 	@media (max-width: 1130px) {
+		display: ${(props) => (props.fixed ? "block" : "none")};
 		position: ${(props) => (!props.fixed ? "static" : "absolute")};
 		left: -40%;
 	}
@@ -24,8 +26,11 @@ export const SideContent = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	position: ${(props) => (props.fixed ? "fixed" : "initial")};
+	width: ${(props) => (props.top ? "100%" : "20%")};
 	width: ${(props) => (props.fixed ? "20%" : "50%")};
+	@media (max-width: 1130px) {
+		position: ${(props) => (props.fixed ? "fixed" : "initial")};
+	}
 	img {
 		border-radius: 50%;
 		max-width: 80%;

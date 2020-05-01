@@ -11,7 +11,7 @@ import {
 	H2,
 	H4,
 	H6,
-	HeaderContainer,
+
 } from "./styles/siteContentStyles";
 
 // Assets
@@ -25,6 +25,7 @@ export default function SiteContent(props) {
 		<ContentContainer>
 			<ContactBlock state={props.state} fixed={true} />
 			<header>
+			<ContactBlock state={props.state} fixed={false} top={true} />
 				<NameTitle>
 					<H1>Richany Nguon</H1>
 					<H3 bold>

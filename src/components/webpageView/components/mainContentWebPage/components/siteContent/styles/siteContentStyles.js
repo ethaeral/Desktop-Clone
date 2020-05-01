@@ -10,6 +10,10 @@ export const ContentContainer = styled.div`
 	font-family: "Montserrat", sans-serif;
 	header {
 		display: flex;
+		align-items: center;
+		height: 80vh;
+		justify-content: center;
+		border: 1px red solid;
 	}
 	section {
 		height: 80vh;
@@ -46,6 +50,7 @@ export const MainContent = styled.div`
 `;
 
 export const NameTitle = styled.div`
+	border: 1px green solid;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
