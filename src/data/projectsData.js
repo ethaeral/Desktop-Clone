@@ -44,6 +44,7 @@ export const allProjects = [
 		nonWeb: false,
 		inProgress: false,
 		isExt: false,
+		webPage: true,
 	},
 	{
 		type: "Team",
@@ -87,6 +88,7 @@ export const allProjects = [
 		nonWeb: false,
 		inProgress: false,
 		isExt: false,
+		webPage: false,
 	},
 	{
 		type: "Team",
@@ -132,6 +134,7 @@ export const allProjects = [
 		nonWeb: false,
 		inProgress: false,
 		isExt: false,
+		webPage: false,
 	},
 	{
 		type: "Team",
@@ -253,6 +256,7 @@ export const allProjects = [
 		nonWeb: false,
 		inProgress: false,
 		isExt: false,
+		webPage: true,
 	},
 	{
 		type: "Team",
@@ -333,6 +337,7 @@ export const allProjects = [
 		nonWeb: false,
 		inProgress: true,
 		isExt: false,
+		webPage: true,
 	},
 	{
 		type: "Personal",
@@ -485,6 +490,7 @@ export const allProjects = [
 		nonWeb: true,
 		inProgress: true,
 		isExt: true,
+		webPage: false,
 	},
 	{
 		type: "Personal",
@@ -560,6 +566,7 @@ export const allProjects = [
 		nonWeb: false,
 		inProgress: true,
 		isExt: false,
+		webPage: true,
 	},
 	{
 		type: "Personal",
@@ -595,6 +602,7 @@ export const allProjects = [
 		nonWeb: true,
 		inProgress: false,
 		isExt: false,
+		webPage: false,
 	},
 ];
 

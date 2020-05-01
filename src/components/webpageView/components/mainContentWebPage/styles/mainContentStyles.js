@@ -6,7 +6,7 @@ export const StripedContainer = styled.div`
 	position: relative;
 	overflow-y: scroll;
 	background: #fff;
-
+	overflow-x: hidden;
 `;
 
 export const UpperContainer = styled.div`

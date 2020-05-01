@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const BlockHolder = styled.div`
+
 	width: ${(props) => (props.top || !props.fixed ? "40%" : "100%")};
-	height: ${(props) => (props.top || !props.fixed ? "60%" : "100%")};
+	height: ${(props) => (props.top || !props.fixed ? "80%" : "100%")};
 	display: ${(props) => (props.top ? "block" : "none")};
 	position: ${(props) => (props.fixed ? "absolute" : "static")};
 	left: ${(props) => (props.fixed ? "-20%" : "inherit")};
@@ -21,7 +22,7 @@ export const BlockHolder = styled.div`
 `;
 
 export const SideContent = styled.div`
-
+	margin: 0 auto;
 	font-family: "Montserrat", sans-serif;
 	display: flex;
 	flex-direction: column;

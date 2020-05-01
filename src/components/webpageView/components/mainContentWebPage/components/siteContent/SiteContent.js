@@ -9,9 +9,9 @@ import {
 	H3,
 	MainContent,
 	H2,
-	H4,
 	H6,
 	AboutContent,
+	GradientSplitter,
 } from "./styles/siteContentStyles";
 
 // Assets
@@ -19,20 +19,18 @@ import Introduction from "../../../../../../assets/introduction.png";
 
 // Components
 import ContactBlock from "./components/contactBlock/ContactBlock";
+import SkillSection from "./components/skillsSection/SkillSection";
+import ProjectSection from "./components/projectSection/ProjectSection";
 
 export default function SiteContent(props) {
 	return (
 		<ContentContainer>
 			<ContactBlock state={props.state} fixed={true} />
 			<header>
-				<ContactBlock
-					className='innerBlock'
-					state={props.state}
-					fixed={false}
-					top={true}
-				/>
+				<ContactBlock state={props.state} fixed={false} top={true} />
 				<NameTitle>
 					<H1>Richany Nguon</H1>
+					<GradientSplitter />
 					<H3 bold>
 						&lt;FullStackDeveloper mission=&#123;continuous learning&#125;/&gt;
 					</H3>
@@ -42,22 +40,19 @@ export default function SiteContent(props) {
 			</header>
 			<MainContent>
 				<main>
-					<section id='skills'>
-						<H2>Skills</H2>
-						<H4>
-							• Javascript • Redux • NodeJS • Express • Jest • Postgresql •
-							Python • Django • Flask • Typescript • NestJs • Apollo GraphQL •
-							TypeOrm •
-						</H4>
-					</section>
 					<section id='projects'>
 						<H2>Projects</H2>
+						<GradientSplitter />
+						<ProjectSection/>
 					</section>
-					<section id='contact'>
-						<H2>Contact</H2>
+					<section id='skills'>
+						<H2>Skills</H2>
+						<GradientSplitter />
+						<SkillSection />
 					</section>
 					<section id='about'>
 						<H2>About</H2>
+						<GradientSplitter />
 						<AboutContent>
 							<ContactBlock state={props.state} fixed={false} />
 							<img
@@ -67,8 +62,13 @@ export default function SiteContent(props) {
 							/>
 						</AboutContent>
 					</section>
+					<section id='contact'>
+						<H2>Contact</H2>
+						<GradientSplitter />
+					</section>
 				</main>
 				<footer>
+					<GradientSplitter />
 					<H6>
 						for maximum enjoyment please consume on a desktop and/or laptop -
 						made with

@@ -36,6 +36,7 @@ function App() {
 		otherProjects: allProjects.filter(
 			(project) => project.nonWeb === true && project.isExt === false
 		),
+		webPageProjects: allProjects.filter((project) => project.webPage === true),
 		sideNavActive: {
 			search: true,
 			branch: false,

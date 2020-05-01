@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const ContentContainer = styled.div`
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 	width: 70%;
@@ -9,21 +10,21 @@ export const ContentContainer = styled.div`
 	margin: 0 auto;
 	font-family: "Montserrat", sans-serif;
 	header {
-
+		margin-top: 1em;
 		display: flex;
 		align-items: center;
 		height: 80vh;
 		justify-content: center;
-		.innerBlock {
-			width: 100%;
-			border: 1px green solid;
-		}
+		margin-bottom: 1em;
 	}
 	section {
-		height: 80vh;
+		min-height: 80vh;
+		margin-bottom: 1em;
 		@media (max-width: 725px) {
 			background-color: rgba(255, 255, 255, 0.78);
 		}
+	}
+	#skills {
 	}
 	#about {
 		display: flex;
@@ -53,12 +54,13 @@ export const HeaderContainer = styled.div`
 
 export const AboutContent = styled.div`
 	display: flex;
+	flex-direction: column;
 `;
 
 export const MainContent = styled.div`
 	margin: 0 auto;
 	width: 75%;
-	box-shadow: 10px 10px 2px 0px rgba(0, 0, 0, 0.02);
+	box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.02);
 	@media (max-width: 725px) {
 		width: 100%;
 	}
@@ -73,7 +75,8 @@ export const NameTitle = styled.div`
 	@media (max-width: 1130px) {
 		margin: 0 auto;
 		background-color: rgba(255, 255, 255, 0.79);
-		height: 50%;
+		height: 90%;
+		width: 80%;
 	}
 `;
 
@@ -98,7 +101,7 @@ export const H2 = styled.h2`
 `;
 
 export const H3 = styled.h3`
-	line-height: 2em;
+	line-height: 1.25em;
 	font-size: 1em;
 	font-weight: ${(props) => (props.bold ? 700 : 400)};
 	@media (max-width: 725px) {
@@ -118,3 +121,19 @@ export const H6 = styled.h6`
 `;
 
 export const P = styled.p``;
+
+export const GradientSplitter = styled.div`
+	margin-bottom: 1em;
+	width: 100%;
+	height: 1px;
+	background: rgb(222, 102, 0);
+	background: linear-gradient(
+		90deg,
+		rgba(222, 102, 0, 1) 0%,
+		rgba(254, 160, 47, 1) 15%,
+		rgba(235, 217, 200, 1) 50%,
+		rgba(0, 122, 122, 1) 85%,
+		rgba(0, 63, 90, 1) 100%
+	);
+`;
+
