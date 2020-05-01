@@ -22,11 +22,12 @@ import {
 
 // Components
 import SiteContent from "./components/siteContent/SiteContent";
-import ContactBlock from "./components/siteContent/components/contactBlock/ContactBlock";
+
 
 export default function MainContentWebPaged(props) {
 	return (
 		<StripedContainer id='scroll'>
+	
 			<SiteContent state={props.state} />
 			<UpperContainer>
 				<DarkBlueTop>

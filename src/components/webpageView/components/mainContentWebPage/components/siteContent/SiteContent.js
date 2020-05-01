@@ -23,19 +23,16 @@ import ContactBlock from "./components/contactBlock/ContactBlock";
 export default function SiteContent(props) {
 	return (
 		<ContentContainer>
+			<ContactBlock state={props.state} fixed={true} />
 			<header>
-				<HeaderContainer>
-					<ContactBlock state={props.state} mobileOnly={false} />
-					<NameTitle>
-						<H1>Richany Nguon</H1>
-						<H3 bold>
-							&lt;FullStackDeveloper mission=&#123;continuous
-							learning&#125;/&gt;
-						</H3>
-						<br />
-						<H3>Looking for the right questions to ask. Passionate creator.</H3>
-					</NameTitle>
-				</HeaderContainer>
+				<NameTitle>
+					<H1>Richany Nguon</H1>
+					<H3 bold>
+						&lt;FullStackDeveloper mission=&#123;continuous learning&#125;/&gt;
+					</H3>
+					<br />
+					<H3>Looking for the right questions to ask. Passionate creator.</H3>
+				</NameTitle>
 			</header>
 			<MainContent>
 				<main>
@@ -55,7 +52,7 @@ export default function SiteContent(props) {
 					</section>
 					<section id='about'>
 						<H2>About</H2>
-						<ContactBlock state={props.state} mobileOnly={true} />
+						<ContactBlock state={props.state} fixed={false} />
 						<img src={Introduction} alt='codesnippet' />
 					</section>
 				</main>

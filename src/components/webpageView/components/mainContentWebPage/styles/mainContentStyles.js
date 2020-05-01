@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
 export const StripedContainer = styled.div`
-	height: 100vh;
+	height: 100%;
 	width: 100%;
-	position: absolute;
+	position: relative;
 	overflow-y: scroll;
 	background: #fff;
+
 `;
 
 export const UpperContainer = styled.div`

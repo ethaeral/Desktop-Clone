@@ -1,27 +1,31 @@
 import styled from "styled-components";
 
 export const BlockHolder = styled.div`
-	width: 20vw;
-	height: 300px;
-	display: ${(props) => (props.mobileOnly ? "none" : "initial")};
+	width: 100%;
+	height: 100%;
+	display: ${(props) => (props.fixed ? "block" : "none")};
+	position: ${(props) => (!props.fixed ? "static" : "absolute")};
+	left: -20%;
 	@media (max-width: 1130px) {
-		border: 1px red solid;
-		display: ${(props) => (!props.mobileOnly ? "fixed" : "none")};
-		margin-left: -100px;
+		position: ${(props) => (!props.fixed ? "static" : "absolute")};
+		left: -40%;
 	}
 	@media (max-width: 725px) {
-		display: ${(props) => (props.mobileOnly ? "initial" : "none")};
+		display: ${(props) => (!props.fixed ? "block" : "none")};
+	}
+	@media (max-height: 600px) {
+		display: ${(props) => (!props.fixed ? "block" : "none")};
 	}
 `;
 
 export const SideContent = styled.div`
-	border: 1px red solid;
+	font-family: "Montserrat", sans-serif;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	@media (max-width: 1130px) {
-	}
+	position: ${(props) => (props.fixed ? "fixed" : "initial")};
+	width: ${(props) => (props.fixed ? "20%" : "50%")};
 	img {
 		border-radius: 50%;
 		max-width: 80%;

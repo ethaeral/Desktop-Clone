@@ -42,6 +42,7 @@ export default function WebPageView(props) {
 			/>
 			<AddressBar />
 			<MainContentWebPage state={statefulWindows.homepage}/>
+			
 		</PageContainer>
 	);
 }

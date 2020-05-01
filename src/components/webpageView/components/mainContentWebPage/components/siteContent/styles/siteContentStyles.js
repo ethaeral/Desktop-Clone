@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const ContentContainer = styled.div`
-	border: 1px solid red;
 	display: flex;
 	flex-direction: column;
 	width: 70%;
@@ -10,7 +9,7 @@ export const ContentContainer = styled.div`
 	margin: 0 auto;
 	font-family: "Montserrat", sans-serif;
 	header {
-		position: relative;
+		display: flex;
 	}
 	section {
 		height: 80vh;
@@ -33,10 +32,8 @@ export const ContentContainer = styled.div`
 export const HeaderContainer = styled.div`
 	position: relative;
 	display: flex;
-	align-items: center;
-	border: 1px red solid;
 	height: 80vh;
-
+	align-items: center;
 `;
 
 export const MainContent = styled.div`
