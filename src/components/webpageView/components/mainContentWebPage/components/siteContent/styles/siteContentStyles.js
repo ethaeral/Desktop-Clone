@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ContentContainer = styled.div`
-	height: 100%;
+	height: 625vh;
 	display: flex;
 	flex-direction: column;
 	width: 70%;
@@ -9,6 +9,7 @@ export const ContentContainer = styled.div`
 	position: relative;
 	margin: 0 auto;
 	font-family: "Montserrat", sans-serif;
+	/* background-color: rgba(255, 255, 255, 0.78); */
 	header {
 		margin-top: 1em;
 		display: flex;
@@ -18,15 +19,15 @@ export const ContentContainer = styled.div`
 		margin-bottom: 1em;
 	}
 	section {
-		min-height: 80vh;
+		min-height: 95vh;
 		margin-bottom: 1em;
 		@media (max-width: 725px) {
-			background-color: rgba(255, 255, 255, 0.78);
+			/* background-color: rgba(255, 255, 255, 0.78); */
 		}
 	}
-	#skills {
-	}
+
 	#about {
+		margin-top: 1em;
 		display: flex;
 		flex-direction: column;
 		.codeSnippet {
@@ -60,9 +61,12 @@ export const AboutContent = styled.div`
 export const MainContent = styled.div`
 	margin: 0 auto;
 	width: 75%;
+	background-color: rgba(255, 255, 255, 0.79);
+	padding: 10px;
 	box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.02);
 	@media (max-width: 725px) {
 		width: 100%;
+		border-radius: 10px;
 	}
 `;
 
@@ -75,8 +79,12 @@ export const NameTitle = styled.div`
 	@media (max-width: 1130px) {
 		margin: 0 auto;
 		background-color: rgba(255, 255, 255, 0.79);
+		border-radius: 0% 20% 0% 20%;
 		height: 90%;
 		width: 80%;
+	}
+	@media (max-width: 725px) {
+		width: 100%;
 	}
 `;
 
@@ -113,6 +121,7 @@ export const H3 = styled.h3`
 export const H4 = styled.h4`
 	line-height: 2em;
 	font-size: 0.8em;
+	font-weight: ${(props) => (props.bold ? 700 : 400)};
 `;
 
 export const H6 = styled.h6`
@@ -136,4 +145,3 @@ export const GradientSplitter = styled.div`
 		rgba(0, 63, 90, 1) 100%
 	);
 `;
-

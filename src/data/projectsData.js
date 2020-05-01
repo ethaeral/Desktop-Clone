@@ -25,7 +25,7 @@ export const allProjects = [
 		],
 		description: {
 			short:
-				"A predictor application that helps Kickstarter users upload their campaign information and recieve information about the success rate of their campagin in relation to other thousands of campaigns",
+				"A predictor application that helps Kickstarter users upload their campaign information and recieve information about the success rate of their campagin in relation to other thousands of campaigns. Built by an international team within a week.",
 			long:
 				"A machine learning web application that leverages natural language processing using tf-idf and random forest model to predict the success of a kickstarter campaign. Users can create a card of their campaign entering monetary goal, category, duration, and description to find out their percentage of success. Users can  also readjust their features of their campaign in the app to try to gain insight on what they can do to increase their chances of hitting their goals. Built by an international team within a week",
 		},
@@ -37,7 +37,10 @@ export const allProjects = [
 			"Handled private and public routes with authentication with json web tokens",
 			"Managed form and form validation with formik",
 		],
-		media: "https://www.youtube.com/watch?v=StnuSti2IS4",
+		media: "https://www.youtube.com/embed/StnuSti2IS4",
+	
+
+		video: true,
 		codeSnippet: "",
 		date: "09/23/19",
 		role: "Front End Developer I",
@@ -89,6 +92,7 @@ export const allProjects = [
 		inProgress: false,
 		isExt: false,
 		webPage: false,
+		video: false,
 	},
 	{
 		type: "Team",
@@ -135,6 +139,7 @@ export const allProjects = [
 		inProgress: false,
 		isExt: false,
 		webPage: false,
+		video: false,
 	},
 	{
 		type: "Team",
@@ -221,7 +226,7 @@ export const allProjects = [
 			"Designed UI/UX with Figma, built design system leveraging atomic design, designed and implemented state management with Redux, handled authentication",
 			"Created Rest API, used API integration, implemented authorization process, created tests with unit testing frameworks, created documentation, used continuous integration deployment",
 		],
-		media: "https://youtu.be/T0_Z9HuLTR8",
+		media: "https://www.youtube.com/embed/T0_Z9HuLTR8",
 		codeSnippet: `exports.preventDuplicateTags = async (req, res, next) => {
 			const { addTags } = req.body;
 			const { id } = req.params;
@@ -257,6 +262,7 @@ export const allProjects = [
 		inProgress: false,
 		isExt: false,
 		webPage: true,
+		video: true,
 	},
 	{
 		type: "Team",
@@ -310,7 +316,7 @@ export const allProjects = [
 		],
 		description: {
 			short:
-				"A web application that uses machine vision to identify wastes and then presents a logic tree to the users on how to recycle that item.",
+				"A web application that uses machine vision to identify wastes and then presents a logic tree to the users on how to recycle that item. Built by a 4 member team over 3 days.",
 			long:
 				"A web application that uses machine vision to identify wastes and then presents a logic tree to the users on how to recycle that item.The goal was to gamify the action of properly disposing waste. Initially created a flask backend to host a model as it trains - but switched to using AutoML due to time constraints.",
 		},
@@ -338,6 +344,8 @@ export const allProjects = [
 		inProgress: true,
 		isExt: false,
 		webPage: true,
+		video: false,
+	
 	},
 	{
 		type: "Personal",
@@ -547,7 +555,7 @@ export const allProjects = [
 		],
 		description: {
 			short:
-				"An application was to help users parse their data to help analyze and create predictive models without implementing code or data science knowledge.",
+				"An application was to help users parse their data to help analyze and create predictive models without implementing code or data science knowledge. ",
 			long:
 				"An application was to help users parse their data to help analyze and create predictive models without implementing code or data science knowledge.",
 		},
@@ -559,7 +567,7 @@ export const allProjects = [
 			"Created components that handled private	and public routes and designed and implemented state	management with Redux",
 			"Created server to server and server to client back end that leveraged RPC and REST architecture style with test-driven development",
 		],
-		media: "https://github.com/richanynguon/Mosaic",
+		media: "https://www.youtube.com/embed/NDUSza9Cpi4",
 		codeSnippet: "",
 		date: "11/19",
 		role: "Full Stack Developer",
@@ -567,6 +575,7 @@ export const allProjects = [
 		inProgress: true,
 		isExt: false,
 		webPage: true,
+		video: true,
 	},
 	{
 		type: "Personal",

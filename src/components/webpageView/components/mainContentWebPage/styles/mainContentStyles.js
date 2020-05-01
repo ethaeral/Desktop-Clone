@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const StripedContainer = styled.div`
-	height: 100%;
+	height: 150%;
 	width: 100%;
-	position: relative;
+	position: absolute;
 	overflow-y: scroll;
 	background: #fff;
 	overflow-x: hidden;
@@ -23,7 +23,7 @@ export const UpperContainer = styled.div`
 	}
 `;
 export const LowerContainer = styled.div`
-	height: 375vh;
+	height: 600vh;
 	position: absolute;
 	top: 365px;
 	width: 594px;
