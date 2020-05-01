@@ -19,21 +19,14 @@ export const ContentContainer = styled.div`
 		margin-bottom: 1em;
 	}
 	section {
-		min-height: 95vh;
+		min-height: 100vh;
 		margin-bottom: 1em;
 		@media (max-width: 725px) {
-			/* background-color: rgba(255, 255, 255, 0.78); */
+			background-color: rgba(255, 255, 255, 0.78);
+			min-height: 120vh;
 		}
 	}
 
-	#about {
-		margin-top: 1em;
-		display: flex;
-		flex-direction: column;
-		.codeSnippet {
-			width: 100%;
-		}
-	}
 	footer {
 		background-color: rgba(255, 255, 255, 0.78);
 	}

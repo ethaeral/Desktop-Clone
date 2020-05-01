@@ -21,6 +21,7 @@ import Introduction from "../../../../../../assets/introduction.png";
 import ContactBlock from "./components/contactBlock/ContactBlock";
 import SkillSection from "./components/skillsSection/SkillSection";
 import ProjectSection from "./components/projectSection/ProjectSection";
+import AboutSection from "./components/aboutSection/AboutSection";
 
 export default function SiteContent(props) {
 	return (
@@ -43,7 +44,7 @@ export default function SiteContent(props) {
 					<section id='projects'>
 						<H2>Projects</H2>
 						<GradientSplitter />
-						<ProjectSection/>
+						<ProjectSection />
 					</section>
 					<section id='skills'>
 						<H2>Skills</H2>
@@ -53,14 +54,7 @@ export default function SiteContent(props) {
 					<section id='about'>
 						<H2>About</H2>
 						<GradientSplitter />
-						<AboutContent>
-							<ContactBlock state={props.state} fixed={false} />
-							<img
-								className='codeSnippet'
-								src={Introduction}
-								alt='codesnippet'
-							/>
-						</AboutContent>
+						<AboutSection state={props.state} src={Introduction} />
 					</section>
 					<section id='contact'>
 						<H2>Contact</H2>

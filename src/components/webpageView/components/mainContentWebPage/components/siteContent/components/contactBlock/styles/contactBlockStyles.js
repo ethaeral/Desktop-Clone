@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const BlockHolder = styled.div`
-
+	
 	width: ${(props) => (props.top || !props.fixed ? "40%" : "100%")};
 	height: ${(props) => (props.top || !props.fixed ? "80%" : "100%")};
 	display: ${(props) => (props.top ? "block" : "none")};

@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const SkillContainer = styled.div`
-	margin: 0 auto;
+	padding-bottom: 3em;
+	height: 100%;
 `;
 export const SkillsTable = styled.div`
 	height: 70vh;
@@ -9,6 +10,7 @@ export const SkillsTable = styled.div`
 	flex-wrap: wrap;
 	justify-content: center;
 	margin: 0 auto;
+	margin-top: 3em;
 `;
 export const SkillsSection = styled.div`
 	width: 20%;
@@ -29,4 +31,3 @@ export const SkillList = styled.div`
 `;
 
 export const SkillItem = styled.div``;
-
