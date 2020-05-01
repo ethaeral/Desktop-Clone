@@ -20,8 +20,8 @@ import Icon from "../../../icons/Icon";
 
 export default function ContactBlock(props) {
 	return (
-		<BlockHolder fixed={props.fixed} top={props.top}>
-			<SideContent maximized={props.state.maxmized} fixed={props.fixed} top={props.top}>
+		<BlockHolder maximized={props.state.maxmized} fixed={props.fixed} top={props.top}>
+			<SideContent fixed={props.fixed} top={props.top}>
 				<img src={ProfileImage} alt='richany nguon' />
 				<IconHolder>
 					<Icon

@@ -9,16 +9,27 @@ export const ContentContainer = styled.div`
 	margin: 0 auto;
 	font-family: "Montserrat", sans-serif;
 	header {
+
 		display: flex;
 		align-items: center;
 		height: 80vh;
 		justify-content: center;
-		border: 1px red solid;
+		.innerBlock {
+			width: 100%;
+			border: 1px green solid;
+		}
 	}
 	section {
 		height: 80vh;
 		@media (max-width: 725px) {
 			background-color: rgba(255, 255, 255, 0.78);
+		}
+	}
+	#about {
+		display: flex;
+		flex-direction: column;
+		.codeSnippet {
+			width: 100%;
 		}
 	}
 	footer {
@@ -40,6 +51,10 @@ export const HeaderContainer = styled.div`
 	align-items: center;
 `;
 
+export const AboutContent = styled.div`
+	display: flex;
+`;
+
 export const MainContent = styled.div`
 	margin: 0 auto;
 	width: 75%;
@@ -50,7 +65,6 @@ export const MainContent = styled.div`
 `;
 
 export const NameTitle = styled.div`
-	border: 1px green solid;
 	display: flex;
 	flex-direction: column;
 	align-items: center;

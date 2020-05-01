@@ -11,7 +11,7 @@ import {
 	H2,
 	H4,
 	H6,
-
+	AboutContent,
 } from "./styles/siteContentStyles";
 
 // Assets
@@ -25,7 +25,12 @@ export default function SiteContent(props) {
 		<ContentContainer>
 			<ContactBlock state={props.state} fixed={true} />
 			<header>
-			<ContactBlock state={props.state} fixed={false} top={true} />
+				<ContactBlock
+					className='innerBlock'
+					state={props.state}
+					fixed={false}
+					top={true}
+				/>
 				<NameTitle>
 					<H1>Richany Nguon</H1>
 					<H3 bold>
@@ -53,8 +58,14 @@ export default function SiteContent(props) {
 					</section>
 					<section id='about'>
 						<H2>About</H2>
-						<ContactBlock state={props.state} fixed={false} />
-						<img src={Introduction} alt='codesnippet' />
+						<AboutContent>
+							<ContactBlock state={props.state} fixed={false} />
+							<img
+								className='codeSnippet'
+								src={Introduction}
+								alt='codesnippet'
+							/>
+						</AboutContent>
 					</section>
 				</main>
 				<footer>
