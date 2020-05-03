@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StripedContainer = styled.div`
-	height: 150%;
+	height: 100%;
 	width: 100%;
 	position: absolute;
 	overflow-y: scroll;
@@ -23,11 +23,14 @@ export const UpperContainer = styled.div`
 	}
 `;
 export const LowerContainer = styled.div`
-	height: 600vh;
+	height: calc(4749px - 1330px);
 	position: absolute;
 	top: 365px;
 	width: 594px;
 	background-color: #fff;
+	@media (max-width: 725px) {
+		height: calc(4749px - 330px)
+	}
 `;
 
 export const DarkBlueTop = styled.div`

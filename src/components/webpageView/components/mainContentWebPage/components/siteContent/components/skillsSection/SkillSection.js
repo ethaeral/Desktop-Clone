@@ -2,7 +2,6 @@ import React from "react";
 import {
 	SkillContainer,
 	SkillsTable,
-	SectionHolder,
 	SkillList,
 	SkillItem,
 	SkillsSection,

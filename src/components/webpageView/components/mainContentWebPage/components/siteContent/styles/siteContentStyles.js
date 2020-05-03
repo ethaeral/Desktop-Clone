@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const ContentContainer = styled.div`
-	height: 625vh;
 	display: flex;
 	flex-direction: column;
 	width: 70%;
@@ -9,21 +8,18 @@ export const ContentContainer = styled.div`
 	position: relative;
 	margin: 0 auto;
 	font-family: "Montserrat", sans-serif;
-	/* background-color: rgba(255, 255, 255, 0.78); */
 	header {
 		margin-top: 1em;
 		display: flex;
 		align-items: center;
-		height: 80vh;
+		height: 40em;
 		justify-content: center;
 		margin-bottom: 1em;
 	}
 	section {
-		min-height: 100vh;
 		margin-bottom: 1em;
 		@media (max-width: 725px) {
 			background-color: rgba(255, 255, 255, 0.78);
-			min-height: 120vh;
 		}
 	}
 

@@ -25,7 +25,7 @@ import AboutSection from "./components/aboutSection/AboutSection";
 
 export default function SiteContent(props) {
 	return (
-		<ContentContainer>
+		<ContentContainer id="container">
 			<ContactBlock state={props.state} fixed={true} />
 			<header>
 				<ContactBlock state={props.state} fixed={false} top={true} />
@@ -56,10 +56,7 @@ export default function SiteContent(props) {
 						<GradientSplitter />
 						<AboutSection state={props.state} src={Introduction} />
 					</section>
-					{/* <section id='contact'>
-						<H2>Contact</H2>
-						<GradientSplitter />
-					</section> */}
+
 				</main>
 				<footer>
 					<GradientSplitter />
