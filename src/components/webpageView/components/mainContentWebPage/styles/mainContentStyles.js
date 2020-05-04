@@ -23,13 +23,14 @@ export const UpperContainer = styled.div`
 	}
 `;
 export const LowerContainer = styled.div`
-	height: calc(4749px - 1330px);
+	height: ${(props) => (!props.maximized ? "3749px" : "calc(4749px - 1330px)")};
 	position: absolute;
 	top: 365px;
 	width: 594px;
 	background-color: #fff;
 	@media (max-width: 725px) {
-		height: calc(4749px - 330px)
+		height: ${(props) =>
+			!props.maximized ? "4749px" : "calc(4749px - 330px)"};
 	}
 `;
 

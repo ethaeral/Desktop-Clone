@@ -1,95 +1,65 @@
 import React from "react";
-import {
-	SkillContainer,
-	SkillsTable,
-	SkillList,
-	SkillItem,
-	SkillsSection,
-} from "./styles/skillStyles";
-import { H3 } from "../../styles/siteContentStyles";
+import { SkillContainer, SkillsTable } from "./styles/skillStyles";
 
-export default function SkillSection() {
+import SectionedSkills from "./components/sectionedSkills/SectionedSkills";
+
+export default function SkillSection(props) {
+	const { maximized } = props.state;
 	return (
 		<SkillContainer>
 			<SkillsTable>
-				<SkillsSection>
-					<H3 bold>Programming Languages</H3>
-					<SkillList>
-						<SkillItem>JavaScript</SkillItem>
-						<SkillItem>Python</SkillItem>
-						<SkillItem>TypeScript</SkillItem>
-					</SkillList>
-				</SkillsSection>
-				<SkillsSection>
-					<H3 bold>Runtime Enviroment</H3>
-					<SkillList>
-						<SkillItem>NodeJs</SkillItem>
-					</SkillList>
-				</SkillsSection>
-				<SkillsSection>
-					<H3 bold>Frameworks</H3>
-					<SkillList>
-						<SkillItem>ReactJs</SkillItem>
-						<SkillItem>ExpressJs</SkillItem>
-						<SkillItem>Flask</SkillItem>
-						<SkillItem>Django</SkillItem>
-						<SkillItem>NestJs</SkillItem>
-					</SkillList>
-				</SkillsSection>
-				<SkillsSection>
-					<H3 bold>State Management Libraries</H3>
-					<SkillList>
-						<SkillItem>Redux</SkillItem>
-						<SkillItem>Apollo Client</SkillItem>
-					</SkillList>
-				</SkillsSection>
-				<SkillsSection>
-					<H3 bold>Testing Libraries</H3>
-					<SkillList>
-						<SkillItem>Jest</SkillItem>
-						<SkillItem>Supertest</SkillItem>
-						<SkillItem>@testing-libary</SkillItem>
-					</SkillList>
-				</SkillsSection>
+				<SectionedSkills
+					maximized={maximized}
+					title={"Programming Languages"}
+					items={["JavaScript", "Python", "TypeScript"]}
+				/>
+				<SectionedSkills
+					maximized={maximized}
+					title={"Runtime Enviroment"}
+					items={["NodeJs"]}
+				/>
+				<SectionedSkills
+					maximized={maximized}
+					title={"Frameworks"}
+					items={["ReactJs", "ExpressJs", "Flask", "Django", "NestJs"]}
+				/>
+				<SectionedSkills
+					maximized={maximized}
+					title={"State Management Libraries"}
+					items={["Redux", "Apollo Client"]}
+				/>
+				<SectionedSkills
+					maximized={maximized}
+					title={"Testing Libraries"}
+					items={["Jest", "Supertest", "@testing-libary"]}
+				/>
+				<SectionedSkills
+					maximized={maximized}
+					title={"Database"}
+					items={["Postgresql", "SQLite"]}
+				/>
+				<SectionedSkills
+					maximized={maximized}
+					title={"Database Query Languages/ Tools"}
+					items={["KnexJs", "GraphQL", "TypeORM"]}
+				/>
+				<SectionedSkills
+					maximized={maximized}
+					title={"Platforms"}
+					items={["Google App Engine", "Heroku", "Vercel (Zeit)", "Netlify"]}
+				/>
 
-				<SkillsSection>
-					<H3 bold>Database</H3>
-					<SkillList>
-						<SkillItem>Postgresql</SkillItem>
-						<SkillItem>SQLite</SkillItem>
-					</SkillList>
-				</SkillsSection>
-				<SkillsSection>
-					<H3 bold>Database Query Languages/ Tools</H3>
-					<SkillList>
-						<SkillItem>KnexJs</SkillItem>
-						<SkillItem>GraphQL</SkillItem>
-						<SkillItem>TypeOrm</SkillItem>
-					</SkillList>
-				</SkillsSection>
-				<SkillsSection>
-					<H3 bold>Platforms</H3>
-					<SkillList>
-						<SkillItem>Google App Engine</SkillItem>
-						<SkillItem>Heroku</SkillItem>
-						<SkillItem>Vercel (Zeit)</SkillItem>
-						<SkillItem>Netlify</SkillItem>
-					</SkillList>
-				</SkillsSection>
+				<SectionedSkills
+					maximized={maximized}
+					title={"Operating Systems"}
+					items={["Linux", "Windows"]}
+				/>
 
-				<SkillsSection>
-					<H3 bold> Operating Systems </H3>
-					<SkillList>
-						<SkillItem>Linux</SkillItem>
-						<SkillItem>Windows</SkillItem>
-					</SkillList>
-				</SkillsSection>
-				<SkillsSection>
-					<H3 bold> Version Control </H3>
-					<SkillList>
-						<SkillItem>Git</SkillItem>
-					</SkillList>
-				</SkillsSection>
+				<SectionedSkills
+					maximized={maximized}
+					title={"Version Control"}
+					items={["Git"]}
+				/>
 			</SkillsTable>
 		</SkillContainer>
 	);

@@ -7,10 +7,20 @@ export default function AboutSection(props) {
 	return (
 		<AboutContainer>
 			<ContactBlock state={props.state} fixed={false} />
+			<br />
 			<H3>
-		 I'm an advocate for transparent relationships, vulnerability, self-development,	and continuous learning. I am looking to continuously expand, cultivate, and refine	current skills in software development in financial technology.
+				Always following a dream and a mission. Exploring interests in art,
+				cognitive sceince/philosophies, sound energy, social impact, and
+				financial tech. Currently a developer looking to work with software
+				dealing with alternative energies and wireless power.
 			</H3>
-			<img className='codeSnippet' src={props.src} alt='codesnippet' />
+			<br />
+			<img
+				className='codeSnippet'
+				src={props.src}
+				maximized={props.state.maximized.toString()}
+				alt='codesnippet'
+			/>
 		</AboutContainer>
 	);
 }

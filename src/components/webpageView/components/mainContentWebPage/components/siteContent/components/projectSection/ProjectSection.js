@@ -8,7 +8,7 @@ export default function ProjectSection() {
 	return (
 		<ProjectSecConatiner>
 			{statefulWindows.webPageProjects.map((projectData) => (
-				<ProjectItem data={projectData} />
+				<ProjectItem key={projectData.name} data={projectData} />
 			))}
 		</ProjectSecConatiner>
 	);

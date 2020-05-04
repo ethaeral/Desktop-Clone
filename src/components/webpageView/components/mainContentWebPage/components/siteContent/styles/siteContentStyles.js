@@ -15,8 +15,15 @@ export const ContentContainer = styled.div`
 		height: 40em;
 		justify-content: center;
 		margin-bottom: 1em;
+		@media (max-width: 725px) {
+			text-align: center;
+			h3 {
+				margin: 0px 5px 0px 5px;
+			}
+		}
 	}
 	section {
+		padding: 5px;
 		margin-bottom: 1em;
 		@media (max-width: 725px) {
 			background-color: rgba(255, 255, 255, 0.78);
@@ -25,6 +32,7 @@ export const ContentContainer = styled.div`
 
 	footer {
 		background-color: rgba(255, 255, 255, 0.78);
+
 	}
 	@media (max-width: 1130px) {
 		margin-right: 0;

@@ -7,10 +7,10 @@ export const AboutContainer = styled.div`
 	align-items: center;
 	flex-direction: column;
 	.codeSnippet {
-		width: 40em;
+		width: ${(props) => (props.maximized ? "40em" : "30em")};
 		border-radius: 10px;
 		@media (max-width: 725px) {
-			width: 30em;
-	}
+			width: ${(props) => (props.maximized ? "30em" : "18em")};
+		}
 	}
 `;

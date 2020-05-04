@@ -10,7 +10,6 @@ import {
 	MainContent,
 	H2,
 	H6,
-	AboutContent,
 	GradientSplitter,
 } from "./styles/siteContentStyles";
 
@@ -25,7 +24,7 @@ import AboutSection from "./components/aboutSection/AboutSection";
 
 export default function SiteContent(props) {
 	return (
-		<ContentContainer id="container">
+		<ContentContainer id='container'>
 			<ContactBlock state={props.state} fixed={true} />
 			<header>
 				<ContactBlock state={props.state} fixed={false} top={true} />
@@ -49,24 +48,17 @@ export default function SiteContent(props) {
 					<section id='skills'>
 						<H2>Skills</H2>
 						<GradientSplitter />
-						<SkillSection />
+						<SkillSection state={props.state} />
 					</section>
 					<section id='about'>
 						<H2>About</H2>
 						<GradientSplitter />
 						<AboutSection state={props.state} src={Introduction} />
 					</section>
-
 				</main>
 				<footer>
 					<GradientSplitter />
-					<H6>
-						for maximum enjoyment please consume on a desktop and/or laptop -
-						made with
-						<span role='img' aria-label='tea emoji'>
-							🍵
-						</span>
-					</H6>
+					<H6>Designed and created by Richany Nguon 2020</H6>
 				</footer>
 			</MainContent>
 		</ContentContainer>

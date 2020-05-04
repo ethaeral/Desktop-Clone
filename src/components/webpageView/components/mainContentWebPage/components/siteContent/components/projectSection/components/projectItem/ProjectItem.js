@@ -35,14 +35,12 @@ export default function ProjectItem(props) {
 						</a>
 						<H3>{role}</H3>
 						<Github>
-							<a href={linkGithub}>
-								<Icon
-									src={GithubIcon}
-									alt={"source code"}
-									link={linkGithub}
-									linkTitle={"Source Code"}
-								/>
-							</a>
+							<Icon
+								src={GithubIcon}
+								alt={"source code"}
+								link={linkGithub}
+								linkTitle={"Source Code"}
+							/>
 						</Github>
 					</RoleName>
 					<H3> {date}</H3>
@@ -53,9 +51,9 @@ export default function ProjectItem(props) {
 						<iframe
 							width='100%'
 							src={data.media}
-							frameborder='0'
+							frameBorder='0'
 							allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
-							allowfullscreen
+							allowFullScreen
 							title='project video'></iframe>
 					) : (
 						<iframe
@@ -67,7 +65,7 @@ export default function ProjectItem(props) {
 				<TechStack>
 					•
 					{techStack.map((tech) => (
-						<H4>{tech}•</H4>
+						<H4 key={tech}>{tech}•</H4>
 					))}
 				</TechStack>
 			</ProjectMain>
@@ -76,7 +74,7 @@ export default function ProjectItem(props) {
 					<H4 bold>{description.short}</H4>
 				</DescriptionProject>
 				{contributions.map((bullet) => (
-					<li>
+					<li key={bullet}>
 						<H4>{bullet}</H4>
 					</li>
 				))}

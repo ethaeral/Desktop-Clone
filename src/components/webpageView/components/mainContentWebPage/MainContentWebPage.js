@@ -26,7 +26,7 @@ import SiteContent from "./components/siteContent/SiteContent";
 
 export default function MainContentWebPaged(props) {
 	return (
-		<StripedContainer id='scroll'>
+		<StripedContainer id='scroll' >
 			<SiteContent state={props.state} />
 			<UpperContainer>
 				<DarkBlueTop>
@@ -49,7 +49,7 @@ export default function MainContentWebPaged(props) {
 					</WhiteTop>
 				</DarkBlueTop>
 			</UpperContainer>
-			<LowerContainer>
+			<LowerContainer maximized={props.state.maximized}>
 				<OrangeBottom>
 					<WhiteBottom>
 						<LightOrangeBottom>
