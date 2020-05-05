@@ -64,7 +64,7 @@ function App() {
 			z: 1,
 		},
 		modalIsOpen: {
-			windowBar: true,
+			windowBar: false,
 		},
 	});
 
