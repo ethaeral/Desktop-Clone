@@ -17,9 +17,9 @@ export const ControlContainer = styled.div`
 	height: 190px;
 	justify-content: flex-end;
 	align-items: flex-start;
-  button{
-    border:none;
-  }
+	button {
+		border: none;
+	}
 `;
 
 export const CircleControl = styled.div`
@@ -48,9 +48,14 @@ export const CircleControl = styled.div`
 
 	border-radius: ${(props) => (props.anchor ? "50% 0% 50% 50%" : "50%")};
 	img {
-		width: 70px;
+		width: ${(props) => (props.tab ? "80px" : "70px")};
 		margin: 0 auto;
 		margin-left: 15px;
+		transform: ${(props) => (props.tab ? "rotate(-93deg)" : "rotate(0deg)")};
+	}
+	transform: ${(props) => (props.tab ? "rotate(135deg)" : "rotate(0deg)")};
+	span {
+		transform: rotate(45deg);
 	}
 `;
 
@@ -69,5 +74,5 @@ export const ShadowClone = styled.div`
 
 export const ModalMaxWin = styled(MaxWindow)`
 	border-width: 6px 4px 3px 3px;
-  margin: 0 auto;
+	margin: 0 auto;
 `;

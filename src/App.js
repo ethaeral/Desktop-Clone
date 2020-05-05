@@ -65,6 +65,7 @@ function App() {
 		},
 		modalIsOpen: {
 			windowBar: false,
+			tabbedBar: false,
 		},
 	});
 

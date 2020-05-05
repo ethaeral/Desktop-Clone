@@ -17,7 +17,7 @@ export const CodeContainer = styled.div`
 	overflow: hidden;
 
 
-	@media (max-width: 580px) {
+	@media (max-width: 760px) {
 		display: none;
 	}
 `;

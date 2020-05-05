@@ -40,7 +40,7 @@ export const TerminalIcon = styled.div`
 	color: #dfdbd2;
 	display: flex;
 
-	@media (max-width: 580px) {
+	@media (max-width: 760px) {
 		display: none;
 	}
 	img {
@@ -59,7 +59,7 @@ export const BackgroundImage = styled.div`
 		margin: 0 auto;
 		margin-top: 5em;
 
-		@media (max-width: 580px) {
+		@media (max-width: 760px) {
 			display: none;
 		}
 	}
