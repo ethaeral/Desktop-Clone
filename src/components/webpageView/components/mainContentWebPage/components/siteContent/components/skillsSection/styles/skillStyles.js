@@ -11,6 +11,9 @@ export const SkillsTable = styled.div`
 	justify-content: center;
 	margin: 0 auto;
 	margin-top: 3em;
+	@media (max-width: 1130px) {
+			margin-top: ${(props) => (props.maximized ? "3em" : "1em")};
+		}
 `;
 
 
