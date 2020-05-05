@@ -9,10 +9,10 @@ export default function AboutSection(props) {
 			<ContactBlock state={props.state} fixed={false} />
 			<br />
 			<H3>
-				Always following a dream and a mission. Exploring interests in art,
-				cognitive sceince/philosophies, sound energy, social impact, and
-				financial tech. Currently a developer looking to work with software
-				dealing with alternative energies and wireless power.
+				Following a dream and a mission. Exploring interests in art,
+				cognitive science/philosophies, sound energy, social impact, and
+				financial tech. Always up to work with software
+				dealing with alternative energies and social impact.
 			</H3>
 			<br />
 			<img

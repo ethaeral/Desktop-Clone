@@ -14,6 +14,8 @@ import {
 
 // Context
 import WindowsContext from "../../modules/windowContext";
+import MobileControls from "./components/mobileControls/MobileControls";
+import ControlModal from "./components/controlModal/ControlModal";
 
 export default function WindowControls(props) {
 	const { statefulWindows, setWindowState } = useContext(WindowsContext);
@@ -22,11 +24,17 @@ export default function WindowControls(props) {
 	return (
 		<Bar>
 			<Title>{title}</Title>
+			<ControlModal
+				statefulWindows={statefulWindows}
+				setWindowState={setWindowState}
+				type={type}
+				tabbedTitle={tabbedTitle}
+			/>
+			<MobileControls state={statefulWindows} setState={setWindowState} />
 			<WindowOptions>
 				<button
 					onClick={(e) => {
 						e.stopPropagation();
-
 						setWindowState({
 							...statefulWindows,
 							tabbedWindows: [

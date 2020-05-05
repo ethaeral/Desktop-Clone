@@ -30,6 +30,9 @@ export const WindowOptions = styled.div`
 	height: 1.5em;
 	display: flex;
 	margin-right: 0.4em;
+	@media (max-width: 770px) {
+		display: none;
+	}
 `;
 export const CircleButtons = styled.div`
 	border: 1px #3d3c37 solid;

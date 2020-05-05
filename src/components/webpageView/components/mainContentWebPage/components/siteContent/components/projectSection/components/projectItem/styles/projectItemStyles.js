@@ -31,7 +31,7 @@ export const MediaDescription = styled.div`
 	flex-direction: column;
 	@media (max-width: 725px) {
 		iframe {
-			width: 50%;
+			width: 100%;
 			margin: 0 auto;
 		}
 	}

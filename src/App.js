@@ -63,6 +63,9 @@ function App() {
 			closed: false,
 			z: 1,
 		},
+		modalIsOpen: {
+			windowBar: true,
+		},
 	});
 
 	return (
