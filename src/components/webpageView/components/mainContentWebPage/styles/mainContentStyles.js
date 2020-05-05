@@ -28,9 +28,12 @@ export const LowerContainer = styled.div`
 	top: 365px;
 	width: 594px;
 	background-color: #fff;
-	@media (max-width: 725px) {
+	@media (max-width: 1130px) {
 		height: ${(props) =>
-			!props.maximized ? "4749px" : "calc(4749px - 330px)"};
+			!props.maximized ? "4749px" : "calc(4749px - 630px)"};
+	}
+	@media (max-width: 770px) {
+		height: ${(props) => (!props.maximized ? "5100px" : "calc(4900px - 20vh)")};
 	}
 `;
 

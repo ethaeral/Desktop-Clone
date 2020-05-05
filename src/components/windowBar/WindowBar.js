@@ -18,6 +18,7 @@ import WindowsContext from "../../modules/windowContext";
 export default function WindowControls(props) {
 	const { statefulWindows, setWindowState } = useContext(WindowsContext);
 	const { title, type, tabbedTitle } = props;
+
 	return (
 		<Bar>
 			<Title>{title}</Title>

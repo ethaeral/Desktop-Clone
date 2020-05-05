@@ -9,7 +9,7 @@ export const AboutContainer = styled.div`
 	.codeSnippet {
 		width: ${(props) => (props.maximized ? "40em" : "30em")};
 		border-radius: 10px;
-		@media (max-width: 725px) {
+		@media (max-width: 1130px) {
 			width: ${(props) => (props.maximized ? "30em" : "18em")};
 		}
 	}
