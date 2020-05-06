@@ -15,7 +15,7 @@ export default function Tab(props) {
 	const { title, type } = props;
 
 	return (
-		<TabBox>
+		<TabBox hide={type === "code" || type === "terminal"}>
 			<Title> {title}</Title>
 			<TabModal state={statefulWindows} setState={setWindowState} />
 			<ModalTabControls

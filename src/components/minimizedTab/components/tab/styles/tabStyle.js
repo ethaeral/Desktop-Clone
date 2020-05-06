@@ -16,6 +16,9 @@ export const TabBox = styled.div`
 	padding-right: 0.5em;
 	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 	text-overflow: ellipsis;
+	@media (max-width: 770px) {
+		display: ${(props) => (props.hide ? "none" : "flex")};
+	}
 `;
 
 export const TabButtonContainer = styled.div`

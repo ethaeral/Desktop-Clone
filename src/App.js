@@ -31,8 +31,10 @@ import {
 
 import MinimizedTab from "./components/minimizedTab/MinimizedTab";
 import WebPageView from "./components/webpageView/WebPageView";
+import MobileWarning from "./components/mobileWarning/MobileWarning";
 
 function App() {
+	const [warning, setWarning] = useState(true);
 	const [statefulWindows, setWindowState] = useState({
 		zCounter: 1,
 		tabbedWindows: [],
@@ -63,8 +65,8 @@ function App() {
 			z: 0,
 		},
 		homepage: {
-			minimized: false,
-			maximized: true,
+			minimized: true,
+			maximized: false,
 			closed: false,
 			z: 1,
 		},
@@ -78,7 +80,7 @@ function App() {
 		<AppContainer>
 			<WindowsContext.Provider value={{ statefulWindows, setWindowState }}>
 				<StripeContainer />
-
+				<MobileWarning warning={warning} setWarning={setWarning}/>
 				<BackgroundImage>
 					<img src={mask} alt='princess mononoke mask' />
 				</BackgroundImage>

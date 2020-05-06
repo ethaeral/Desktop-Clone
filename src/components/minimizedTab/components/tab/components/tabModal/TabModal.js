@@ -37,7 +37,7 @@ export default function TabModal(props) {
 									minimized: false,
 									closed: false,
 								},
-								modalIsOpen: { ...state.modalIsOpen, windowBar: false },
+								modalIsOpen: { ...state.modalIsOpen, tabbedBar: false },
 							});
 						}}>
 						<CircleControl tabControl={true}>
@@ -59,7 +59,7 @@ export default function TabModal(props) {
 									minimized: false,
 									closed: true,
 								},
-								modalIsOpen: { ...state.modalIsOpen, windowBar: false },
+								modalIsOpen: { ...state.modalIsOpen, tabbedBar: false },
 							});
 						}}>
 						<CircleControl exit={true} tabControl={true}>
