@@ -1,8 +1,9 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import {
 	WarningContainer,
 	WarningPopUp,
 	WarningContent,
+	WarningText,
 } from "./styles/mobileWarningStyles";
 import {
 	Bar,
@@ -11,15 +12,18 @@ import {
 	ButtonText,
 } from "../windowBar/styles/windowBarStyle";
 
+import Info from '../../assets/info.png'
+
 export default function MobileWarning(props) {
-  const { warning, setWarning } = props;
-  useEffect(()=>{},[warning])
+	const { warning, setWarning } = props;
+	useEffect(() => {}, [warning]);
 	return (
 		<WarningContainer shown={warning}>
 			<WarningPopUp>
 				<Bar>
 					<Title>Information</Title>
-					<button className="cursor"
+					<button
+						className='cursor'
 						onClick={(e) => {
 							e.stopPropagation();
 							setWarning(false);
@@ -30,14 +34,18 @@ export default function MobileWarning(props) {
 					</button>
 				</Bar>
 				<WarningContent>
-					Unable to launch full application. Device does not meet requirement.
-					Resolution width must be larger than 760px.
-					<button className="cursor"
+					<WarningText>
+          <img src={Info} alt="info icon"/>
+						Unable to launch full application. Device does not meet requirement.
+						Resolution width must be larger than 760px.
+					</WarningText>
+					<button
+						className='cursor'
 						onClick={(e) => {
 							e.stopPropagation();
 							setWarning(false);
 						}}>
-						Ok
+						OK
 					</button>
 				</WarningContent>
 			</WarningPopUp>
