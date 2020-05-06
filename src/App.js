@@ -1,5 +1,5 @@
 // Libraries
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // Components
 import StripeContainer from "./components/stripes/StripeContainer";
@@ -45,11 +45,11 @@ function App() {
 		),
 		webPageProjects: allProjects.filter((project) => project.webPage === true),
 		sideNavActive: {
-			search: true,
+			search: false,
 			branch: false,
 			bug: false,
 			ext: false,
-			projects: false,
+			projects: true,
 			setting: false,
 		},
 		terminal: {
@@ -75,6 +75,20 @@ function App() {
 			tabbedBar: false,
 		},
 	});
+	useEffect(() => {
+		setTimeout(function () {
+			setWindowState({
+				...statefulWindows,
+				homepage: { ...statefulWindows.homepage, maximized: false },
+			});
+		}, 10000);
+		setTimeout(function () {
+			alert(
+				"Feel free to click around - feedback and bug spotting is more than welcomed!"
+			);
+		}, 10003);
+		// eslint-disable-next-line
+	}, []);
 
 	return (
 		<AppContainer>
@@ -157,7 +171,7 @@ function App() {
 				<VscodeContainer />
 				<MinimizedTab />
 				<WebPageView />
-				<MobileWarning warning={warning} setWarning={setWarning}/>
+				<MobileWarning warning={warning} setWarning={setWarning} />
 				<Credit>
 					<a href='https://icons8.com/'>Icon Credit - Icons8</a>
 				</Credit>
