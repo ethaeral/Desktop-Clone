@@ -9,6 +9,8 @@ import Terminal from "./components/terminal/Terminal";
 // Assets
 import terminal from "./assets/02-terminal.png";
 import mask from "./assets/mononoke.png";
+import code from "./assets/vscode.png";
+import firefox from "./assets/firefox.png";
 
 // Context
 import WindowsContext from "./modules/windowContext";
@@ -22,6 +24,9 @@ import {
 	TerminalIcon,
 	BackgroundImage,
 	Credit,
+	IconHolders,
+	FireFoxIcon,
+	CodeIcon,
 } from "./styles/appStyles";
 
 import MinimizedTab from "./components/minimizedTab/MinimizedTab";
@@ -78,27 +83,74 @@ function App() {
 					<img src={mask} alt='princess mononoke mask' />
 				</BackgroundImage>
 				<Background />
-				<button
-					onClick={() => {
-						const addCounter = statefulWindows.zCounter++;
-						setWindowState({
-							...setWindowState,
-							zCounter: addCounter,
-						});
-						setWindowState({
-							...statefulWindows,
-							terminal: {
-								...statefulWindows.terminal,
-								closed: false,
-								z: statefulWindows.zCounter,
-							},
-						});
-					}}>
-					<TerminalIcon>
-						<img src={terminal} alt='terminal-icon' />
-						Terminal
-					</TerminalIcon>
-				</button>
+				<IconHolders>
+					<button
+						onClick={(e) => {
+							e.stopPropagation();
+							const addCounter = statefulWindows.zCounter++;
+							setWindowState({
+								...statefulWindows,
+								zCounter: addCounter,
+							});
+							setWindowState({
+								...statefulWindows,
+								terminal: {
+									...statefulWindows.terminal,
+									closed: false,
+									z: statefulWindows.zCounter,
+								},
+							});
+						}}>
+						<TerminalIcon>
+							<img src={terminal} alt='terminal-icon' />
+							Terminal
+						</TerminalIcon>
+					</button>
+					<button
+						onClick={(e) => {
+							e.stopPropagation();
+							const addCounter = statefulWindows.zCounter++;
+							setWindowState({
+								...statefulWindows,
+								zCounter: addCounter,
+							});
+							setWindowState({
+								...statefulWindows,
+								code: {
+									...statefulWindows.code,
+									closed: false,
+									z: statefulWindows.zCounter,
+								},
+							});
+						}}>
+						<CodeIcon>
+							<img src={code} alt='code-icon' />
+							Ghibli Studio Code
+						</CodeIcon>
+					</button>
+					<button
+						onClick={(e) => {
+							e.stopPropagation();
+							const addCounter = statefulWindows.zCounter++;
+							setWindowState({
+								...statefulWindows,
+								zCounter: addCounter,
+							});
+							setWindowState({
+								...statefulWindows,
+								homepage: {
+									...statefulWindows.homepage,
+									closed: false,
+									z: statefulWindows.zCounter,
+								},
+							});
+						}}>
+						<FireFoxIcon>
+							<img src={firefox} alt='firefox-icon' />
+							Firefox
+						</FireFoxIcon>
+					</button>
+				</IconHolders>
 				<Terminal />
 				<VscodeContainer />
 				<MinimizedTab />

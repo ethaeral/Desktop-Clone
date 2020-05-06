@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const AppContainer = styled.div`
-
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
@@ -27,8 +26,6 @@ export const Background = styled.div`
 `;
 
 export const TerminalIcon = styled.div`
-	position: absolute;
-	top: 0;
 	margin: 1em;
 	display: flex;
 	flex-direction: column;
@@ -36,15 +33,23 @@ export const TerminalIcon = styled.div`
 	font-size: 0.7em;
 	justify-content: center;
 	align-items: center;
-	width: 5%;
+	width: 100%;
 	color: #dfdbd2;
 	display: flex;
-
+	text-align: center;
 	@media (max-width: 760px) {
 		display: none;
 	}
 	img {
 		width: 100%;
+	}
+`;
+
+export const CodeIcon = styled(TerminalIcon)``;
+
+export const FireFoxIcon = styled(TerminalIcon)`
+	@media (max-width: 760px) {
+		display: block;
 	}
 `;
 
@@ -65,15 +70,25 @@ export const BackgroundImage = styled.div`
 	}
 `;
 
-export const Credit = styled.div`	a {
-	position:absolute;
-	right: 0;
-	bottom:0;
-	text-decoration: none;
-	font-family: "Ubuntu";
-	font-size: 0.5em;
-	color: #000;
-	&:hover {
-		cursor: pointer;
+export const Credit = styled.div`
+	a {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		text-decoration: none;
+		font-family: "Ubuntu";
+		font-size: 0.5em;
+		color: #000;
+		&:hover {
+			cursor: pointer;
+		}
 	}
-}`
+`;
+
+export const IconHolders = styled.div`
+	position: absolute;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	width: 5%;
+`;

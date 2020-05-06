@@ -15,9 +15,11 @@ export const TabBox = styled.div`
 	border: 1px solid rgba(58, 57, 53, 1);
 	padding-right: 0.5em;
 	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+	text-overflow: ellipsis;
 `;
 
 export const TabButtonContainer = styled.div`
+	display: flex;
 	@media (max-width: 770px) {
 		display: none;
 	}
