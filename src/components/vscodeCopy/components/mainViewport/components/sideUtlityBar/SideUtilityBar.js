@@ -48,9 +48,15 @@ export default function SideUtilityBar() {
 		const newObj = {};
 		const newActiveState = Object.assign(allFalseActive, newObj);
 		newActiveState[property] = true;
+		const addCounter = statefulWindows.zCounter++;
+		setWindowState({
+			...setWindowState,
+			zCounter: addCounter,
+		});
 		setWindowState({
 			...statefulWindows,
 			sideNavActive: newActiveState,
+			code: { ...statefulWindows.code, z: statefulWindows.zCounter },
 		});
 	};
 	return (
