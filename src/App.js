@@ -65,8 +65,8 @@ function App() {
 			z: 0,
 		},
 		homepage: {
-			minimized: true,
-			maximized: false,
+			minimized: false,
+			maximized: true,
 			closed: false,
 			z: 1,
 		},
@@ -80,7 +80,7 @@ function App() {
 		<AppContainer>
 			<WindowsContext.Provider value={{ statefulWindows, setWindowState }}>
 				<StripeContainer />
-				<MobileWarning warning={warning} setWarning={setWarning}/>
+
 				<BackgroundImage>
 					<img src={mask} alt='princess mononoke mask' />
 				</BackgroundImage>
@@ -157,6 +157,7 @@ function App() {
 				<VscodeContainer />
 				<MinimizedTab />
 				<WebPageView />
+				<MobileWarning warning={warning} setWarning={setWarning}/>
 				<Credit>
 					<a href='https://icons8.com/'>Icon Credit - Icons8</a>
 				</Credit>
