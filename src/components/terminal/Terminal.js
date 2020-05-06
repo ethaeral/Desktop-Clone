@@ -22,8 +22,8 @@ export default function Terminal(props) {
 				});
 				setWindowState({
 					...statefulWindows,
-					code: {
-						...statefulWindows.code,
+					terminal: {
+						...statefulWindows.terminal,
 						z: statefulWindows.zCounter,
 					},
 				});
