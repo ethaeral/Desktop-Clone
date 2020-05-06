@@ -5,7 +5,7 @@ export const ModalTabControlContainer = styled.div`
 	.modalButton {
 		display: flex;
 	}
-	@media (max-width: 770px) {
+	@media (max-width: 767px) {
 		display: block;
 	}
 `;

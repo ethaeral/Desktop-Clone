@@ -36,8 +36,8 @@ export default function MobileWarning(props) {
 				<WarningContent>
 					<WarningText>
           <img src={Info} alt="info icon"/>
-						Unable to launch full application. Device does not meet requirement.
-						Resolution width must be larger than 760px.
+						Unable to load full application.
+						Resolution width must be larger than 767px.
 					</WarningText>
 					<button
 						className='cursor'

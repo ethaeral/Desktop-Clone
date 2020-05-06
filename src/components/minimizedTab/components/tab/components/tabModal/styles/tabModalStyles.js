@@ -10,7 +10,7 @@ export const TabModalContainer = styled.div`
 	display: none;
 	bottom: 0;
 	left: 0;
-	@media (max-width: 770px) {
+	@media (max-width: 767px) {
 		display: ${(props) => (props.isOpen ? "block" : "none")};
 	}
 `;
@@ -18,15 +18,15 @@ export const TabModalContainer = styled.div`
 export const OpenModalContainer = styled.div`
 	position: absolute;
 	bottom: 0;
-	left: 4.5em;
+	left: calc(50% - 4em - 110px);
 	height: 155px;
 	width: 200px;
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
 	align-items: flex-end;
-  margin-bottom: 0em;
-  transform:rotate(-45deg);
+	margin-bottom: 0em;
+	transform: rotate(-45deg);
 `;
 
 export const TopButton = styled.div`

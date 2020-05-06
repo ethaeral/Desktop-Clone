@@ -30,7 +30,7 @@ export const WindowOptions = styled.div`
 	height: 1.5em;
 	display: flex;
 	margin-right: 0.4em;
-	@media (max-width: 770px) {
+	@media (max-width: 767px) {
 		display: none;
 	}
 `;

@@ -4,11 +4,11 @@ export const WarningContainer = styled.div`
 	display: none;
 	position: absolute;
 	height: 50%;
-	width: 50%;
+	width: 80%;
 	top: 25%;
-	left: 25%;
+	left: 10%;
 	margin: 0 auto;
-	@media (max-width: 770px) {
+	@media (max-width: 767px) {
 		display: ${(props) => (props.shown ? "flex" : "none")};
 		justify-content: center;
 		align-items: center;
@@ -50,7 +50,8 @@ export const WarningText = styled.div`
 	display: flex;
 	padding: 5px;
 	img {
-		width: 80%;
-		height: 80%;
+		width: 200px;
+		height: 60px;
+		margin-right: 5px;
 	}
 `;

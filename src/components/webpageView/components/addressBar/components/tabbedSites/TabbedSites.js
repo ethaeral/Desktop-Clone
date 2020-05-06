@@ -17,6 +17,7 @@ import NewTab from "../../../../../../assets/webpage/newTab.png";
 export default function TabbedSites() {
 	const [counter, setCounter] = useState(["1"]);
 	const [active, setActive] = useState("");
+
 	useEffect(() => {
 		let lastNum = counter[counter.length - 1];
 		setActive(lastNum);
@@ -37,10 +38,10 @@ export default function TabbedSites() {
 				<NewTabIcon
 					onClick={async (e) => {
 						e.stopPropagation();
-						const nextNum = await parseInt(counter[counter.length - 1]) + 1;
+						const nextNum = (await parseInt(counter[counter.length - 1])) + 1;
 						await setCounter([...counter, nextNum.toString()]);
 						const el = await document.getElementById(`scroll`);
-						el.scrollTop=0;
+						el.scrollTop = 0;
 					}}
 					img={NewTab}
 				/>

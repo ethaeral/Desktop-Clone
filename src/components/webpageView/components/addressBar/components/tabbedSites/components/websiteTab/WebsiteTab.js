@@ -1,5 +1,5 @@
 // Libraries
-import React from "react";
+import React, {useContext} from "react";
 
 // Stlyes
 import {
@@ -20,7 +20,11 @@ import HoverX from "../../../../../../../../assets/webpage/hoverX.png";
 import Soot from "../../../../../../../../assets/webpage/soot.gif";
 
 
+//Context
+import WindowsContext from "../../../../../../../../modules/windowContext";
+
 export default function WebsiteTab(props) {
+	const { statefulWindows, setWindowState } = useContext(WindowsContext);
 	const { state, setCounter, item, setActive, isActive } = props;
 	return (
 		<SiteTabContainer
@@ -51,6 +55,18 @@ export default function WebsiteTab(props) {
 							e.stopPropagation();
 							const removeLast = state.slice(1, state.length);
 							setCounter(removeLast);
+							console.log(state)
+							if (state.length === 1){
+								setWindowState({
+									...statefulWindows,
+									homepage: {
+										...statefulWindows.hompage,
+										minimized: false,
+										maximized: false,
+										closed: true,
+									},
+								});
+							}
 						}}
 						img={DarkX}
 					/>
