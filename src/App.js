@@ -183,7 +183,6 @@ function App() {
 					message={"Feel free to look around. Bugs? Feedback? Let me know!"}
 					full={true}
 				/>
-
 				<Credit>
 					<a href='https://icons8.com/'>Icon Credit - Icons8</a>
 				</Credit>

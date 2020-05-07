@@ -1,11 +1,16 @@
-import React from 'react'
-import { Display } from './styles/codeDisplayStyles'
+import React from "react";
+import { Display } from "./styles/codeDisplayStyles";
+
+import CodeTab from "./components/codeTab/CodeTab";
+import DisplayCode from "./components/displayCode/DisplayCode";
 
 
 export default function CodeDisplay() {
-  return (
-    <Display>
-     CodeDisplay 
-    </Display>
-  )
+	return (
+		<Display>
+      <CodeTab/>
+      <DisplayCode/>
+	
+		</Display>
+	);
 }
