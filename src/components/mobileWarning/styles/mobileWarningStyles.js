@@ -7,12 +7,12 @@ export const WarningContainer = styled.div`
 	width: 80%;
 	max-width: 300px;
 	top: 25%;
-	left: calc(50% - 300px);
+	left: calc(50vw - 150px);
 	margin: 0 auto;
 	z-index: ${(props) => (props.full ? 6 : 0)};
 	@media (max-width: 767px) {
 		display: ${(props) => (props.shown ? "flex" : "none")};
-		left: calc(50% - 40%);
+		left: 10%;
 		justify-content: center;
 		align-items: center;
 	}
