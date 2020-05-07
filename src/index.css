@@ -106,7 +106,7 @@ section {
 	display: block;
 }
 body {
-	line-height: 1;
+	line-height: 1.2;
   background: rgb(37,39,51);
   background: linear-gradient(90deg, rgba(37,39,51,1) 0%, rgba(37,38,50,1) 100%);
 }

@@ -35,6 +35,7 @@ import MobileWarning from "./components/mobileWarning/MobileWarning";
 
 function App() {
 	const [warning, setWarning] = useState(true);
+	const [welcome, setWelcome] = useState(false);
 	const [statefulWindows, setWindowState] = useState({
 		zCounter: 1,
 		tabbedWindows: [],
@@ -83,9 +84,7 @@ function App() {
 			});
 		}, 10000);
 		setTimeout(function () {
-			alert(
-				"Feel free to click around - feedback and bug spotting is more than welcomed!"
-			);
+		setWelcome(true)
 		}, 10003);
 		// eslint-disable-next-line
 	}, []);
@@ -171,7 +170,20 @@ function App() {
 				<VscodeContainer />
 				<MinimizedTab />
 				<WebPageView />
-				<MobileWarning warning={warning} setWarning={setWarning} />
+				<MobileWarning
+					state={warning}
+					setState={setWarning}
+					message={
+						"Unable to load full application. Resolution width must be larger than 767px."
+					}
+				/>
+				<MobileWarning
+					state={welcome}
+					setState={setWelcome}
+					message={"Feel free to look around. Bugs? Feedback? Let me know!"}
+					full={true}
+				/>
+
 				<Credit>
 					<a href='https://icons8.com/'>Icon Credit - Icons8</a>
 				</Credit>

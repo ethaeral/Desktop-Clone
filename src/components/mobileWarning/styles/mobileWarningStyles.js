@@ -1,13 +1,15 @@
 import styled from "styled-components";
 
 export const WarningContainer = styled.div`
-	display: none;
+	display: ${(props) => (props.full && props.shown ? "flex" : "none")};
 	position: absolute;
 	height: 50%;
 	width: 80%;
+	max-width: 300px;
 	top: 25%;
-	left: 10%;
+	left: calc(50% - 300px);
 	margin: 0 auto;
+	z-index: ${(props) => (props.full ? 6 : 0)};
 	@media (max-width: 767px) {
 		display: ${(props) => (props.shown ? "flex" : "none")};
 		justify-content: center;
@@ -19,6 +21,7 @@ export const WarningPopUp = styled.div`
 	margin: 0 auto;
 	width: 100%;
 	height: 200px;
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 `;
 
 export const WarningContent = styled.div`
@@ -27,7 +30,7 @@ export const WarningContent = styled.div`
 	background: #f2f1f0;
 	padding: 5px;
 	display: flex;
-	height: 150px;
+	height: calc(200px - 2em);
 	flex-direction: column;
 	justify-content: space-between;
 	button {
@@ -42,6 +45,7 @@ export const WarningContent = styled.div`
 	}
 	.cursor {
 		cursor: pointer;
+		margin-right: 1em;
 	}
 `;
 
@@ -50,7 +54,7 @@ export const WarningText = styled.div`
 	display: flex;
 	padding: 5px;
 	img {
-		width: 200px;
+		width: 150px;
 		height: 60px;
 		margin-right: 5px;
 	}
