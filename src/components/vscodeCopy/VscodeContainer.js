@@ -41,7 +41,7 @@ export default function VscodeContainer(props) {
 				});
 			}}>
 			<WindowsBar
-				title={"currentFile.js - richannyNguonPortfolio - Ghibli Studio Code"}
+				title={"currentFile.js - richanyNguonPortfolio - Ghibli Studio Code"}
 				type={"code"}
 				tabbedTitle={"Ghibli Studio Code"}
 			/>
