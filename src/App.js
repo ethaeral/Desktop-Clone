@@ -32,6 +32,7 @@ import {
 import MinimizedTab from "./components/minimizedTab/MinimizedTab";
 import WebPageView from "./components/webpageView/WebPageView";
 import MobileWarning from "./components/mobileWarning/MobileWarning";
+import Draggable from "./components/draggable/Draggable";
 
 function App() {
 	const [warning, setWarning] = useState(true);
@@ -76,6 +77,7 @@ function App() {
 			tabbedBar: false,
 		},
 	});
+
 	useEffect(() => {
 		setTimeout(function () {
 			setWindowState({
@@ -166,10 +168,31 @@ function App() {
 						</FireFoxIcon>
 					</button>
 				</IconHolders>
-				<Terminal />
-				<VscodeContainer />
+
+				<Draggable
+					component={Terminal}
+					z={statefulWindows.terminal.z}
+					state={statefulWindows}
+					setState={setWindowState}
+					type={"terminal"}
+				/>
+				<Draggable
+					component={VscodeContainer}
+					z={statefulWindows.code.z}
+					state={statefulWindows}
+					setState={setWindowState}
+					type={"code"}
+				/>
+
+				<Draggable
+					component={WebPageView}
+					z={statefulWindows.homepage.z}
+					state={statefulWindows}
+					setState={setWindowState}
+					type={"homepage"}
+				/>
 				<MinimizedTab />
-				<WebPageView />
+
 				<MobileWarning
 					state={warning}
 					setState={setWarning}
@@ -177,6 +200,7 @@ function App() {
 						"Unable to load full application. Resolution width must be larger than 767px."
 					}
 				/>
+
 				<MobileWarning
 					state={welcome}
 					setState={setWelcome}

@@ -4,15 +4,14 @@ export const CodeContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	position: absolute;
-	top: 0;
+	top: ${props=>props.y};
 	bottom: 0;
-	left: 0;
+	left: ${props=>props.x};
 	right: 0;
 	margin: auto;
 	width: ${(props) => (props.maximized ? "100%" : "85vw")};
 	height: ${(props) => (props.maximized ? "100%" : "85vh")};
 	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
-	z-index: ${(props) => props.z};
 	visibility: ${(props) => (props.hidden ? "hidden" : "visible")};
 	overflow: hidden;
 

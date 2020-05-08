@@ -11,6 +11,7 @@ export const Bar = styled.div`
 	border-radius: 0.35em 0.35em 0em 0em;
 	height: 2em;
 	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.02);
+	cursor: grab;
 `;
 export const Title = styled.div`
 	padding: 0em 2em 0em 2em;

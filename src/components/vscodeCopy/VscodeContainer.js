@@ -1,5 +1,5 @@
 // Libraries
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 
 // Components
 import BottomUtilityBar from "./components/bottomUtilityBar/BottomUtilityBar";
@@ -17,11 +17,15 @@ export default function VscodeContainer(props) {
 	const { statefulWindows, setWindowState } = useContext(WindowsContext);
 	return (
 		<CodeContainer
-		none={props.none}
+			ref={props.reference}
+			x={statefulWindows.code.x}
+			y={statefulWindows.code.y}
+			none={props.none}
 			hidden={statefulWindows.code.minimized || statefulWindows.code.closed}
 			maximized={statefulWindows.code.maximized}
 			z={statefulWindows.code.z}
 			onClick={() => {
+			
 				const addCounter = statefulWindows.zCounter++;
 				setWindowState({
 					...setWindowState,

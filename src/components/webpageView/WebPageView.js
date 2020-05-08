@@ -16,6 +16,7 @@ export default function WebPageView(props) {
 	const { statefulWindows, setWindowState } = useContext(WindowsContext);
 	return (
 		<PageContainer
+			ref={props.reference}
 			hidden={
 				statefulWindows.homepage.minimized || statefulWindows.homepage.closed
 			}

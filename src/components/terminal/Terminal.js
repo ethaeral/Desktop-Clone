@@ -9,6 +9,7 @@ export default function Terminal(props) {
 	const { statefulWindows, setWindowState } = useContext(WindowsContext);
 	return (
 		<Window
+		ref={props.reference}
 			none={props.none}
 			hidden={
 				statefulWindows.terminal.minimized || statefulWindows.terminal.closed
