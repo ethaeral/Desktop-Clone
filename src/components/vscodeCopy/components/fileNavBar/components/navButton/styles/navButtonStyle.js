@@ -36,6 +36,7 @@ export const OptionButton = styled.p`
 	display: flex;
 	align-items: center;
 	padding-left: 0.5em;
+	padding-right: 0.5em;
 	padding-top: 0.5em;
 	cursor: pointer;
 `;
