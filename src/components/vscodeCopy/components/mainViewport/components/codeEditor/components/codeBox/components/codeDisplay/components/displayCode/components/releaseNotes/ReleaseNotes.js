@@ -16,7 +16,10 @@ export default function ReleaseNotes() {
 				<hr />
 				<H4>
 					Update 0.01: In progress intial release canvas,{" "}
-					<a href='https://trello.com/b/RjEB8dt6/desktop-portfolio'>
+					<a
+						href='https://trello.com/b/RjEB8dt6/desktop-portfolio'
+						rel="noopener noreferrer"
+						target='_blank'>
 						Check out my Trello board
 					</a>
 				</H4>

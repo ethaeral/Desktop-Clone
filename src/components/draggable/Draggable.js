@@ -2,21 +2,24 @@ import React, { useEffect, useRef, useState } from "react";
 import { DragContainer } from "./styles/draggableStyles";
 
 export default function Draggable(props) {
-	const { z, state, setState, type } = props;
 	const childRef = useRef(null);
 	const parentRef = useRef(null);
+	
 	const [dimensions, setDemensions] = useState({ height: null, width: null });
-	const [mousePos, setMousePos] = useState({ x: null, y: null });
-	const { height, width } = dimensions;
 	const [position, setPosition] = useState({ x: 0, y: 0 });
+	const [mousePos, setMousePos] = useState({ x: null, y: null });
+	
+	const { z, state, setState, type } = props;
+	const { maximized } = state[type];
+	const { height, width } = dimensions;
 	const { x, y } = position;
+
 	const cursorX = document.documentElement.scrollLeft
 		? document.documentElement.scrollLeft
 		: document.body.scrollLeft;
 	const cursorY = document.documentElement.scrollTop
 		? document.documentElement.scrollTop
 		: document.body.scrollTop;
-	const { maximized } = state[type];
 
 	useEffect(() => {
 		if (childRef.current) {
