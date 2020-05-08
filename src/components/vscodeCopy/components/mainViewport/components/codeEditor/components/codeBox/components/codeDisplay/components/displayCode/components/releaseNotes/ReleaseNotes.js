@@ -14,7 +14,12 @@ export default function ReleaseNotes() {
 			<ReleaseContentContainer>
 				<H2>March 2020 (version beta 0.01)</H2>
 				<hr />
-				<H4>Update 0.01: In progress intial release canvas</H4>
+				<H4>
+					Update 0.01: In progress intial release canvas,{" "}
+					<a href='https://trello.com/b/RjEB8dt6/desktop-portfolio'>
+						Check out my Trello board
+					</a>
+				</H4>
 				<hr />
 				<H4>
 					{" "}
@@ -41,20 +46,23 @@ export default function ReleaseNotes() {
 							control which program they would like to have "launched" and which
 							they would like to view.
 						</H4>
+						<li>
+							<H4>Draggable windows</H4>
+						</li>
 					</li>
 				</ul>
 				<H4 bold>Complete release looks like:</H4>
 				<ul>
 					<li>
 						<H4>
-							Fully Fucntioning Terminal: Terminal will take commands like help,
+							Fully Functioning Terminal: Terminal will take commands like help,
 							code, firefox, contact, exit. File options that are highlighted
 							will be functional
 						</H4>
 					</li>
 					<li>
 						<H4>
-							Fully Fucntioning Studio Ghibli Code: Users are able to search for
+							Fully Functioning Studio Ghibli Code: Users are able to search for
 							projects with key words and dependencies, see current projects
 							that are in progress, able to report bugs and offer suggestions,
 							able to view extensions, browse through project folder, view
@@ -62,9 +70,7 @@ export default function ReleaseNotes() {
 							functional terminal actions
 						</H4>
 					</li>
-					<li>
-						<H4>Moveable and resizable windows: maybe just moveable for now</H4>
-					</li>
+
 					<li>
 						<H4>Tool tip generation at cursor position</H4>
 					</li>

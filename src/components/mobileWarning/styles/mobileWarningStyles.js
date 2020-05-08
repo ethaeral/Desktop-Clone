@@ -10,6 +10,9 @@ export const WarningContainer = styled.div`
 	left: calc(50vw - 150px);
 	margin: 0 auto;
 	z-index: ${(props) => (props.full ? 6 : 0)};
+	button {
+		margin-right: 10px;
+	}
 	@media (max-width: 767px) {
 		display: ${(props) => (props.shown ? "flex" : "none")};
 		left: 10%;

@@ -1,5 +1,5 @@
 // Libraries
-import React, {useContext} from "react";
+import React from "react";
 
 // Stlyes
 import {
@@ -9,9 +9,8 @@ import {
 	LowerContent,
 	RemoveTab,
 	TitleContainer,
-	TitleText
+	TitleText,
 } from "./styles/websiteTabStyles";
-
 
 // Assets
 import ActiveX from "../../../../../../../../assets/webpage/activeX.png";
@@ -19,13 +18,16 @@ import DarkX from "../../../../../../../../assets/webpage/darkX.png";
 import HoverX from "../../../../../../../../assets/webpage/hoverX.png";
 import Soot from "../../../../../../../../assets/webpage/soot.gif";
 
-
-//Context
-import WindowsContext from "../../../../../../../../modules/windowContext";
-
 export default function WebsiteTab(props) {
-	const { statefulWindows, setWindowState } = useContext(WindowsContext);
-	const { state, setCounter, item, setActive, isActive } = props;
+	const {
+		state,
+		item,
+		setActive,
+		isActive,
+		setWindowState,
+		statefulWindows,
+	} = props;
+
 	return (
 		<SiteTabContainer
 			img={DarkX}
@@ -45,8 +47,8 @@ export default function WebsiteTab(props) {
 					isActive={isActive}
 				/>
 				<TitleContainer isActive={isActive}>
-					<TitleText >
-						<img src={Soot} alt="soot spirit from spirited away"/>
+					<TitleText>
+						<img src={Soot} alt='soot spirit from spirited away' />
 						Richany Nguon
 					</TitleText>
 					<RemoveTab
@@ -54,9 +56,8 @@ export default function WebsiteTab(props) {
 						onClick={(e) => {
 							e.stopPropagation();
 							const removeLast = state.slice(1, state.length);
-							setCounter(removeLast);
-							console.log(state)
-							if (state.length === 1){
+							setWindowState({ ...statefulWindows, firefoxTabs: removeLast });
+							if (state.length === 1) {
 								setWindowState({
 									...statefulWindows,
 									homepage: {

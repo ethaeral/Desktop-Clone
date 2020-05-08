@@ -1,5 +1,5 @@
 // Libraries
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 
 // Styles
 import {
@@ -14,21 +14,24 @@ import WebsiteTab from "./components/websiteTab/WebsiteTab";
 // Assets
 import NewTab from "../../../../../../assets/webpage/newTab.png";
 
-export default function TabbedSites() {
-	const [counter, setCounter] = useState(["1"]);
-	const [active, setActive] = useState("");
+import WindowsContext from "../../../../../../modules/windowContext";
 
+export default function TabbedSites() {
+	const [active, setActive] = useState("");
+	const { statefulWindows, setWindowState } = useContext(WindowsContext);
+	const { firefoxTabs } = statefulWindows;
 	useEffect(() => {
-		let lastNum = counter[counter.length - 1];
+		let lastNum = firefoxTabs[firefoxTabs.length - 1];
 		setActive(lastNum);
-	}, [counter]);
+	}, [firefoxTabs]);
 	return (
 		<TabSiteContainer>
-			{counter.map((item) => (
+			{firefoxTabs.map((item) => (
 				<WebsiteTab
 					key={item}
-					state={counter}
-					setCounter={setCounter}
+					state={firefoxTabs}
+					setWindowState={setWindowState}
+					statefulWindows={statefulWindows}
 					setActive={setActive}
 					isActive={active === item}
 					item={item}
@@ -38,8 +41,12 @@ export default function TabbedSites() {
 				<NewTabIcon
 					onClick={async (e) => {
 						e.stopPropagation();
-						const nextNum = (await parseInt(counter[counter.length - 1])) + 1;
-						await setCounter([...counter, nextNum.toString()]);
+						const nextNum =
+							(await parseInt(firefoxTabs[firefoxTabs.length - 1])) + 1;
+						await setWindowState({
+							...statefulWindows,
+							firefoxTabs: [...statefulWindows.firefoxTabs, nextNum.toString()],
+						});
 						const el = await document.getElementById(`scroll`);
 						el.scrollTop = 0;
 					}}

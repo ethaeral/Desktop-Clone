@@ -80,7 +80,7 @@ export default function BottomUtilityBar() {
 				<Icon>
 					<img src={twitterIssue} alt='twitter issue icon' />
 					<ToolTipOverflow>
-						<ToolTipContainer overflow={"true"}>Tweet Feeback</ToolTipContainer>
+						<ToolTipContainer overflow={"true"}>Tweet Feedback</ToolTipContainer>
 					</ToolTipOverflow>
 				</Icon>
 				<Icon>

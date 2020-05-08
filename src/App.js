@@ -39,6 +39,7 @@ function App() {
 	const [welcome, setWelcome] = useState(false);
 	const [statefulWindows, setWindowState] = useState({
 		zCounter: 1,
+		firefoxTabs: ["1"],
 		tabbedWindows: [],
 		projects: allProjects.filter((project) => project.nonWeb === false),
 		exts: allProjects.filter((project) => project.isExt === true),
@@ -80,14 +81,9 @@ function App() {
 
 	useEffect(() => {
 		setTimeout(function () {
-			setWindowState({
-				...statefulWindows,
-				homepage: { ...statefulWindows.homepage, maximized: false },
-			});
-		}, 10000);
-		setTimeout(function () {
-		setWelcome(true)
+			setWelcome(true);
 		}, 10003);
+
 		// eslint-disable-next-line
 	}, []);
 
@@ -147,11 +143,15 @@ function App() {
 					</button>
 					<button
 						onClick={(e) => {
+							let {firefoxTabs, zCounter} = statefulWindows
 							e.stopPropagation();
-							const addCounter = statefulWindows.zCounter++;
+							const nextNum =parseInt(firefoxTabs[firefoxTabs.length - 1]) + 1;
+		
+							const addCounter = zCounter++;
 							setWindowState({
 								...statefulWindows,
 								zCounter: addCounter,
+								firefoxTabs: [...firefoxTabs, nextNum.toString()],
 							});
 							setWindowState({
 								...statefulWindows,
@@ -204,7 +204,7 @@ function App() {
 				<MobileWarning
 					state={welcome}
 					setState={setWelcome}
-					message={"Feel free to look around. Bugs? Feedback? Let me know!"}
+					message={"The curious are always the most rewarded..."}
 					full={true}
 				/>
 				<Credit>
