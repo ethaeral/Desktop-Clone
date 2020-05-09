@@ -49,10 +49,11 @@ export default function ReleaseNotes() {
 							control which program they would like to have "launched" and which
 							they would like to view.
 						</H4>
-						<li>
+			
+					</li>
+								<li>
 							<H4>Draggable windows</H4>
 						</li>
-					</li>
 				</ul>
 				<H4 bold>Complete release looks like:</H4>
 				<ul>

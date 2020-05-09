@@ -4,13 +4,13 @@ import { DragContainer } from "./styles/draggableStyles";
 export default function Draggable(props) {
 	const childRef = useRef(null);
 	const parentRef = useRef(null);
-	
+
 	const [dimensions, setDemensions] = useState({ height: null, width: null });
 	const [position, setPosition] = useState({ x: 0, y: 0 });
 	const [mousePos, setMousePos] = useState({ x: null, y: null });
-	
+
 	const { z, state, setState, type } = props;
-	const { maximized } = state[type];
+	const { maximized, minimized } = state[type];
 	const { height, width } = dimensions;
 	const { x, y } = position;
 
@@ -20,9 +20,9 @@ export default function Draggable(props) {
 	const cursorY = document.documentElement.scrollTop
 		? document.documentElement.scrollTop
 		: document.body.scrollTop;
-
+	const atBreakpoint = window.innerWidth < 767;
 	useEffect(() => {
-		if (childRef.current) {
+		if (childRef.current && !maximized && !atBreakpoint) {
 			const height = childRef.current.offsetHeight;
 			const width = childRef.current.offsetWidth;
 			setDemensions({ height, width });
@@ -30,7 +30,7 @@ export default function Draggable(props) {
 			const midPosY = window.innerHeight / 2 - height / 2;
 			setPosition({ x: midPosX, y: midPosY });
 		}
-	}, [childRef, maximized]);
+	}, [childRef, maximized, minimized, atBreakpoint]);
 
 	return (
 		<DragContainer
