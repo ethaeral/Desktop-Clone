@@ -51,8 +51,12 @@ export default function Draggable(props) {
 					x: e.clientX + cursorX,
 					y: e.clientY + cursorY,
 				});
-				setState({ ...state, zCounter: state.zCounter + 1 });
-				setState({ ...state, [type]: { ...state[type], z: state.zCounter } });
+				const newCounter = state.zCounter + 1;
+				setState({
+					...state,
+					zCounter: newCounter,
+					[type]: { ...state[type], z: newCounter },
+				});
 			}}
 			onDragEnd={(e) => {
 				const deltaX = e.clientX + cursorX - mousePos.x;

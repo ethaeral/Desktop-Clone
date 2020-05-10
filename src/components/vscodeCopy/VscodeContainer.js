@@ -25,17 +25,14 @@ export default function VscodeContainer(props) {
 			maximized={statefulWindows.code.maximized}
 			z={statefulWindows.code.z}
 			onClick={() => {
-			
 				const addCounter = statefulWindows.zCounter++;
-				setWindowState({
-					...setWindowState,
-					zCounter: addCounter,
-				});
+
 				setWindowState({
 					...statefulWindows,
+					zCounter: addCounter,
 					code: {
 						...statefulWindows.code,
-						z: statefulWindows.zCounter,
+						z: addCounter,
 					},
 					sideNavActive: { ...statefulWindows.sideNavActive, setting: false },
 				});

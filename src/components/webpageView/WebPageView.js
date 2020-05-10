@@ -24,15 +24,13 @@ export default function WebPageView(props) {
 			z={statefulWindows.homepage.z}
 			onClick={() => {
 				const addCounter = statefulWindows.zCounter++;
-				setWindowState({
-					...setWindowState,
-					zCounter: addCounter,
-				});
+
 				setWindowState({
 					...statefulWindows,
+					zCounter: addCounter,
 					homepage: {
 						...statefulWindows.homepage,
-						z: statefulWindows.zCounter,
+						z: addCounter,
 					},
 				});
 			}}>
@@ -43,7 +41,6 @@ export default function WebPageView(props) {
 			/>
 			<AddressBar />
 			<MainContentWebPage state={statefulWindows.homepage} />
-			
 		</PageContainer>
 	);
 }

@@ -102,13 +102,10 @@ function App() {
 							setWindowState({
 								...statefulWindows,
 								zCounter: addCounter,
-							});
-							setWindowState({
-								...statefulWindows,
 								terminal: {
 									...statefulWindows.terminal,
 									closed: false,
-									z: statefulWindows.zCounter,
+									z: addCounter,
 								},
 							});
 						}}>
@@ -124,13 +121,10 @@ function App() {
 							setWindowState({
 								...statefulWindows,
 								zCounter: addCounter,
-							});
-							setWindowState({
-								...statefulWindows,
 								code: {
 									...statefulWindows.code,
 									closed: false,
-									z: statefulWindows.zCounter,
+									z: addCounter,
 								},
 							});
 						}}>
@@ -141,22 +135,18 @@ function App() {
 					</button>
 					<button
 						onClick={(e) => {
-							let {firefoxTabs, zCounter} = statefulWindows
+							let { firefoxTabs, zCounter } = statefulWindows;
 							e.stopPropagation();
-							const nextNum =parseInt(firefoxTabs[firefoxTabs.length - 1]) + 1;
-		
+							const nextNum = parseInt(firefoxTabs[firefoxTabs.length - 1]) + 1;
 							const addCounter = zCounter++;
 							setWindowState({
 								...statefulWindows,
 								zCounter: addCounter,
 								firefoxTabs: [...firefoxTabs, nextNum.toString()],
-							});
-							setWindowState({
-								...statefulWindows,
 								homepage: {
 									...statefulWindows.homepage,
 									closed: false,
-									z: statefulWindows.zCounter,
+									z: addCounter,
 								},
 							});
 						}}>
