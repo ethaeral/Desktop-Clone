@@ -3,4 +3,3 @@ export const bookMarks=[
   {title:"Skills", id:"skills"},
   {title:"Projects", id:"projects"},
 ]
-// {title:"Contact", id:"contact"},

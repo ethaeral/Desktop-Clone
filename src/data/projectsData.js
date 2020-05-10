@@ -597,14 +597,13 @@ export const allProjects = [
 				"A predictive model using multi-variable linear regression to predict house values based on features using boston housing data used for a study to determine if air pollution affected house prices. Credit: https://www.udemy.com/course/python-data-science-machine-learning-bootcamp/ ",
 		},
 		techStack: ["Python", "Flask"],
-		linkDeployed: undefined,
-		linkGithub: undefined,
+
 		contributions: [
 			"Clean data and remove entries with missing data,calculated  feature correlation, probability values, multicollinearity, and calculated bayesian information criterion - data included quantitative and qualitative information",
 			"Check for normality in distribution of residuals and Determine standard deviation in predicted results ",
 			"Created flask backend to host the model",
 		],
-		media: undefined,
+
 		codeSnippet: "",
 		date: "12/27/19",
 		role: "Data Scientist / Data Engineer",
