@@ -21,8 +21,9 @@ export default function Draggable(props) {
 		? document.documentElement.scrollTop
 		: document.body.scrollTop;
 	const atBreakpoint = window.innerWidth < 767;
+
 	useEffect(() => {
-		if (childRef.current && !maximized && !atBreakpoint) {
+		if (childRef.current  && !atBreakpoint) {
 			const height = childRef.current.offsetHeight;
 			const width = childRef.current.offsetWidth;
 			setDemensions({ height, width });
