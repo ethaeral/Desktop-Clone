@@ -38,6 +38,9 @@ export default function Draggable(props) {
 			const midPosY = halfVH - height / 1.5;
 			setPosition({ x: midPosX, y: midPosY });
 		}
+		if (maximized) {
+			setPosition({ x: 0, y: 0 });
+		}
 	}, [childRef, maximized, minimized, atBreakpoint, closed]);
 	return (
 		<DragContainer
