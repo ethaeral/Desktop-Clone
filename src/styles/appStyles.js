@@ -16,6 +16,7 @@ export const AppContainer = styled.div`
 		margin: 0.3em 0.1em 0.3em 0em;
 	}
 	overflow: hidden;
+
 `;
 
 export const Background = styled.div`
@@ -23,6 +24,7 @@ export const Background = styled.div`
 	width: 100%;
 	position: absolute;
 	background: rgba(0, 0, 0, 0.03);
+
 `;
 
 export const TerminalIcon = styled.div`
@@ -39,6 +41,7 @@ export const TerminalIcon = styled.div`
 	text-align: center;
 	@media (max-width: 760px) {
 		display: none;
+
 	}
 	img {
 		width: 100%;
@@ -50,6 +53,7 @@ export const CodeIcon = styled(TerminalIcon)``;
 export const FireFoxIcon = styled(TerminalIcon)`
 	@media (max-width: 760px) {
 		display: block;
+
 	}
 `;
 

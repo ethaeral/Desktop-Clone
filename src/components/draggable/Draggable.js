@@ -10,7 +10,7 @@ export default function Draggable(props) {
 	const [mousePos, setMousePos] = useState({ x: null, y: null });
 
 	const { z, state, setState, type } = props;
-	const { maximized, minimized } = state[type];
+	const { maximized, minimized, closed } = state[type];
 	const { height, width } = dimensions;
 	const { x, y } = position;
 
@@ -23,16 +23,22 @@ export default function Draggable(props) {
 	const atBreakpoint = window.innerWidth < 767;
 
 	useEffect(() => {
-		if (childRef.current  && !atBreakpoint) {
-			const height = childRef.current.offsetHeight;
-			const width = childRef.current.offsetWidth;
-			setDemensions({ height, width });
-			const midPosX = window.innerWidth / 2 - width / 2;
-			const midPosY = window.innerHeight / 2 - height / 2;
+		const height = childRef.current.offsetHeight;
+		const width = childRef.current.offsetWidth;
+		const halfVW = window.innerWidth / 2;
+		const halfVH = window.innerHeight / 2;
+		setDemensions({ height, width });
+		if (childRef.current && !atBreakpoint) {
+			const midPosX = halfVW - width / 2;
+			const midPosY = halfVH - height / 2;
 			setPosition({ x: midPosX, y: midPosY });
 		}
-	}, [childRef, maximized, minimized, atBreakpoint]);
-
+		if (atBreakpoint && !maximized) {
+			const midPosX = halfVW - width / 1.5;
+			const midPosY = halfVH - height / 1.5;
+			setPosition({ x: midPosX, y: midPosY });
+		}
+	}, [childRef, maximized, minimized, atBreakpoint, closed]);
 	return (
 		<DragContainer
 			ref={parentRef}

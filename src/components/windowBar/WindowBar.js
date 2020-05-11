@@ -22,7 +22,22 @@ export default function WindowControls(props) {
 	const { title, type, tabbedTitle } = props;
 
 	return (
-		<Bar>
+		<Bar
+			onDoubleClick={(e) => {
+				e.stopPropagation();
+				const addCounter = statefulWindows.zCounter++;
+				setWindowState({
+					...statefulWindows,
+					zCounter: addCounter,
+					[type]: {
+						...[type],
+						maximized: !statefulWindows[type].maximized,
+						minimized: false,
+						closed: false,
+						z: addCounter,
+					},
+				});
+			}}>
 			<Title>{title}</Title>
 			<ControlModal
 				statefulWindows={statefulWindows}
@@ -58,17 +73,14 @@ export default function WindowControls(props) {
 						e.stopPropagation();
 						const addCounter = statefulWindows.zCounter++;
 						setWindowState({
-							...setWindowState,
-							zCounter: addCounter,
-						});
-						setWindowState({
 							...statefulWindows,
+							zCounter: addCounter,
 							[type]: {
 								...[type],
 								maximized: !statefulWindows[type].maximized,
 								minimized: false,
 								closed: false,
-								z: statefulWindows.zCounter,
+								z: addCounter,
 							},
 						});
 					}}>
