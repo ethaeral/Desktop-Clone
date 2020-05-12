@@ -42,7 +42,7 @@ export default function Draggable(props) {
 			setPosition({ x: 0, y: 0 });
 		}
 	}, [childRef, maximized, minimized, atBreakpoint, closed]);
-	
+
 	return (
 		<DragContainer
 			ref={parentRef}
@@ -54,6 +54,14 @@ export default function Draggable(props) {
 			x={x}
 			y={y}
 			z={z}
+			onClick={() => {
+				const newCounter = state.zCounter + 1;
+				setState({
+					...state,
+					zCounter: newCounter,
+					[type]: { ...state[type], z: newCounter },
+				});
+			}}
 			onDragStart={(e) => {
 				const crt = e.target.cloneNode(true);
 				crt.style.opacity = 1;
