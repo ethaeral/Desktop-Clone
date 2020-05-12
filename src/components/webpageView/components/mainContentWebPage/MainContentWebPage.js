@@ -23,11 +23,11 @@ import {
 // Components
 import SiteContent from "./components/siteContent/SiteContent";
 
-
 export default function MainContentWebPaged(props) {
+	const { state, counter } = props;
 	return (
-		<StripedContainer id='scroll' >
-			<SiteContent state={props.state} />
+		<StripedContainer id='scroll' isActive={state.z === counter}>
+			<SiteContent state={state} />
 			<UpperContainer>
 				<DarkBlueTop>
 					<WhiteTop>

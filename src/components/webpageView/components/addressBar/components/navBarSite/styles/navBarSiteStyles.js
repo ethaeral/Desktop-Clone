@@ -19,5 +19,5 @@ export const NavBarSiteContainer = styled.div`
 	@media (max-width: 580px) {
 		height: 50%;
 	}
-	
+
 `;

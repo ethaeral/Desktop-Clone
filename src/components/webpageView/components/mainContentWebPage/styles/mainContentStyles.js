@@ -7,6 +7,25 @@ export const StripedContainer = styled.div`
 	overflow-y: scroll;
 	background: #fff;
 	overflow-x: hidden;
+	&::-webkit-scrollbar {
+		width: 10px;
+	}
+	&::-webkit-scrollbar-track {
+		background: #f2f1f0;
+	}
+	&::-webkit-scrollbar-thumb {
+		background: ${(props) => (props.isActive ? "#f0895f" : "#bebdbd")};
+		border-style: solid;
+		border-width: 0px 0px 0px 5px;
+		border-color: #f2f1f0;
+		&:hover {
+			border-width: 0px 0px 0px 3px;
+		}
+	}
+
+	border-color: #0c0c0d;
+	border-style: solid;
+	border-width: 1px 0px 0px 0px;
 `;
 
 export const UpperContainer = styled.div`
