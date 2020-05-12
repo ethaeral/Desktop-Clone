@@ -22,6 +22,15 @@ export default function Draggable(props) {
 		: document.body.scrollTop;
 	const atBreakpoint = window.innerWidth < 767;
 
+	const makeActive = () => {
+		const newCounter = state.zCounter + 1;
+		setState({
+			...state,
+			zCounter: newCounter,
+			[type]: { ...state[type], z: newCounter },
+		});
+	};
+
 	useEffect(() => {
 		const height = childRef.current.offsetHeight;
 		const width = childRef.current.offsetWidth;
@@ -55,12 +64,7 @@ export default function Draggable(props) {
 			y={y}
 			z={z}
 			onClick={() => {
-				const newCounter = state.zCounter + 1;
-				setState({
-					...state,
-					zCounter: newCounter,
-					[type]: { ...state[type], z: newCounter },
-				});
+				makeActive();
 			}}
 			onDragStart={(e) => {
 				const crt = e.target.cloneNode(true);
@@ -70,12 +74,7 @@ export default function Draggable(props) {
 					x: e.clientX + cursorX,
 					y: e.clientY + cursorY,
 				});
-				const newCounter = state.zCounter + 1;
-				setState({
-					...state,
-					zCounter: newCounter,
-					[type]: { ...state[type], z: newCounter },
-				});
+				makeActive();
 			}}
 			onDragEnd={(e) => {
 				const deltaX = e.clientX + cursorX - mousePos.x;
