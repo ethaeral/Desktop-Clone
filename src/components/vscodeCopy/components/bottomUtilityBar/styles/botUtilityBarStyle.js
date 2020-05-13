@@ -16,36 +16,3 @@ export const IconHolder = styled.div`
 	overflow: hidden;
 	align-items: center;
 `;
-
-export const Icon = styled.div`
-	margin-left: 1em;
-	display: flex;
-	align-items: center;
-	img {
-		margin-right: 0.3em;
-	}
-	&:hover {
-		span {
-			visibility: visible;
-		}
-	}
-`;
-
-export const ToolTip = styled.span`
-	visibility: hidden;
-	position: absolute;
-`;
-
-export const ToolTipOverflow = styled(ToolTip)`
-	right: 0;
-`;
-
-export const ToolTipContainer = styled.div`
-	background: black;
-	color: white;
-	width: 100%;
-	margin-left: ${(props) => (props.overflow ? 0 : "10%")};
-	margin-bottom: 20%;
-	padding: 0.25em;
-	border: 1px solid white;
-`;

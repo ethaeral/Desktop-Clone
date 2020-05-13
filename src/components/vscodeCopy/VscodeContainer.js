@@ -17,6 +17,7 @@ export default function VscodeContainer(props) {
 	const { statefulWindows, setWindowState } = useContext(WindowsContext);
 	return (
 		<CodeContainer
+		 className="vscode"
 			ref={props.reference}
 			x={statefulWindows.code.x}
 			y={statefulWindows.code.y}
