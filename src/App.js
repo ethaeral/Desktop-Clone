@@ -69,8 +69,8 @@ function App() {
 		},
 		homepage: {
 			minimized: false,
-			maximized: true,
-			closed: false,
+			maximized: false,
+			closed: true,
 			z: 1,
 		},
 		modalIsOpen: {
@@ -79,11 +79,11 @@ function App() {
 		},
 	});
 
-	useEffect(() => {
-		setTimeout(function () {
-			setWelcome(true);
-		}, 10003);
-	}, []);
+	// useEffect(() => {
+	// 	setTimeout(function () {
+	// 		setWelcome(true);
+	// 	}, 10003);
+	// }, []);
 
 	return (
 		<AppContainer>

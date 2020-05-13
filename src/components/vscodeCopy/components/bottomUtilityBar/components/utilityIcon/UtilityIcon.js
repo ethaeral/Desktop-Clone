@@ -24,9 +24,9 @@ export default function UtilityIcon(props) {
 				? offsetLeft + e.pageX - icon.left
 				: offsetWidth - tipWidth;
 		const y =
-			offsetTop + e.pageY - icon.top - 15 < offsetHeight - 50
-				? offsetTop + e.pageY - icon.top - 15
-				: offsetHeight - 50;
+			offsetTop + e.pageY - icon.top - 25 < offsetHeight
+				? offsetTop + e.pageY - icon.top - 25
+				: offsetHeight;
 		setMousePos({ x, y });
 	};
 
