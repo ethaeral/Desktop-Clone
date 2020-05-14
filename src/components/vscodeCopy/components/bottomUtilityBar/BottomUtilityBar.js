@@ -7,7 +7,7 @@ import notifcations from "../../../../assets/notifcations.png";
 import problems from "../../../../assets/problems.png";
 import sync from "../../../../assets/sync.png";
 import twitterIssue from "../../../../assets/twitterIssue.png";
-import UtilityIcon from "./components/utilityIcon/UtilityIcon";
+import UtilityIcon from "../utilityIcon/UtilityIcon";
 
 export default function BottomUtilityBar() {
 	const today = new Date();

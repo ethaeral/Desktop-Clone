@@ -1,10 +1,11 @@
 import React, { useState, useRef } from "react";
 import { UtilityIconContainer } from "./styles/utilityIconStyles";
-import CodeToolTip from "../../../codeToolTip/CodeToolTip";
-import { FunctionContainer } from "../../../codeToolTip/styles/toolTipStyles";
+import CodeToolTip from "../codeToolTip/CodeToolTip";
+import { FunctionContainer } from "../codeToolTip/styles/toolTipStyles";
+import ActiveInactiveIcon from "./components/activeInactiveIcon/ActiveInactiveIcon";
 
 export default function UtilityIcon(props) {
-	const { message, src, alt, title } = props;
+	const { message, image, active, hover, isActive, onClickFunc, title } = props;
 
 	const [mousePos, setMousePos] = useState({ x: null, y: null });
 	const [visible, setVisible] = useState(false);
@@ -43,7 +44,17 @@ export default function UtilityIcon(props) {
 					e.stopPropagation();
 					setVisible(false);
 				}}>
-				{src ? <img src={src} alt={alt} /> : ""}
+				{image ? (
+					<ActiveInactiveIcon
+						onClickFunc={onClickFunc}
+						image={image}
+						active={active}
+						hover={hover}
+						isActive={isActive}
+					/>
+				) : (
+					""
+				)}
 				{title ? title : ""}
 			</UtilityIconContainer>
 			<CodeToolTip message={message} x={x} y={y} visible={visible} />

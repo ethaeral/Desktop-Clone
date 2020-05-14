@@ -4,7 +4,7 @@ import { CodeTabBar } from './styles/codeTabStyles'
 export default function CodeTab() {
   return (
     <CodeTabBar>
-      
+      wassup
     </CodeTabBar>
   )
 }

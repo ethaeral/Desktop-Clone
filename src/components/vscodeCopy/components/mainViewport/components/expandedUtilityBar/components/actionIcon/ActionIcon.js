@@ -17,7 +17,6 @@ export default function ActionIcon(props) {
 		setState,
 		activeImage,
 		inactiveImage,
-	
 		cb,
 	} = props;
 	return (
