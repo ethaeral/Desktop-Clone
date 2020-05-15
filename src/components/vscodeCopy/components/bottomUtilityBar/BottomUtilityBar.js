@@ -20,26 +20,27 @@ export default function BottomUtilityBar() {
 		<UtilityBar>
 			<IconHolder>
 				<UtilityIcon
-					src={branch}
-					alt={"gitbranch icon"}
+					image={branch}
+					hover={branch}
 					title={"master*"}
 					message={"portfolio (Git) - master*"}
 				/>
 				<UtilityIcon
-					src={sync}
+					image={sync}
+					hover={sync}
 					alt={"sync icon"}
 					message={"portfolio (Git) - Synchronize Changes"}
 				/>
 				<UtilityIcon
-					src={problems}
-					alt={"problems icon"}
+					image={problems}
+					hover={problems}
 					message={"No Problems"}
 				/>
 			</IconHolder>
 			<IconHolder>
 				<UtilityIcon
-					src={commits}
-					alt={"git commit icon"}
+					image={commits}
+					hover={commits}
 					title={`richanynguon, ${dateTime}`}
 					message={"Show Commit Details"}
 				/>
@@ -47,13 +48,13 @@ export default function BottomUtilityBar() {
 				<UtilityIcon title={`LF`} message={"Select End of Line Sequence"} />
 				<UtilityIcon title={`JavaScript`} message={"Select Language Mode"} />
 				<UtilityIcon
-					src={twitterIssue}
-					alt={"twitter issue icon"}
+					image={twitterIssue}
+					hover={twitterIssue}
 					message={"Tweet Feedback"}
 				/>
 				<UtilityIcon
-					src={notifcations}
-					alt={"notification icon"}
+					image={notifcations}
+					hover={notifcations}
 					message={"No Notifications"}
 				/>
 			</IconHolder>

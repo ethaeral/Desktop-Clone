@@ -48,11 +48,11 @@ function App() {
 		),
 		webPageProjects: allProjects.filter((project) => project.webPage === true),
 		sideNavActive: {
-			search: true,
+			search: false,
 			branch: false,
 			bug: false,
 			ext: false,
-			projects: false,
+			projects: true,
 			setting: false,
 		},
 		terminal: {
