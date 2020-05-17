@@ -1,4 +1,7 @@
+// Libraries
 import React from "react";
+
+// Styles
 import { SkillItem } from "./styles/itemSkillStyles";
 import { H4 } from "../../../../../../styles/siteContentStyles";
 

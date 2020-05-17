@@ -1,7 +1,12 @@
+// Libraries
 import React from "react";
+
+// Styles
 import { AboutContainer } from "./styles/aboutStyles";
-import ContactBlock from "../contactBlock/ContactBlock";
 import { H3 } from "../../styles/siteContentStyles";
+
+// Components
+import ContactBlock from "../contactBlock/ContactBlock";
 
 export default function AboutSection(props) {
 	return (

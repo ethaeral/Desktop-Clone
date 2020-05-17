@@ -1,6 +1,10 @@
+// Libraries
 import React from "react";
+
+// Styles
 import { SkillContainer, SkillsTable } from "./styles/skillStyles";
 
+// Components
 import SectionedSkills from "./components/sectionedSkills/SectionedSkills";
 
 export default function SkillSection(props) {

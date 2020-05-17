@@ -1,4 +1,6 @@
+// Libraries
 import styled from "styled-components";
+
 export const SkillsSection = styled.div`
 	width: 20%;
 	text-align: center;

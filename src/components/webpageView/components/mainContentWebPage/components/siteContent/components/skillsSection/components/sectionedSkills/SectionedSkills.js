@@ -1,7 +1,11 @@
+// Libraries
 import React from "react";
+
+// Styles
 import { SkillsSection, SkillList } from "./styles/sectionedSkillsStyles";
 import { H3 } from "../../../../styles/siteContentStyles";
 
+// Components
 import ItemSkill from "./components/itemSkill/ItemSkill";
 
 export default function SectionedSkills(props) {

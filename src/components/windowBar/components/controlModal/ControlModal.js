@@ -1,4 +1,7 @@
+// Libraries
 import React from "react";
+
+// Styles
 import {
 	ModalContianer,
 	ControlContainer,
@@ -7,6 +10,7 @@ import {
 	ModalMaxWin,
 } from "./styles/controlModalStyle";
 
+// Assets
 import Kodama from "../../../../assets/webpage/kodama.gif";
 
 export default function ControlModal(props) {

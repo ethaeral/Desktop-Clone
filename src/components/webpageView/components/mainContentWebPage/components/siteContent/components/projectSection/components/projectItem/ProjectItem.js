@@ -1,4 +1,9 @@
+// Libraries
 import React from "react";
+
+// Styles
+
+
 import {
 	ProjectItemConatiner,
 	ContribList,
@@ -11,8 +16,13 @@ import {
 	Github,
 } from "./styles/projectItemStyles";
 import { H3, H4 } from "../../../../styles/siteContentStyles";
+
+// Assets
 import GithubIcon from "../../../../../../../../../../assets/webpage/github.svg";
+
+// Components
 import Icon from "../../../../../icons/Icon";
+
 export default function ProjectItem(props) {
 	const { data } = props;
 	const {

@@ -1,4 +1,7 @@
+// Libraries
 import React from "react";
+
+// Styles
 import { IconContainer } from "./styles/iconStyles";
 import { P } from "../siteContent/styles/siteContentStyles";
 

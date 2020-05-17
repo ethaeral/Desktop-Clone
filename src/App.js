@@ -89,7 +89,6 @@ function App() {
 		<AppContainer>
 			<WindowsContext.Provider value={{ statefulWindows, setWindowState }}>
 				<StripeContainer />
-
 				<BackgroundImage>
 					<img src={mask} alt='princess mononoke mask' />
 				</BackgroundImage>
