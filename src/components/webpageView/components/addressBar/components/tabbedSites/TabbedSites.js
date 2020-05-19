@@ -14,6 +14,7 @@ import WebsiteTab from "./components/websiteTab/WebsiteTab";
 // Assets
 import NewTab from "../../../../../../assets/webpage/newTab.png";
 
+// Context
 import WindowsContext from "../../../../../../modules/windowContext";
 
 export default function TabbedSites() {
