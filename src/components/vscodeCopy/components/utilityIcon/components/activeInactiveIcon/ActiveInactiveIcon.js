@@ -1,4 +1,7 @@
+// Libraries
 import React, { useEffect, useState } from "react";
+
+// Styles
 import { AIIconContainer } from "./styles/activeInactiveIconStyles";
 
 export default function ActiveInactiveIcon(props) {
