@@ -62,7 +62,7 @@ function App() {
 			z: 0,
 		},
 		code: {
-			minimized: false,
+			minimized: false,  
 			maximized: false,
 			closed: false,
 			z: 0,
