@@ -4,18 +4,27 @@ import styled from "styled-components";
 export const DividerBar = styled.div`
 	display: flex;
 	align-items: center;
-	border: 1px #191a21 solid;
+	border-color: #191a21;
+	border-style: solid;
+	border-width: 1px 0px 1px 0px;
 	font-family: "Ubuntu";
-	font-size: 0.6em;
+	max-height: 20px;
 	color: #efe8d9;
+
+	background-color: #282a36;
+	justify-content: space-between;
+`;
+
+export const Title = styled.div`
+	font-size: 0.6em;
 	font-weight: 700;
 `;
 
-export const Title = styled.div``;
-
 export const Subscript = styled.div``;
 
-export const DividerIconHolder = styled.div``;
+export const DividerIconHolder = styled.div`
+	display: ${(props) => (props.isVisible && props.isExpand ? "flex" : "none")};
+`;
 
 export const ExpandMenu = styled.div`
 	height: ${(props) =>
@@ -23,6 +32,9 @@ export const ExpandMenu = styled.div`
 	width: 99%;
 `;
 
-export const SectionContainer = styled.div`
-	height: 100%;
+export const SectionContainer = styled.div``;
+
+export const TitleCollaspe = styled.div`
+	display: flex;
+	align-items: center;
 `;

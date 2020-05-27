@@ -14,6 +14,7 @@ export const ToolTipContainer = styled.div`
 	padding: 0.25em;
 	border: 1px solid white;
 	white-space: nowrap;
+	font-size:12px;
 `;
 
 export const FunctionContainer = styled.div`

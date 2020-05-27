@@ -6,10 +6,11 @@ export const ProjectsSideContainer = styled.div`
 
 export const TopBar = styled.div`
 	font-family: "Ubuntu";
-	font-size: 0.7em;
+
 	color: #efe8d9;
 	padding: 1em;
 	h3 {
+			font-size: 0.7em;
 		margin-left: 0.5em;
 	}
 `;

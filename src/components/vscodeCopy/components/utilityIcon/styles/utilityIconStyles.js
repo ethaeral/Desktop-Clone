@@ -6,6 +6,6 @@ export const UtilityIconContainer = styled.div`
 	align-items: center;
 	align-content: center;
 	justify-content: center;
-	
+
 	height: 2em;
 `;
