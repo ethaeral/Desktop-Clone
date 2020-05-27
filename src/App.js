@@ -69,9 +69,9 @@ function App() {
 		},
 		homepage: {
 			minimized: false,
-			maximized: true,
-			closed: false,
-			z: 1,
+			maximized: false,
+			closed: true,
+			z: 0,
 		},
 		modalIsOpen: {
 			windowBar: false,
@@ -79,11 +79,11 @@ function App() {
 		},
 	});
 
-	useEffect(() => {
-		setTimeout(function () {
-			setWelcome(true);
-		}, 10003);
-	}, []);
+	// useEffect(() => {
+	// 	setTimeout(function () {
+	// 		setWelcome(true);
+	// 	}, 10003);
+	// }, []);
 
 	return (
 		<AppContainer>

@@ -46,6 +46,7 @@ export default function SectionsDividers(props) {
 									hover={icon.src}
 									message={icon.message}
 									reg={true}
+									onClickFunc={icon.cb ? icon.cd : undefined}
 								/>
 						  ))
 						: ""}
