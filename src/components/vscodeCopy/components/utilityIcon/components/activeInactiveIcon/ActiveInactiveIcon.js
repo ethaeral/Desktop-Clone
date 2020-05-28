@@ -13,7 +13,7 @@ export default function ActiveInactiveIcon(props) {
 			img.src = image;
 			setImageDim({ height: img.height, width: img.width });
 		}
-	}, []);
+	}, [image, reg]);
 	const { height, width } = imageDim;
 	return (
 		<AIIconContainer

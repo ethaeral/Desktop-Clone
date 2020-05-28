@@ -42,7 +42,7 @@ export default function Projects(props) {
 						},
 						{ src: ProjectOpenEditorSave, message: "Save All (Alt+A)" },
 						{
-							src: ProjectOpenEditorToggle,
+							src: ProjectOpenEditorExit,
 							message: "Close All Editiors (Ctrl+K Ctrl+W)",
 						},
 					]}

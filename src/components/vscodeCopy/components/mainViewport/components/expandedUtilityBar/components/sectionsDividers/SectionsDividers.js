@@ -18,6 +18,7 @@ export default function SectionsDividers(props) {
 	const [isExpand, setIsExpand] = useState(openState ? true : false);
 	const [dimensions, setDimension] = useState({ height: null, width: null });
 	const [visible, setVisible] = useState(false);
+	const [active, setActive] = useState(false);
 	const componentRef = useRef(null);
 	const { height, width } = dimensions;
 	useEffect(() => {
@@ -25,21 +26,25 @@ export default function SectionsDividers(props) {
 		const width = componentRef.current.offsetWidth;
 		setDimension({ height, width });
 	}, []);
+	const blurFunction = () => {
+		console.log("fuck");
+	};
 	return (
 		<SectionContainer
-			onMouseOver={(e) => {
-				e.stopPropagation();
+			onMouseOver={() => {
 				setVisible(true);
 			}}
-			onMouseLeave={(e) => {
-				e.stopPropagation();
+			onMouseLeave={() => {
 				setVisible(false);
 			}}>
 			<DividerBar
-				onClick={(e) => {
-					e.stopPropagation();
+				onClick={() => {
 					setIsExpand(!isExpand);
-				}}>
+				}}
+				onFocus={() => {
+					blurFunction();
+				}}
+				isActive={active}>
 				<TitleCollaspe>
 					<UtilityIcon
 						image={notExpanded}
@@ -56,8 +61,9 @@ export default function SectionsDividers(props) {
 				{subscript ? <Subscript>{subscript}</Subscript> : ""}
 				<DividerIconHolder isVisible={visible} isExpand={isExpand}>
 					{icons
-						? icons.map((icon) => (
+						? icons.map((icon, idx) => (
 								<UtilityIcon
+								key={`${icon.src}${icon.message}${idx}`}
 									image={icon.src}
 									hover={icon.src}
 									message={icon.message}
