@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 
 import { ExpandedUtility } from "./styles/expandedUtilityStyles";
-import WindowsContext from "../../../../../../modules/windowContext";
+import {WindowsContext} from "../../../../../../modules/windowContext";
 
 import Branch from "./components/branch/Branch";
 import Bug from "./components/bug/Bug";

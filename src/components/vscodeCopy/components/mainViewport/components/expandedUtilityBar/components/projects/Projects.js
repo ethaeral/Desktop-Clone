@@ -32,6 +32,7 @@ export default function Projects(props) {
 
 			<SectionHolder>
 				<SectionsDividers
+					firstChild={true}
 					title={"OPEN EDITORS"}
 					component={ProjectsSideContainer}
 					openState={true}
@@ -55,7 +56,10 @@ export default function Projects(props) {
 						{ src: ProjectFolderFile, message: "New File" },
 						{ src: ProjectFolderProject, message: "New Folder" },
 						{ src: ProjectRefresh, message: "Refresh Explorer" },
-						{ src: ProjectFolderCollaspe, message: "Collaspe Folders in Explorer" },
+						{
+							src: ProjectFolderCollaspe,
+							message: "Collaspe Folders in Explorer",
+						},
 					]}
 				/>
 				<SectionsDividers
@@ -78,6 +82,7 @@ export default function Projects(props) {
 					]}
 				/>
 				<SectionsDividers
+					lastChild={true}
 					title={"NPM SCRIPTS"}
 					component={ProjectsSideContainer}
 					openState={true}

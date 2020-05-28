@@ -10,7 +10,7 @@ import MainContentWebPage from "./components/mainContentWebPage/MainContentWebPa
 import { PageContainer } from "./styles/webPageStyle";
 
 // Context
-import WindowsContext from "../../modules/windowContext";
+import {WindowsContext} from "../../modules/windowContext";
 
 export default function WebPageView(props) {
 	const { statefulWindows, setWindowState } = useContext(WindowsContext);

@@ -4,7 +4,7 @@ import {
 	TerminalOptionButton,
 	ListDropDown,
 } from "./styles/terminalButtonStyle";
-import WindowsContext from "../../../../../../../../modules/windowContext";
+import { WindowsContext } from "../../../../../../../../modules/windowContext";
 import TerminalListOption from "./components/terminalListOption/TerminalListOption";
 
 export default function TerminalButtons(props) {

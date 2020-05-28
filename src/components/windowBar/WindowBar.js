@@ -13,7 +13,7 @@ import {
 } from "./styles/windowBarStyle";
 
 // Context
-import WindowsContext from "../../modules/windowContext";
+import {WindowsContext} from "../../modules/windowContext";
 import MobileControls from "./components/mobileControls/MobileControls";
 import ControlModal from "./components/controlModal/ControlModal";
 

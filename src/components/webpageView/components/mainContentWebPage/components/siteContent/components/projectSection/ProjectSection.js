@@ -5,7 +5,7 @@ import React, { useContext } from "react";
 import { ProjectSecConatiner } from "./styles/projectStyles";
 
 // Context
-import WindowsContext from "../../../../../../../../modules/windowContext";
+import {WindowsContext} from "../../../../../../../../modules/windowContext";
 
 // Components
 import ProjectItem from "./components/projectItem/ProjectItem";

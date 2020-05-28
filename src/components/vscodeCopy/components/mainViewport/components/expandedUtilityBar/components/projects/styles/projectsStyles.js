@@ -10,9 +10,11 @@ export const TopBar = styled.div`
 	color: #efe8d9;
 	padding: 1em;
 	h3 {
-			font-size: 0.7em;
+		font-size: 0.7em;
 		margin-left: 0.5em;
 	}
 `;
 
-export const SectionHolder = styled.div``;
+export const SectionHolder = styled.div`
+
+`;

@@ -6,7 +6,7 @@ import {
 	CircleButtons,
 	ExitButton,
 } from "../../../windowBar/styles/windowBarStyle";
-import WindowsContext from "../../../../modules/windowContext";
+import {WindowsContext} from "../../../../modules/windowContext";
 import ModalTabControls from "./components/modalTabControls/ModalTabControls";
 import TabModal from "./components/tabModal/TabModal";
 

@@ -6,7 +6,7 @@ import {
 	OptionButton,
 } from "./styles/navButtonStyle";
 
-import WindowsContext from "../../../../../../modules/windowContext";
+import {WindowsContext} from "../../../../../../modules/windowContext";
 
 export default function NavButton(props) {
 	const { statefulWindows, setWindowState } = useContext(WindowsContext);

@@ -28,7 +28,7 @@ import setting from "../../../../../../assets/sideNav/setting.png";
 import settingActive from "../../../../../../assets/sideNav/settingActive.png";
 import settingHover from "../../../../../../assets/sideNav/settingHover.png";
 
-import WindowsContext from "../../../../../../modules/windowContext";
+import {WindowsContext} from "../../../../../../modules/windowContext";
 
 import ListItem from "../../../fileNavBar/components/navButton/components/listItems/ListItem";
 import { settingPopOutCode } from "../../../../../../data/fileNavBar";

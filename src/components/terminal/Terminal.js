@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import TerminalInput from "./components/terminalWindow/components/terminalInput/TerminalInput";
 import TerminalWindow from "./components/terminalWindow/TerminalWindow";
 import { Window } from "./styles/terminalStyle";
-import WindowsContext from "../../modules/windowContext";
+import {WindowsContext} from "../../modules/windowContext";
 
 export default function Terminal(props) {
 	const { statefulWindows, setWindowState } = useContext(WindowsContext);
