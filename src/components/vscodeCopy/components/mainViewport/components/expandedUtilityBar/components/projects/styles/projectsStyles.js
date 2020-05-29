@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const ProjectsSideContainer = styled.div`
 	display: ${(props) => (props.active ? "block" : "none")};
+	height: 99.5%;
+	border: 1px red solid;
 `;
 
 export const TopBar = styled.div`

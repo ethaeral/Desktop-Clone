@@ -1,5 +1,5 @@
 // Libraries
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 // Styles
 import {
@@ -24,14 +24,22 @@ import ProjectRefresh from "../../../../../../../../assets/utilityBar/ProjectRef
 import ProjectTimelinePin from "../../../../../../../../assets/utilityBar/ProjectTimelinePin.png";
 
 export default function Projects(props) {
+	const [height, setHeight] = useState(null);
+	const componentRef = useRef(null);
+
+	useEffect(() => {
+		const height = componentRef.current.clientHeight;
+		setHeight(height);
+	}, []);
 	return (
-		<ProjectsSideContainer active={props.active}>
+		<ProjectsSideContainer active={props.active} ref={componentRef}>
 			<TopBar>
-				<h3>EXPLORER</h3>
+				<h3>EXPLORER {height}</h3>
 			</TopBar>
 
 			<SectionHolder>
 				<SectionsDividers
+					height={height * 0.2315}
 					firstChild={true}
 					title={"OPEN EDITORS"}
 					component={ProjectsSideContainer}
@@ -49,6 +57,7 @@ export default function Projects(props) {
 					]}
 				/>
 				<SectionsDividers
+					height={height}
 					title={"PORTFOLIO"}
 					component={ProjectsSideContainer}
 					openState={true}
@@ -63,6 +72,7 @@ export default function Projects(props) {
 					]}
 				/>
 				<SectionsDividers
+					height={height * 0.12631}
 					title={"OUTLINE"}
 					component={ProjectsSideContainer}
 					openState={true}
@@ -72,6 +82,7 @@ export default function Projects(props) {
 					]}
 				/>
 				<SectionsDividers
+					height={height * 0.12631}
 					title={"TIMELINE"}
 					component={ProjectsSideContainer}
 					openState={true}
@@ -82,6 +93,7 @@ export default function Projects(props) {
 					]}
 				/>
 				<SectionsDividers
+					height={height * 0.12631}
 					lastChild={true}
 					title={"NPM SCRIPTS"}
 					component={ProjectsSideContainer}

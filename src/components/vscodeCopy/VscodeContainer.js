@@ -1,5 +1,5 @@
 // Libraries
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 
 // Components
 import BottomUtilityBar from "./components/bottomUtilityBar/BottomUtilityBar";

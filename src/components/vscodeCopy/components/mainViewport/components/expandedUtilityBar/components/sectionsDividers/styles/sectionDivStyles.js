@@ -57,8 +57,14 @@ export const DividerIconHolder = styled.div`
 `;
 
 export const ExpandMenu = styled.div`
-	height: ${(props) =>
-		props.isActive ? (props.height ? `${props.height}px` : "50px") : "0px"};
+	overflow-y: auto;
+	height: ${(props) => (props.height ? `${props.height}px` : "50px")};
+	max-height: ${(props) =>
+		props.isActive
+			? props.maxHeight
+				? `${props.maxHeight}px`
+				: "100%"
+			: "0px"};
 	width: 99%;
 `;
 

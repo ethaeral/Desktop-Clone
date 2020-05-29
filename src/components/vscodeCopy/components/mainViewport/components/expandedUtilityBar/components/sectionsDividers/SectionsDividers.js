@@ -1,4 +1,7 @@
+// Libraries
 import React, { useState, useRef, useEffect } from "react";
+
+// Components
 import UtilityIcon from "../../../../../utilityIcon/UtilityIcon";
 import {
 	Title,
@@ -14,21 +17,14 @@ import notExpanded from "../../../../../../../../assets/notExpand.png";
 
 export default function SectionsDividers(props) {
 	const { title, subscript, icons, openState, firstChild, lastChild } = props;
-
 	const [isExpand, setIsExpand] = useState(openState ? true : false);
-	const [dimensions, setDimension] = useState({ height: null, width: null });
 	const [visible, setVisible] = useState(false);
-
+	const [height, setHeight] = useState(null);
 	const componentRef = useRef(null);
-
-	const { height, width } = dimensions;
-
 	useEffect(() => {
-		const height = componentRef.current.offsetHeight;
-		const width = componentRef.current.offsetWidth;
-		setDimension({ height, width });
+		const height = componentRef.current.clientHeight;
+		setHeight(height);
 	}, []);
-
 	return (
 		<SectionContainer
 			onMouseOver={() => {
@@ -74,7 +70,7 @@ export default function SectionsDividers(props) {
 						: ""}
 				</DividerIconHolder>
 			</button>
-			<ExpandMenu isActive={isExpand} height={height} width={width}>
+			<ExpandMenu isActive={isExpand} maxHeight={props.height} height={height}>
 				<props.component ref={componentRef} />
 			</ExpandMenu>
 		</SectionContainer>
