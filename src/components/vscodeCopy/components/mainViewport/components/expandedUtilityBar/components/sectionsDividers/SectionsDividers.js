@@ -12,6 +12,7 @@ import {
 	TitleCollaspe,
 } from "./styles/sectionDivStyles";
 
+// Assets
 import expand from "../../../../../../../../assets/isExpand.png";
 import notExpanded from "../../../../../../../../assets/notExpand.png";
 
