@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 export const SectionContainer = styled.div`
 	.sectionBar {
-		border: 1px orange solid;
 		display: flex;
 		align-items: center;
 		border-color: #191a21;
@@ -26,7 +25,6 @@ export const SectionContainer = styled.div`
 		}
 	}
 	.sectionBarFirst {
-		border: 1px orange solid;
 		display: flex;
 		align-items: center;
 		border-color: #191a21;

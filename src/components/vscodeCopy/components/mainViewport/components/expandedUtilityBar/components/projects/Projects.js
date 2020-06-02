@@ -34,7 +34,7 @@ export default function Projects(props) {
 	return (
 		<ProjectsSideContainer active={props.active} ref={componentRef}>
 			<TopBar>
-				<h3>EXPLORER {height}</h3>
+				<h3>EXPLORER</h3>
 			</TopBar>
 
 			<SectionHolder>
