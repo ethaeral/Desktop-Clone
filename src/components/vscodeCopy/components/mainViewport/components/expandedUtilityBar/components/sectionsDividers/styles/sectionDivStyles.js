@@ -44,7 +44,7 @@ export const SectionContainer = styled.div`
 `;
 
 export const Title = styled.div`
-	font-size: 0.6em;
+	font-size: 0.7em;
 	font-weight: 700;
 `;
 
@@ -71,9 +71,13 @@ export const ExpandMenu = styled.div`
 	}
 	&:hover {
 		&::-webkit-scrollbar-thumb {
-		background: rgba(255, 255, 255, 0.1);
+			background: rgba(255, 255, 255, 0.1);
+		}
 	}
-
+	p {
+		font-size: 0.8em;
+		font-weight: 400;
+		line-height: 1.5em;
 	}
 `;
 

@@ -5,27 +5,12 @@ import React, { useContext } from "react";
 import { WindowsContext } from "../../../../../../../../../../modules/windowContext";
 
 export default function Portfolio() {
+	const { statefulWindows } = useContext(WindowsContext);
 	return (
 		<div>
-			Portfolio Portfolio Portfolio Portfolio Portfolio Portfoliso Portfolio
-			Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio
-			Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio
-			Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio
-			Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio
-			Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio
-			Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio
-			Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio
-			Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio
-			Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio
-			Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio
-			Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio
-			Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio
-			Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio
-			Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio
-			Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio
-			Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio
-			Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio
-			Portfolio Portfolio
+			{statefulWindows.projects.map((project) => (
+				<p>{project.name}</p>
+			))}
 		</div>
 	);
 }

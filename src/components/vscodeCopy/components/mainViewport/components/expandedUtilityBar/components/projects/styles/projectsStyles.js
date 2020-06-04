@@ -4,12 +4,12 @@ import styled from "styled-components";
 export const ProjectsSideContainer = styled.div`
 	display: ${(props) => (props.active ? "block" : "none")};
 	height: 99.5%;
-`;
-
-export const TopBar = styled.div`
 	font-family: "Ubuntu";
 
 	color: #efe8d9;
+`;
+
+export const TopBar = styled.div`
 	padding: 1em;
 	h3 {
 		font-size: 0.7em;
@@ -17,6 +17,4 @@ export const TopBar = styled.div`
 	}
 `;
 
-export const SectionHolder = styled.div`
-
-`;
+export const SectionHolder = styled.div``;
