@@ -79,11 +79,11 @@ function App() {
 		},
 	});
 
-	// useEffect(() => {
-	// 	setTimeout(function () {
-	// 		setWelcome(true);
-	// 	}, 10003);
-	// }, []);
+	useEffect(() => {
+		setTimeout(function () {
+			setWelcome(true);
+		}, 10003);
+	}, []);
 
 	return (
 		<AppContainer>
