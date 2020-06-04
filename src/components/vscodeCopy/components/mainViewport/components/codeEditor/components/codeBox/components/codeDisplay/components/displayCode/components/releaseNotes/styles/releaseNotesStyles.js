@@ -1,9 +1,7 @@
 import styled from "styled-components";
 
 export const ReleaseNotesConainter = styled.div`
-	height: calc(100% - 40px);
 	width: 100%;
-	overflow-y: auto;
 	color: #f6f6f4;
 	font-family: "ubuntu";
 
@@ -13,13 +11,6 @@ export const ReleaseNotesConainter = styled.div`
 	ul {
 		margin: 15px;
 		list-style-type: circle;
-	}
-	&::-webkit-scrollbar {
-    background: #282a36;
-
-	}
-	&::-webkit-scrollbar-thumb{
-		background:  #f6f6f4;
 	}
 `;
 

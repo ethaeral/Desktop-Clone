@@ -20,12 +20,7 @@ export default function SectionsDividers(props) {
 	const { title, subscript, icons, openState, firstChild, lastChild } = props;
 	const [isExpand, setIsExpand] = useState(openState ? true : false);
 	const [visible, setVisible] = useState(false);
-	const [height, setHeight] = useState(null);
 	const componentRef = useRef(null);
-	useEffect(() => {
-		const height = componentRef.current.clientHeight;
-		setHeight(height);
-	}, []);
 	return (
 		<SectionContainer
 			onMouseOver={() => {
@@ -71,8 +66,8 @@ export default function SectionsDividers(props) {
 						: ""}
 				</DividerIconHolder>
 			</button>
-			<ExpandMenu isActive={isExpand} maxHeight={props.height} height={height}>
-				<props.component ref={componentRef} />
+			<ExpandMenu isActive={isExpand} maxHeight={props.height} >
+				<props.component />
 			</ExpandMenu>
 		</SectionContainer>
 	);

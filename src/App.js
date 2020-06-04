@@ -13,7 +13,7 @@ import code from "./assets/vscode.png";
 import firefox from "./assets/firefox.png";
 
 // Context
-import {WindowsContext} from "./modules/windowContext";
+import { WindowsContext } from "./modules/windowContext";
 
 // Data
 import { allProjects } from "./data/projectsData";
@@ -62,15 +62,15 @@ function App() {
 			z: 0,
 		},
 		code: {
-			minimized: false,  
+			minimized: false,
 			maximized: false,
 			closed: false,
 			z: 0,
 		},
 		homepage: {
 			minimized: false,
-			maximized: true,
-			closed: false,
+			maximized: false,
+			closed: true,
 			z: 1,
 		},
 		modalIsOpen: {
@@ -79,11 +79,11 @@ function App() {
 		},
 	});
 
-	useEffect(() => {
-		setTimeout(function () {
-			setWelcome(true);
-		}, 10003);
-	}, []);
+	// useEffect(() => {
+	// 	setTimeout(function () {
+	// 		setWelcome(true);
+	// 	}, 10003);
+	// }, []);
 
 	return (
 		<AppContainer>

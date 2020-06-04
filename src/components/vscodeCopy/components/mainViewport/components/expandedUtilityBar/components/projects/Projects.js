@@ -10,6 +10,12 @@ import {
 
 // Components
 import SectionsDividers from "../sectionsDividers/SectionsDividers";
+import NpmScripts from "./components/npmScripts/NpmScripts";
+import Portfolio from "./components/portfolio/Portfolio";
+import Outline from "./components/outline/Outline";
+import Timeline from "./components/timeline/Timeline";
+import OpenEditors from "./components/openEditors/OpenEditors";
+
 
 // Assets
 import ProjectActions from "../../../../../../../../assets/utilityBar/ProjectActions.png";
@@ -29,7 +35,7 @@ export default function Projects(props) {
 
 	useEffect(() => {
 		const height = componentRef.current.clientHeight;
-		setHeight(height);
+		setHeight(height-110);
 	}, []);
 	return (
 		<ProjectsSideContainer active={props.active} ref={componentRef}>
@@ -39,10 +45,10 @@ export default function Projects(props) {
 
 			<SectionHolder>
 				<SectionsDividers
-					height={height * 0.2315}
+					height={height * 0.2}
 					firstChild={true}
 					title={"OPEN EDITORS"}
-					component={ProjectsSideContainer}
+					component={OpenEditors}
 					openState={true}
 					icons={[
 						{
@@ -57,9 +63,9 @@ export default function Projects(props) {
 					]}
 				/>
 				<SectionsDividers
-					height={height}
+					height={height*0.4}
 					title={"PORTFOLIO"}
-					component={ProjectsSideContainer}
+					component={Portfolio}
 					openState={true}
 					icons={[
 						{ src: ProjectFolderFile, message: "New File" },
@@ -72,9 +78,9 @@ export default function Projects(props) {
 					]}
 				/>
 				<SectionsDividers
-					height={height * 0.12631}
+					height={height * 0.1}
 					title={"OUTLINE"}
-					component={ProjectsSideContainer}
+					component={Outline}
 					openState={true}
 					icons={[
 						{ src: ProjectCollaspe, message: "Collaspe All" },
@@ -82,9 +88,9 @@ export default function Projects(props) {
 					]}
 				/>
 				<SectionsDividers
-					height={height * 0.12631}
+					height={height * 0.1}
 					title={"TIMELINE"}
-					component={ProjectsSideContainer}
+					component={Timeline}
 					openState={true}
 					icons={[
 						{ src: ProjectTimelinePin, message: "Pin the Current Timeline" },
@@ -93,10 +99,10 @@ export default function Projects(props) {
 					]}
 				/>
 				<SectionsDividers
-					height={height * 0.12631}
+					height={height * 0.1}
 					lastChild={true}
 					title={"NPM SCRIPTS"}
-					component={ProjectsSideContainer}
+					component={NpmScripts}
 					openState={true}
 					icons={[
 						{ src: ProjectRefresh, message: "Refresh" },

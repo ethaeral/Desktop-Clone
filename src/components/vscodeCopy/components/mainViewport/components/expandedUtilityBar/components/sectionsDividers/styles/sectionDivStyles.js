@@ -56,7 +56,6 @@ export const DividerIconHolder = styled.div`
 
 export const ExpandMenu = styled.div`
 	overflow-y: auto;
-	height: ${(props) => (props.height ? `${props.height}px` : "50px")};
 	max-height: ${(props) =>
 		props.isActive
 			? props.maxHeight
@@ -64,6 +63,18 @@ export const ExpandMenu = styled.div`
 				: "100%"
 			: "0px"};
 	width: 99%;
+	&::-webkit-scrollbar {
+		background: none;
+	}
+	&::-webkit-scrollbar-thumb {
+		background: none;
+	}
+	&:hover {
+		&::-webkit-scrollbar-thumb {
+		background: rgba(255, 255, 255, 0.1);
+	}
+
+	}
 `;
 
 export const TitleCollaspe = styled.div`
