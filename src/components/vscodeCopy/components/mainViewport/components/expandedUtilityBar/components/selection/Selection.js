@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function Selection(props) {
 	const {
-		heightMultiplier,
 		actionInactive,
 		actionHover,
 		actionActive,
@@ -13,27 +12,52 @@ export default function Selection(props) {
 		title,
 		subtitle,
 		subscript,
-		isActive,
+		innerIconActive,
+		innerIconHover,
+		innerIconInactive,
+		innerTitle,
+		openIconInactive,
+		openIconActive,
+		openIconHover,
 	} = props;
+	const [isOpen, setIsOpen] = useState(false);
 	return (
-		<div heightMultiplier={heightMultiplier} onClick={() => onClickFunc()}>
-			{actionInactive && (
+		<div>
+			<button onClick={() => setIsOpen(!isOpen)}>
+				{actionInactive && (
+					<div
+						inactive={actionInactive}
+						hover={actionHover}
+						active={actionActive}
+					/>
+				)}
 				<div
-					inactive={actionInactive}
-					hover={actionHover}
-					active={actionActive}
-					isActive={isActive}
+					isOpen={isOpen}
+					openIconInactive={openIconInactive}
+					openIconActive={openIconActive}
+					openIconHover={openIconHover}
+					inactive={iconInactive}
+					hover={iconHover}
+					active={iconActive}
 				/>
+				<p>
+					{title}
+				</p>
+				{subtitle}
+				{subscript}
+			</button>
+			{innerTitle && (
+				<button
+					innerIconActive={innerIconActive}
+					innerIconHover={innerIconHover}
+					innerIconInactive={innerIconInactive}
+					isOpen={isOpen}
+					onClick={() => onClickFunc()}>
+					<p>
+						{innerTitle}
+					</p>
+				</button>
 			)}
-			<div
-				inactive={iconInactive}
-				hover={iconHover}
-				active={iconActive}
-				isActive={isActive}
-			/>
-			{title}
-			{subtitle}
-			{subscript}
 		</div>
 	);
 }
