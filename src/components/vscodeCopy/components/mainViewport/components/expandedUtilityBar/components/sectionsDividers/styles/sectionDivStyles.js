@@ -55,7 +55,8 @@ export const DividerIconHolder = styled.div`
 `;
 
 export const ExpandMenu = styled.div`
-	overflow-y: auto;
+	overflow-y: overlay;
+	overflow-x: hidden;
 	max-height: ${(props) =>
 		props.isActive
 			? props.maxHeight
@@ -64,14 +65,15 @@ export const ExpandMenu = styled.div`
 			: "0px"};
 	width: 99%;
 	&::-webkit-scrollbar {
-		background: none;
+		display: none;
 	}
-	&::-webkit-scrollbar-thumb {
-		background: none;
-	}
+
 	&:hover {
+		&::-webkit-scrollbar {
+			display: block;
+		}
 		&::-webkit-scrollbar-thumb {
-			background: rgba(255, 255, 255, 0.1);
+			background-color: rgba(255, 255, 255, 0.1);
 		}
 	}
 	p {
@@ -84,4 +86,10 @@ export const ExpandMenu = styled.div`
 export const TitleCollaspe = styled.div`
 	display: flex;
 	align-items: center;
+`;
+
+export const ScrollBar = styled.div`
+	position: absolute;
+	width: 10px;
+	height: 20px;
 `;

@@ -10,6 +10,7 @@ import {
 	ExpandMenu,
 	SectionContainer,
 	TitleCollaspe,
+	ScrollBar,
 } from "./styles/sectionDivStyles";
 
 // Assets
@@ -20,7 +21,7 @@ export default function SectionsDividers(props) {
 	const { title, subscript, icons, openState, firstChild, lastChild } = props;
 	const [isExpand, setIsExpand] = useState(openState ? true : false);
 	const [visible, setVisible] = useState(false);
-	const componentRef = useRef(null);
+	
 	return (
 		<SectionContainer
 			onMouseOver={() => {
@@ -69,6 +70,7 @@ export default function SectionsDividers(props) {
 			<ExpandMenu isActive={isExpand} maxHeight={props.height} >
 				<props.component />
 			</ExpandMenu>
+			<ScrollBar/>
 		</SectionContainer>
 	);
 }

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { SelectionContainer } from "./styles/selectionStyles";
 
 export default function Selection(props) {
 	const {
@@ -22,8 +23,8 @@ export default function Selection(props) {
 	} = props;
 	const [isOpen, setIsOpen] = useState(false);
 	return (
-		<div>
-			<button onClick={() => setIsOpen(!isOpen)}>
+		<SelectionContainer>
+			<button className="FolderButton" onClick={() => setIsOpen(!isOpen)}>
 				{actionInactive && (
 					<div
 						inactive={actionInactive}
@@ -40,24 +41,21 @@ export default function Selection(props) {
 					hover={iconHover}
 					active={iconActive}
 				/>
-				<p>
-					{title}
-				</p>
+				<p>{title}</p>
 				{subtitle}
 				{subscript}
 			</button>
 			{innerTitle && (
 				<button
+				className="FileButton"
 					innerIconActive={innerIconActive}
 					innerIconHover={innerIconHover}
 					innerIconInactive={innerIconInactive}
 					isOpen={isOpen}
-					onClick={() => onClickFunc()}>
-					<p>
-						{innerTitle}
-					</p>
+					onClick={() => onClickFunc}>
+					<p>{innerTitle}</p>
 				</button>
 			)}
-		</div>
+		</SelectionContainer>
 	);
 }
