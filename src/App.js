@@ -1,5 +1,5 @@
 // Libraries
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 // Components
 import StripeContainer from "./components/stripes/StripeContainer";
@@ -69,8 +69,8 @@ function App() {
 		},
 		homepage: {
 			minimized: false,
-			maximized: true,
-			closed: false,
+			maximized: false,
+			closed: true,
 			z: 1,
 		},
 		modalIsOpen: {

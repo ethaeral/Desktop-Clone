@@ -27,13 +27,13 @@ import sideHover from "../../../../../../../../../../assets/utilityBar/projects/
 import jsActive from "../../../../../../../../../../assets/utilityBar/projects/jsActive.png";
 import jsInactive from "../../../../../../../../../../assets/utilityBar/projects/jsInactive.png";
 import jsHover from "../../../../../../../../../../assets/utilityBar/projects/jsHover.png";
-import { DropDownContainer } from "./styles/portfolioStyles";
+import { DropDownContainer, PortfolioContainer } from "./styles/portfolioStyles";
 
 export default function Portfolio() {
 	const [isOpen, setIsOpen] = useState(true);
 	const { statefulWindows } = useContext(WindowsContext);
 	return (
-		<div>
+		<PortfolioContainer>
 			<Selection
 				state={isOpen}
 				setState={setIsOpen}
@@ -52,7 +52,7 @@ export default function Portfolio() {
 				openIconHover={folderOpenHover}
 				title={"src"}
 			/>
-			<DropDownContainer isOpen={isOpen}>
+			<DropDownContainer isOpen={isOpen} className="dropDown">
 				{statefulWindows.projects.map((project) => (
 					<Selection
 						key={project.name}
@@ -79,6 +79,6 @@ export default function Portfolio() {
 					/>
 				))}
 			</DropDownContainer>
-		</div>
+		</PortfolioContainer>
 	);
 }
