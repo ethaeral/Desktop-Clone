@@ -11,3 +11,9 @@ export const SelectionContainer = styled.div`
 		width: 100%;
 	}
 `;
+ 
+export const SelectionIcon = styled.div``
+
+export const FolderButton = styled.button``
+
+export const FileButton = styled.button``

@@ -1,5 +1,10 @@
 import React, { useState } from "react";
-import { SelectionContainer } from "./styles/selectionStyles";
+import {
+	SelectionContainer,
+	SelectionIcon,
+	FileButton,
+	FolderButton,
+} from "./styles/selectionStyles";
 
 export default function Selection(props) {
 	const {
@@ -20,19 +25,34 @@ export default function Selection(props) {
 		openIconInactive,
 		openIconActive,
 		openIconHover,
+		state,
+		setState,
+		topFolder,
 	} = props;
 	const [isOpen, setIsOpen] = useState(false);
 	return (
 		<SelectionContainer>
-			<button className="FolderButton" onClick={() => setIsOpen(!isOpen)}>
+			<FolderButton
+				className='FolderButton'
+				onClick={
+					topFolder
+						? () => {
+								setState(!state);
+								console.log("outside");
+						  }
+						: () => {
+								console.log("inside");
+								setIsOpen(!isOpen);
+						  }
+				}>
 				{actionInactive && (
-					<div
+					<SelectionIcon
 						inactive={actionInactive}
 						hover={actionHover}
 						active={actionActive}
 					/>
 				)}
-				<div
+				<SelectionIcon
 					isOpen={isOpen}
 					openIconInactive={openIconInactive}
 					openIconActive={openIconActive}
@@ -44,17 +64,19 @@ export default function Selection(props) {
 				<p>{title}</p>
 				{subtitle}
 				{subscript}
-			</button>
+			</FolderButton>
 			{innerTitle && (
-				<button
-				className="FileButton"
+				<FileButton
+					className='FileButton'
 					innerIconActive={innerIconActive}
 					innerIconHover={innerIconHover}
 					innerIconInactive={innerIconInactive}
 					isOpen={isOpen}
-					onClick={() => onClickFunc}>
+					onClick={(e) => {
+						onClickFunc();
+					}}>
 					<p>{innerTitle}</p>
-				</button>
+				</FileButton>
 			)}
 		</SelectionContainer>
 	);

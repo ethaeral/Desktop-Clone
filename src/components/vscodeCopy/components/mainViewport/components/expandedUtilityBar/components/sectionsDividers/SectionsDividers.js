@@ -1,5 +1,5 @@
 // Libraries
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 
 // Components
 import UtilityIcon from "../../../../../utilityIcon/UtilityIcon";
@@ -35,7 +35,7 @@ export default function SectionsDividers(props) {
 			isExpand={isExpand}>
 			<button
 				className={firstChild ? "sectionBarFirst" : "sectionBar"}
-				tabindex='-1'
+				tabIndex='-1'
 				onClick={(e) => {
 					setIsExpand(!isExpand);
 				}}>

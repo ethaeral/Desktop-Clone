@@ -27,16 +27,17 @@ import sideHover from "../../../../../../../../../../assets/utilityBar/projects/
 import jsActive from "../../../../../../../../../../assets/utilityBar/projects/jsActive.png";
 import jsInactive from "../../../../../../../../../../assets/utilityBar/projects/jsInactive.png";
 import jsHover from "../../../../../../../../../../assets/utilityBar/projects/jsHover.png";
+import { DropDownContainer } from "./styles/portfolioStyles";
 
 export default function Portfolio() {
-	const [isOpen, setIsOpen] = useState(false);
+	const [isOpen, setIsOpen] = useState(true);
 	const { statefulWindows } = useContext(WindowsContext);
 	return (
 		<div>
 			<Selection
-				onClick={() => {
-					setIsOpen(!isOpen);
-				}}
+				state={isOpen}
+				setState={setIsOpen}
+				topFolder={true}
 				actionInactive={sideInactive}
 				actionHover={sideHover}
 				actionActive={sideActive}
@@ -51,9 +52,10 @@ export default function Portfolio() {
 				openIconHover={folderOpenHover}
 				title={"src"}
 			/>
-			<div isOpen={isOpen}>
+			<DropDownContainer isOpen={isOpen}>
 				{statefulWindows.projects.map((project) => (
 					<Selection
+						key={project.name}
 						actionInactive={sideInactive}
 						actionHover={sideHover}
 						actionActive={sideActive}
@@ -66,7 +68,9 @@ export default function Portfolio() {
 						openIconInactive={folderOpenInactive}
 						openIconActive={folderOpenActive}
 						openIconHover={folderOpenHover}
-						onClickFunc={console.log("bish")}
+						onClickFunc={() => {
+							console.log("bish");
+						}}
 						title={project.name}
 						innerTitle={`${project.name.split(" ").join("")}.js`}
 						innerIconInactive={jsInactive}
@@ -74,7 +78,7 @@ export default function Portfolio() {
 						innerIconHover={jsHover}
 					/>
 				))}
-			</div>
+			</DropDownContainer>
 		</div>
 	);
 }
