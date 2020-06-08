@@ -1,10 +1,5 @@
 import React, { useState } from "react";
-import {
-	SelectionContainer,
-	SelectionIcon,
-	FileButton,
-	FolderButton,
-} from "./styles/selectionStyles";
+import { SelectionContainer, SelectionIcon } from "./styles/selectionStyles";
 
 export default function Selection(props) {
 	const {
@@ -28,55 +23,68 @@ export default function Selection(props) {
 		state,
 		setState,
 		topFolder,
+		actionDownInactive,
+		actionDownActive,
+		actionDownHover,
 	} = props;
-	const [isOpen, setIsOpen] = useState(false);
+	const [isOpen, setIsOpen] = useState(true);
 	return (
-		<SelectionContainer>
-			<FolderButton
+		<SelectionContainer
+			isOpen={isOpen}
+			actionHover={actionHover}
+			actionActive={actionActive}
+			actionOpenActive={actionDownActive}
+			actionOpenHover={actionDownHover}
+			innerActive={innerIconActive}
+			innerHover={innerIconHover}
+			iconOpenActive={openIconActive}
+			iconOpenHover={openIconHover}
+			iconHover={iconHover}
+			iconActive={iconActive}
+			>
+			<button
 				className='FolderButton'
 				onClick={
 					topFolder
 						? () => {
 								setState(!state);
-								console.log("outside");
+								setIsOpen(!isOpen);
 						  }
 						: () => {
-								console.log("inside");
 								setIsOpen(!isOpen);
 						  }
 				}>
 				{actionInactive && (
 					<SelectionIcon
+						className='folder'
+						isOpen={isOpen}
 						inactive={actionInactive}
-						hover={actionHover}
-						active={actionActive}
+						openInactive={actionDownInactive}
 					/>
 				)}
 				<SelectionIcon
+					className='folder'
 					isOpen={isOpen}
-					openIconInactive={openIconInactive}
-					openIconActive={openIconActive}
-					openIconHover={openIconHover}
+					openInactive={openIconInactive}
 					inactive={iconInactive}
-					hover={iconHover}
-					active={iconActive}
+
 				/>
 				<p>{title}</p>
 				{subtitle}
 				{subscript}
-			</FolderButton>
+			</button>
 			{innerTitle && (
-				<FileButton
+				<button
 					className='FileButton'
-					innerIconActive={innerIconActive}
-					innerIconHover={innerIconHover}
-					innerIconInactive={innerIconInactive}
-					isOpen={isOpen}
 					onClick={(e) => {
 						onClickFunc();
 					}}>
+					<SelectionIcon
+						className='file'
+						inactive={innerIconInactive}
+					/>
 					<p>{innerTitle}</p>
-				</FileButton>
+				</button>
 			)}
 		</SelectionContainer>
 	);
