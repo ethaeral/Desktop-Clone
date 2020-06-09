@@ -79,7 +79,7 @@ export const ExpandMenu = styled.div`
 	p {
 		font-size: 0.8em;
 		font-weight: 400;
-		line-height: 1.5em;
+		line-height: 0.8em;
 	}
 `;
 
