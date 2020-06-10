@@ -1,5 +1,10 @@
 import React, { useState } from "react";
-import { SelectionContainer, SelectionIcon } from "./styles/selectionStyles";
+import {
+	SelectionContainer,
+	SelectionIcon,
+	FileDiv,
+	FolderDiv,
+} from "./styles/selectionStyles";
 
 export default function Selection(props) {
 	const {
@@ -40,51 +45,51 @@ export default function Selection(props) {
 			iconOpenActive={openIconActive}
 			iconOpenHover={openIconHover}
 			iconHover={iconHover}
-			iconActive={iconActive}
-			>
-			<button
-				className='FolderButton'
-				onClick={
-					topFolder
-						? () => {
-								setState(!state);
-								setIsOpen(!isOpen);
-						  }
-						: () => {
-								setIsOpen(!isOpen);
-						  }
-				}>
-				{actionInactive && (
+			topFolder={topFolder}
+			iconActive={iconActive}>
+			<FolderDiv>
+				<button
+					className='FolderButton'
+					onClick={
+						topFolder
+							? () => {
+									setState(!state);
+									setIsOpen(!isOpen);
+							  }
+							: () => {
+									setIsOpen(!isOpen);
+							  }
+					}>
+					{actionInactive && (
+						<SelectionIcon
+							className='folder'
+							isOpen={isOpen}
+							inactive={actionInactive}
+							openInactive={actionDownInactive}
+						/>
+					)}
 					<SelectionIcon
 						className='folder'
 						isOpen={isOpen}
-						inactive={actionInactive}
-						openInactive={actionDownInactive}
+						openInactive={openIconInactive}
+						inactive={iconInactive}
 					/>
-				)}
-				<SelectionIcon
-					className='folder'
-					isOpen={isOpen}
-					openInactive={openIconInactive}
-					inactive={iconInactive}
-
-				/>
-				<p>{title}</p>
-				{subtitle}
-				{subscript}
-			</button>
-			{innerTitle && (
-				<button
-					className='FileButton'
-					onClick={(e) => {
-						onClickFunc();
-					}}>
-					<SelectionIcon
-						className='file'
-						inactive={innerIconInactive}
-					/>
-					<p>{innerTitle}</p>
+					<p>{title}</p>
+					{subtitle}
+					{subscript}
 				</button>
+			</FolderDiv>
+			{innerTitle && (
+				<FileDiv>
+					<button
+						className='FileButton'
+						onClick={(e) => {
+							onClickFunc();
+						}}>
+						<SelectionIcon className='file' inactive={innerIconInactive} />
+						<p>{innerTitle}</p>
+					</button>
+				</FileDiv>
 			)}
 		</SelectionContainer>
 	);

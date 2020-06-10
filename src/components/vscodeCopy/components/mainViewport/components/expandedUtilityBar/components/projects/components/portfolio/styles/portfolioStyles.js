@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const DropDownContainer = styled.div`
 	display: ${(props) => (props.isOpen ? "block" : "none")};
-	margin-left: 10px;
+	height: 100%;
+	margin-left: 8px;
 	border-left: 1px #262626 solid;
 `;
 
