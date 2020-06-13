@@ -47,7 +47,7 @@ export default function Selection(props) {
 			iconHover={iconHover}
 			topFolder={topFolder}
 			iconActive={iconActive}>
-			<FolderDiv>
+			<FolderDiv 	topFolder={topFolder}>
 				<button
 					className='FolderButton'
 					onClick={
@@ -62,7 +62,7 @@ export default function Selection(props) {
 					}>
 					{actionInactive && (
 						<SelectionIcon
-							className='folder'
+							className='action'
 							isOpen={isOpen}
 							inactive={actionInactive}
 							openInactive={actionDownInactive}
