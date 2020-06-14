@@ -9,6 +9,20 @@ export const SelectionContainer = styled.div`
 		width: 100%;
 		display: flex;
 		align-items: center;
+		&:hover {
+			.action {
+				background-image: ${(props) =>
+					props.isOpen
+						? `url(${props.actionOpenHover})`
+						: `url(${props.actionHover})`};
+			}
+			.folder {
+				background-image: ${(props) =>
+					props.isOpen
+						? `url(${props.iconOpenHover})`
+						: `url(${props.iconHover})`};
+			}
+		}
 	}
 	.FileButton {
 		border-left: 1px #262626 solid;
@@ -20,25 +34,13 @@ export const SelectionContainer = styled.div`
 		align-items: center;
 		&:focus {
 			border-left: 1px #585858 solid;
+			/* background-color: rgba(255, 255, 255, 0.15);
 			.file {
 				background-image: ${(props) => `url(${props.innerActive})`};
-			}
+			} */
 		}
 		&:hover {
-			.action {
-				background-image: ${(props) =>
-					props.isOpen
-						? `url(${props.actionOpenHover})`
-						: `url(${props.actionHover})`};
-			}
 			.file {
-				background-image: ${(props) => `url(${props.innerHover})`};
-			}
-			.folder {
-				background-image: ${(props) =>
-					props.isOpen
-						? `url(${props.iconOpenHover})`
-						: `url(${props.iconHover})`};
 				background-image: ${(props) => `url(${props.innerHover})`};
 			}
 		}
@@ -52,8 +54,6 @@ export const SelectionIcon = styled.div`
 	background-repeat: no-repeat;
 	background-image: ${(props) =>
 		props.isOpen ? `url(${props.openInactive})` : `url(${props.inactive})`};
-
-	
 `;
 
 export const FileDiv = styled.div`

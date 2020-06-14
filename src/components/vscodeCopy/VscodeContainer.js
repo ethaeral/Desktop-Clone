@@ -12,12 +12,12 @@ import { CodeContainer } from "./styles/codeContainerStyle";
 
 // Context
 import { WindowsContext } from "../../modules/windowContext";
+import { CodeContext } from "../../modules/codeContext";
 
 export default function VscodeContainer(props) {
-
 	const { statefulWindows, setWindowState } = useContext(WindowsContext);
 	return (
-	
+		<CodeContext.Provider>
 			<CodeContainer
 				className='vscode'
 				ref={props.reference}
@@ -38,7 +38,6 @@ export default function VscodeContainer(props) {
 						},
 						sideNavActive: { ...statefulWindows.sideNavActive, setting: false },
 					});
-			
 				}}>
 				<WindowsBar
 					title={"currentFile.js - richanyNguonPortfolio - Ghibli Studio Code"}
@@ -49,6 +48,6 @@ export default function VscodeContainer(props) {
 				<MainViewport />
 				<BottomUtilityBar />
 			</CodeContainer>
-
+		</CodeContext.Provider>
 	);
 }
