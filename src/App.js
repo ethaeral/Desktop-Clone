@@ -69,8 +69,8 @@ function App() {
 		},
 		homepage: {
 			minimized: false,
-			maximized: true,
-			closed: false,
+			maximized: false,
+			closed: true,
 			z: 1,
 		},
 		modalIsOpen: {
@@ -94,7 +94,7 @@ function App() {
 				</BackgroundImage>
 				<Background />
 				<IconHolders>
-					<button
+					{/* <button
 						onClick={(e) => {
 							e.stopPropagation();
 							const addCounter = statefulWindows.zCounter++;
@@ -112,7 +112,7 @@ function App() {
 							<img src={terminal} alt='terminal-icon' />
 							Terminal
 						</TerminalIcon>
-					</button>
+					</button> */}
 					<button
 						onClick={(e) => {
 							e.stopPropagation();
@@ -156,13 +156,13 @@ function App() {
 					</button>
 				</IconHolders>
 
-				<Draggable
+				{/* <Draggable
 					component={Terminal}
 					z={statefulWindows.terminal.z}
 					state={statefulWindows}
 					setState={setWindowState}
 					type={"terminal"}
-				/>
+				/> */}
 				<Draggable
 					component={VscodeContainer}
 					z={statefulWindows.code.z}

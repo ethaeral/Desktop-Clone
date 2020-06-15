@@ -1,0 +1,21 @@
+Suggested App Build:
+
+amon amarth app -- game application?
+
+
+
+to do:
+
+x external repl that plugs into finish the terminal plug in functionality for vscode terminal
+x remove debug section
+inside edition
+have one tab and display name
+search fucntion 
+branch wip projects
+
+
+open editior will consist of one file that changes
+outline will have message "The active editor cannot provideoutline information.
+Timeline will have uncommited Changes
+npm scripts
+one script from start
