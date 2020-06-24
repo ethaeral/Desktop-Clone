@@ -1,5 +1,5 @@
 // Libraries
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 
 // Components
 import BottomUtilityBar from "./components/bottomUtilityBar/BottomUtilityBar";
@@ -16,8 +16,16 @@ import { CodeContext } from "../../modules/codeContext";
 
 export default function VscodeContainer(props) {
 	const { statefulWindows, setWindowState } = useContext(WindowsContext);
+	const [currentProject, setCurrentProject] = useState(() => {
+		let projectState = { current: undefined };
+		statefulWindows.projects.forEach((project) => {
+			projectState[`${project.name}`] = { ...project };
+		});
+		return projectState;
+	});
+
 	return (
-		<CodeContext.Provider>
+		<CodeContext.Provider value={{ currentProject, setCurrentProject }}>
 			<CodeContainer
 				className='vscode'
 				ref={props.reference}

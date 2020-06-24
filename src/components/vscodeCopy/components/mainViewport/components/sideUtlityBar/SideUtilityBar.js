@@ -82,7 +82,7 @@ export default function SideUtilityBar() {
 						switchActive("branch");
 					}}
 				/>
-				<SideIcon
+				{/* <SideIcon
 					image={bug}
 					active={bugActive}
 					hover={bugHover}
@@ -91,7 +91,7 @@ export default function SideUtilityBar() {
 						e.stopPropagation();
 						switchActive("bug");
 					}}
-				/>
+				/> */}
 				<SideIcon
 					image={extension}
 					active={extensionActive}

@@ -5,7 +5,7 @@ import ReleaseNotes from "./components/releaseNotes/ReleaseNotes";
 export default function DisplayCode() {
 	return (
 		<DisplayCodeContainer>
-			<ReleaseNotes />
+			{/* <ReleaseNotes /> */}
 		</DisplayCodeContainer>
 	);
 }

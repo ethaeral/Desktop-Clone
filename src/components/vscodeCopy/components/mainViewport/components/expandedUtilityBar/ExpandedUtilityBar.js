@@ -16,7 +16,7 @@ export default function ExpandedUtilityBar() {
 	return (
 		<ExpandedUtility>
 			<Branch active={branch} />
-			<Bug active={bug} />
+			{/* <Bug active={bug} /> */}
 			<Ext active={ext} />
 			<Projects active={projects} />
 			<Search active={search} />

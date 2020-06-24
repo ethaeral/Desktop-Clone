@@ -12,7 +12,7 @@ export default function CodeEditior() {
 	return (
 		<CodeContainer>
 			<CodeBox />
-			<Terminal />
+			{/* <Terminal /> */}
 		</CodeContainer>
 	);
 }
