@@ -3,7 +3,7 @@ import React, { useContext, useState } from "react";
 
 // Context
 import { WindowsContext } from "../../../../../../../../../../modules/windowContext";
-
+import { CodeContext } from "../../../../../../../../../../modules/codeContext";
 // Components
 import Selection from "../../../selection/Selection";
 
@@ -30,13 +30,13 @@ import jsHover from "../../../../../../../../../../assets/utilityBar/projects/js
 import {
 	DropDownContainer,
 	PortfolioContainer,
-	Line,
+
 } from "./styles/portfolioStyles";
 
 export default function Portfolio() {
 	const [isOpen, setIsOpen] = useState(true);
 	const { statefulWindows } = useContext(WindowsContext);
-
+	const { currentProject, setCurrentProject } = useContext(CodeContext);
 	return (
 		<PortfolioContainer>
 			<Selection
@@ -58,7 +58,7 @@ export default function Portfolio() {
 				title={"src"}
 			/>
 
-			<DropDownContainer isOpen={isOpen} className="dropDown">
+			<DropDownContainer isOpen={isOpen} className='dropDown'>
 				{statefulWindows.projects.map((project) => (
 					<Selection
 						key={project.name}
@@ -75,7 +75,7 @@ export default function Portfolio() {
 						openIconActive={folderOpenActive}
 						openIconHover={folderOpenHover}
 						onClickFunc={() => {
-							console.log("bish");
+							setCurrentProject({ ...currentProject, current: project.name });
 						}}
 						title={project.name}
 						innerTitle={`${project.name.split(" ").join("")}.js`}
