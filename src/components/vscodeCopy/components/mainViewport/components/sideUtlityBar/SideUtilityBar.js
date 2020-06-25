@@ -9,9 +9,9 @@ import {
 	SettingMenu,
 } from "./styles/sideUtilityStyles";
 
-import bug from "../../../../../../assets/sideNav/bug.png";
-import bugActive from "../../../../../../assets/sideNav/bugActive.png";
-import bugHover from "../../../../../../assets/sideNav/bugHover.png";
+// import bug from "../../../../../../assets/sideNav/bug.png";
+// import bugActive from "../../../../../../assets/sideNav/bugActive.png";
+// import bugHover from "../../../../../../assets/sideNav/bugHover.png";
 import extension from "../../../../../../assets/sideNav/extension.png";
 import extensionActive from "../../../../../../assets/sideNav/extensionActive.png";
 import extensionHover from "../../../../../../assets/sideNav/extensionHover.png";
