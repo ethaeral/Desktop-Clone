@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Display } from "./styles/codeDisplayStyles";
 import { CodeContext } from "../../../../../../../../../../modules/codeContext";
 import CodeTab from "./components/codeTab/CodeTab";
-import DisplayCode from "./components/displayCode/DisplayCode";
+// import DisplayCode from "./components/displayCode/DisplayCode";
 
 export default function CodeDisplay() {
 	const { currentProject } = useContext(CodeContext);

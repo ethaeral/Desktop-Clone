@@ -29,7 +29,7 @@ export const allProjects = [
 			long:
 				"A machine learning web application that leverages natural language processing using tf-idf and random forest model to predict the success of a kickstarter campaign. Users can create a card of their campaign entering monetary goal, category, duration, and description to find out their percentage of success. Users can  also readjust their features of their campaign in the app to try to gain insight on what they can do to increase their chances of hitting their goals. Built by an international team within a week",
 		},
-		techStack: ["ReactJS", "Javscript"],
+		techStack: ["ReactJS", "Javascript"],
 		linkDeployed: "https://kickstartersuccess.now.sh/login",
 		linkGithub: "https://github.com/Kickstarter-Success/Frontend",
 		contributions: [
@@ -76,7 +76,7 @@ export const allProjects = [
 			long:
 				"A web application where a host of a potluck and their guest can collaborate in participating in a pot luck. A host can sign up and login to create a potluck event and send invites to their guests. Guests can confirm their status and select items that they will be bringing. Built by an international team within a week",
 		},
-		techStack: ["ReactJS", "Javscript"],
+		techStack: ["ReactJS", "Javascript"],
 		linkDeployed: "https://potluck-frontend.feast.now.sh",
 		linkGithub: "https://github.com/build-yelp-10-21/potluck-frontend",
 		contributions: [

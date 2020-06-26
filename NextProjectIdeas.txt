@@ -1,8 +1,9 @@
 Suggested App Build:
 
 amon amarth app -- game application?
+an image gallery app with low-res embed sharing
 
-
+https://www.twitch.tv/franklyfaye/clip/MagnificentBovineDeerBudStar?filter=clips&range=all&sort=time
 
 to do:
 

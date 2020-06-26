@@ -2,7 +2,7 @@ import React from "react";
 
 
 import CodeBox from "./components/codeBox/CodeBox";
-import Terminal from "./components/terminal/Terminal";
+// import Terminal from "./components/terminal/Terminal";
 import { CodeContainer } from "./styles/codeEditiorStyles";
 
 

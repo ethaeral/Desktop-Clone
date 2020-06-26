@@ -4,10 +4,10 @@ import React, { useState } from "react";
 // Components
 import StripeContainer from "./components/stripes/StripeContainer";
 import VscodeContainer from "./components/vscodeCopy/VscodeContainer";
-import Terminal from "./components/terminal/Terminal";
+// import Terminal from "./components/terminal/Terminal";
 
 // Assets
-import terminal from "./assets/02-terminal.png";
+// import terminal from "./assets/02-terminal.png";
 import mask from "./assets/mononoke.png";
 import code from "./assets/vscode.png";
 import firefox from "./assets/firefox.png";
@@ -21,7 +21,7 @@ import { allProjects } from "./data/projectsData";
 import {
 	AppContainer,
 	Background,
-	TerminalIcon,
+	// TerminalIcon,
 	BackgroundImage,
 	Credit,
 	IconHolders,
