@@ -1,5 +1,7 @@
 // Libaries
 import React, { useEffect, useRef, useState } from "react";
+
+// Styles
 import { DragContainer } from "./styles/draggableStyles";
 
 export default function Draggable(props) {
