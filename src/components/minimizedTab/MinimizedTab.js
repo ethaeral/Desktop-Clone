@@ -1,3 +1,4 @@
+// Libraries
 import React, { useContext } from "react";
 
 import { TabBar } from "./styles/tabBarStyles";
