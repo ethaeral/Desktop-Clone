@@ -6,6 +6,8 @@ import { TabBar } from "./styles/tabBarStyles";
 
 // Components
 import Tab from "./components/tab/Tab";
+
+// Context
 import {WindowsContext} from "../../modules/windowContext";
 
 export default function MinimizedTab() {
