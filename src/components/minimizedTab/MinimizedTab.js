@@ -1,6 +1,7 @@
 // Libraries
 import React, { useContext } from "react";
 
+// Styles
 import { TabBar } from "./styles/tabBarStyles";
 import Tab from "./components/tab/Tab";
 import {WindowsContext} from "../../modules/windowContext";
