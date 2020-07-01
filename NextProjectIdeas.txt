@@ -1,7 +1,11 @@
-Suggested App Build:
+Suggested App Build required in VIM:
 
 amon amarth app -- game application?
 an image gallery app with low-res embed sharing
+4D Hyperbolic Space with pathing- find shortest pathing
+
+Find an easier but kinda challenging project to do c++ - arduino 
+plant health monitor that predicts the next time it needs to be watered
 
 https://www.twitch.tv/franklyfaye/clip/MagnificentBovineDeerBudStar?filter=clips&range=all&sort=time
 
