@@ -87,7 +87,12 @@ export default function Draggable(props) {
 					y: position.y + deltaY,
 				});
 			}}>
-			<props.component reference={childRef} />
+			<props.component
+				reference={childRef}
+				clear={
+					state[type].hasOwnProperty("clear") ? state[type].clear : undefined
+				}
+			/>
 		</DragContainer>
 	);
 }

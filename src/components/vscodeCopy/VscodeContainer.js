@@ -53,7 +53,7 @@ export default function VscodeContainer(props) {
 					tabbedTitle={"Ghibli Studio Code"}
 				/>
 				<FileNavBar />
-				<MainViewport />
+				<MainViewport clear={statefulWindows.code.clear} />
 				<BottomUtilityBar />
 			</CodeContainer>
 		</CodeContext.Provider>

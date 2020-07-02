@@ -2,10 +2,10 @@ import React from "react";
 import { Input } from "./styles/terminalInStyles";
 import REPL from "../../../../../repl/REPL";
 
-export default function TerminalInput() {
+export default function TerminalInput({clear}) {
 	return (
 		<Input>
-			<REPL />
+			<REPL clear={clear} />
 		</Input>
 	);
 }

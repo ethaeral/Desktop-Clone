@@ -58,7 +58,8 @@ export default function SearchBar({ stateControl, dependencyMap }) {
 			}
 		});
 		set({ ...state, results });
-	}, [tag, dependencyMap, set, state]);
+	// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [tag]);
 
 	useEffect(() => {
 		updateTag();

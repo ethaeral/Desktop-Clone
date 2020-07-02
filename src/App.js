@@ -59,18 +59,20 @@ function App() {
 			minimized: false,
 			maximized: false,
 			closed: true,
+			clear: false,
 			z: 0,
 		},
 		code: {
 			minimized: false,
 			maximized: false,
 			closed: false,
+			clear: false,
 			z: 0,
 		},
 		homepage: {
 			minimized: false,
-			maximized: false,
-			closed: true,
+			maximized: true,
+			closed: false,
 			z: 1,
 		},
 		modalIsOpen: {
@@ -105,6 +107,7 @@ function App() {
 									...statefulWindows.terminal,
 									closed: false,
 									z: addCounter,
+									clear: false,
 								},
 							});
 						}}>
@@ -124,6 +127,7 @@ function App() {
 									...statefulWindows.code,
 									closed: false,
 									z: addCounter,
+									clear: false,
 								},
 							});
 						}}>
