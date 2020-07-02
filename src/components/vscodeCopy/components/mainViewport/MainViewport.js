@@ -9,12 +9,12 @@ import CodeEditior from "./components/codeEditor/CodeEditior";
 // Styles
 import { MainViewContainer } from "./styles/mainViewStyles";
 
-export default function MainViewport() {
+export default function MainViewport({clear}) {
 	return (
 		<MainViewContainer>
 			<SideUtilityBar />
 			<ExpandedUtilityBar />
-			<CodeEditior />
+			<CodeEditior clear={clear} />
 		</MainViewContainer>
 	);
 }

@@ -1,5 +1,5 @@
 // Libraries
-import React, { useContext } from "react";
+import React, { useContext} from "react";
 
 // Styles
 import {
@@ -13,7 +13,7 @@ import {
 } from "./styles/windowBarStyle";
 
 // Context
-import {WindowsContext} from "../../modules/windowContext";
+import { WindowsContext } from "../../modules/windowContext";
 import MobileControls from "./components/mobileControls/MobileControls";
 import ControlModal from "./components/controlModal/ControlModal";
 
@@ -91,15 +91,28 @@ export default function WindowControls(props) {
 				<button
 					onClick={(e) => {
 						e.stopPropagation();
-						setWindowState({
-							...statefulWindows,
-							[type]: {
-								...[type],
-								maximized: false,
-								minimized: false,
-								closed: true,
-							},
-						});
+						if (type === "code" || type === "terminal") {
+							setWindowState({
+								...statefulWindows,
+								[type]: {
+									...[type],
+									maximized: false,
+									minimized: false,
+									closed: true,
+									clear: true,
+								},
+							});
+						} else {
+							setWindowState({
+								...statefulWindows,
+								[type]: {
+									...[type],
+									maximized: false,
+									minimized: false,
+									closed: true,
+								},
+							});
+						}
 					}}>
 					<ExitButton>
 						<ButtonText>&#215;</ButtonText>

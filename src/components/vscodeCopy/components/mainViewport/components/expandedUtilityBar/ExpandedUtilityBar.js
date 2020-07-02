@@ -11,7 +11,7 @@ import Search from "./components/search/Search";
 
 export default function ExpandedUtilityBar() {
 	const { statefulWindows } = useContext(WindowsContext);
-	const { search, bug, branch, ext, projects } = statefulWindows.sideNavActive;
+	const { search,  branch, ext, projects } = statefulWindows.sideNavActive;
 
 	return (
 		<ExpandedUtility>
