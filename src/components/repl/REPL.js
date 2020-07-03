@@ -5,21 +5,22 @@ import {
 	REPLContainer,
 	FullInput,
 	PTerm,
+	Path,
 } from "./styles";
 
-// script f6f6f4
 export default function REPL({ clear }) {
-	const REPLRef = useRef(null);
 	const [input, setInput] = useState("");
 	const [message, setMessage] = useState([
 		"Unrecognized command type /help to see all commands",
 	]);
+
 	useEffect(() => {
 		if (clear === true) {
 			setInput("");
 			setMessage([]);
 		}
 	}, [clear]);
+
 	function getResponse(givenInput) {
 		const command = {
 			"/help":
@@ -32,41 +33,43 @@ export default function REPL({ clear }) {
 		if (command.hasOwnProperty(givenInput)) {
 			return command[givenInput];
 		} else {
-			return "$Unrecognized command type /help to see all commands";
+			return "Unrecognized command type /help to see all commands";
 		}
 	}
 	return (
-		<REPLContainer ref={}>
+		<REPLContainer>
 			<REPLMessage>
 				{message.map((m) => (
-					<p>
-						{m}
-						<br />
-					</p>
+					<Path key={`${Math.random()}`}>
+						<PTerm color='#78f09a'>visitor@guest</PTerm>
+						<PTerm color='#f6f6f4'>:</PTerm>
+						<PTerm color='#d6b4f7'>~/Desktop/portfolio</PTerm>
+						<PTerm color='#f6f6f4'>$</PTerm>{m}
+					</Path>
 				))}
 			</REPLMessage>
 			<FullInput>
-				<REPLInput
-					type='text'
-					value={input}
-					onKeyDown={(e) => {
-						if (e.keyCode === 13) {
-							const reply = getResponse(input);
-							setMessage([
-								...message,
-								<p>
-									<PTerm color='#78f09a'>visitor@guest</PTerm>:
-									<PTerm color='#d6b4f7'>~/</PTerm>
-								</p>,
-								reply,
-							]);
-							setInput("");
-						}
-					}}
-					onChange={(e) => {
-						setInput(e.target.value);
-					}}
-				/>
+				{" "}
+				<Path key={`${Math.random()}`}>
+					<PTerm color='#78f09a'>visitor@guest</PTerm>
+					<PTerm color='#f6f6f4'>:</PTerm>
+					<PTerm color='#d6b4f7'>~/Desktop/portfolio</PTerm>
+					<PTerm color='#f6f6f4'>$</PTerm>
+					</Path>
+					<REPLInput
+						type='text'
+						value={input}
+						onKeyDown={(e) => {
+							if (e.keyCode === 13) {
+								const reply = getResponse(input);
+								setMessage([...message, reply]);
+								setInput("");
+							}
+						}}
+						onChange={(e) => {
+							setInput(e.target.value);
+						}}
+					/>
 			</FullInput>
 		</REPLContainer>
 	);
