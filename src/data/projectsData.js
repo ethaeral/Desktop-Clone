@@ -38,7 +38,6 @@ export const allProjects = [
 			"Managed form and form validation with formik",
 		],
 		media: "https://www.youtube.com/embed/StnuSti2IS4",
-	
 
 		video: true,
 		codeSnippet: "",
@@ -265,6 +264,39 @@ export const allProjects = [
 		video: true,
 	},
 	{
+		type: "Personal",
+		name: "Rainbow of Life",
+		tags: [
+			"@testing-library/jest-dom",
+			"@testing-library/react",
+			"@testing-library/user-event",
+			"react",
+			"react-dom",
+			"react-scripts",
+			"styled-components",
+		],
+		description: {
+			short: "A 3D rendering of Conway's Game of Life",
+			long: "A 3D rendering of Conway's Game of Life",
+		},
+		techStack: ["ReactJS", "Javascript"],
+		linkDeployed: "https://rainbowoflife.vercel.app/",
+		linkGithub: "https://github.com/richanynguon/3d_matrix_rendering",
+		contributions: [
+			"Leveraged a graph and hashmap to optimize generation of a state related multi-dimensional array",
+			"Render multi-dimensional array as a 3D cube and created 3D transform features",
+		],
+		media: "",
+		codeSnippet: "",
+		date: "06/22/20",
+		role: "Front End Developer",
+		nonWeb: false,
+		inProgress: false,
+		isExt: false,
+		webPage: true,
+		video: false,
+	},
+	{
 		type: "Team",
 		name: "Enviro",
 		tags: [
@@ -345,7 +377,6 @@ export const allProjects = [
 		isExt: false,
 		webPage: true,
 		video: false,
-	
 	},
 	{
 		type: "Personal",
@@ -613,7 +644,6 @@ export const allProjects = [
 		webPage: false,
 	},
 ];
-
 
 /*
 
