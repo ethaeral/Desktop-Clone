@@ -2,23 +2,18 @@
 import React from "react";
 
 // Styles
-import {
-	ToolTipDown,
-	ToolTipDownContainer,
-} from "../../../actionIcon/styles/actionIconStyles";
 import { SearchToolContainer } from "./styles/searchToolStyles";
 
 // Assets
 import SearchRefresh from "../../../../../../../../../../assets/utilityBar/searchRefresh.png";
 import SearchClear from "../../../../../../../../../../assets/utilityBar/searchClear.png";
-import SearchNew from "../../../../../../../../../../assets/utilityBar/searchNew.png";
-import SearchToggleExpand from "../../../../../../../../../../assets/utilityBar/searchToggleExpand.png";
-import SearchToggleExpandInactive from "../../../../../../../../../../assets/utilityBar/searchToggleExpandInactive.png";
 import SearchRefreshInactive from "../../../../../../../../../../assets/utilityBar/searchRefreshInactive.png";
 import SearchClearInactive from "../../../../../../../../../../assets/utilityBar/searchClearInactive.png";
-
+import AddBox from "../../../../../../../../../../assets/searchBar/add.png";
+import AddFile from "../../../../../../../../../../assets/searchBar/addfile.png";
+import SearchText from "../../../../../../../../../../assets/searchBar/search.png";
 // Components
-import ActionIcon from "../../../actionIcon/ActionIcon";
+import UtilityIcon from "../../../../../../../utilityIcon/UtilityIcon";
 
 export default function SearchToolBar(props) {
 	const { stateControl } = props;
@@ -26,38 +21,46 @@ export default function SearchToolBar(props) {
 	return (
 		<SearchToolContainer>
 			<div>
-				SEARCH
-				<ToolTipDown>
-					<ToolTipDownContainer>Search(Ctrl+Shift+F)</ToolTipDownContainer>
-				</ToolTipDown>
+				<UtilityIcon
+					type={"refresh"}
+					state={state}
+					setState={set}
+					active={SearchText}
+					image={SearchText}
+					hover={SearchText}
+				/>
 			</div>
-			<ActionIcon
+			<UtilityIcon
 				type={"refresh"}
 				state={state}
 				setState={set}
-				activeImage={SearchRefresh}
-				inActiveImage={SearchRefreshInactive}
+				active={SearchRefresh}
+				image={SearchRefreshInactive}
+				hover={SearchRefreshInactive}
 			/>
-			<ActionIcon
+			<UtilityIcon
 				type={"clear"}
 				state={state}
 				setState={set}
-				activeImage={SearchClear}
-				inActiveImage={SearchClearInactive}
+				active={SearchClear}
+				image={SearchClearInactive}
+				hover={SearchClearInactive}
 			/>
-			<ActionIcon
+			<UtilityIcon
 				type={undefined}
 				state={state}
 				setState={set}
-				activeImage={SearchNew}
-				inActiveImage={undefined}
+				active={AddFile}
+				image={AddFile}
+				hover={AddFile}
 			/>
-			<ActionIcon
+			<UtilityIcon
 				type={"toggle"}
 				state={state}
 				setState={set}
-				activeImage={SearchToggleExpand}
-				inActiveImage={SearchToggleExpandInactive}
+				active={AddBox}
+				image={AddBox}
+				hover={AddBox}
 			/>
 		</SearchToolContainer>
 	);
