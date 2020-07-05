@@ -2,7 +2,7 @@
 import React from "react";
 
 // Styles
-import { SearchToolContainer } from "./styles/searchToolStyles";
+import { SearchToolContainer, IconHolder } from "./styles/searchToolStyles";
 
 // Assets
 import SearchRefresh from "../../../../../../../../../../assets/utilityBar/searchRefresh.png";
@@ -30,38 +30,42 @@ export default function SearchToolBar(props) {
 					hover={SearchText}
 				/>
 			</div>
-			<UtilityIcon
-				type={"refresh"}
-				state={state}
-				setState={set}
-				active={SearchRefresh}
-				image={SearchRefreshInactive}
-				hover={SearchRefreshInactive}
-			/>
-			<UtilityIcon
-				type={"clear"}
-				state={state}
-				setState={set}
-				active={SearchClear}
-				image={SearchClearInactive}
-				hover={SearchClearInactive}
-			/>
-			<UtilityIcon
-				type={undefined}
-				state={state}
-				setState={set}
-				active={AddFile}
-				image={AddFile}
-				hover={AddFile}
-			/>
-			<UtilityIcon
-				type={"toggle"}
-				state={state}
-				setState={set}
-				active={AddBox}
-				image={AddBox}
-				hover={AddBox}
-			/>
+			<IconHolder>
+				<UtilityIcon
+					type={"refresh"}
+					state={state}
+					setState={set}
+					active={SearchRefresh}
+					image={SearchRefreshInactive}
+					hover={SearchRefreshInactive}
+				/>
+				<UtilityIcon
+					type={"clear"}
+					state={state}
+					setState={set}
+					active={SearchClear}
+					image={SearchClearInactive}
+					hover={SearchClearInactive}
+				/>
+				<UtilityIcon
+					type={undefined}
+					state={state}
+					setState={set}
+					active={AddFile}
+					image={AddFile}
+					hover={AddFile}
+				/>
+				<UtilityIcon
+					type={"toggle"}
+					state={state}
+					setState={set}
+					active={AddBox}
+					image={AddBox}
+					hover={AddBox}
+				/>
+			</IconHolder>
 		</SearchToolContainer>
 	);
 }
+
+

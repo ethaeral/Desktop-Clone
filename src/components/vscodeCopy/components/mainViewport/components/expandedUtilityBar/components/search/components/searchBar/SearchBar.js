@@ -4,7 +4,13 @@ import {
 	TagContainer,
 	Input,
 	DropDownSuggestions,
+	IconHolders,
+	FakeInput,
 } from "./styles/searchBarStyles";
+import UtilityIcon from "../../../../../../../utilityIcon/UtilityIcon";
+import Regex from '../../../../../../../../../../assets/utilityBar/searchPerseve.png'
+import Regex2 from '../../../../../../../../../../assets/utilityBar/searchMatchWord.png'
+import Regex3 from '../../../../../../../../../../assets/utilityBar/searchRegex.png'
 
 function Tags({ tagName, tag, setTag }) {
 	return (
@@ -58,7 +64,7 @@ export default function SearchBar({ stateControl, dependencyMap }) {
 			}
 		});
 		set({ ...state, results });
-	// eslint-disable-next-line react-hooks/exhaustive-deps
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [tag]);
 
 	useEffect(() => {
@@ -68,33 +74,40 @@ export default function SearchBar({ stateControl, dependencyMap }) {
 	return (
 		<SearchBarContainer>
 			<div>
-				<TagContainer>
+				<FakeInput>
+					<Input
+						type='text'
+						value={state.input}
+						onChange={(e) => {
+							set({
+								...state,
+								input: e.target.value,
+							});
+							setSuggestions(
+								Object.keys(dependencyMap).filter((key) => {
+									return key
+										.toLowerCase()
+										.includes(
+											e.target.value === "" || e.target.value === " "
+												? "A"
+												: e.target.value.toLowerCase()
+										);
+								})
+							);
+						}}
+					/>
+					<IconHolders>
+						<UtilityIcon image ={Regex} hover={Regex} active={Regex}/>
+						<UtilityIcon image ={Regex2} hover={Regex2} active={Regex2}/>
+						<UtilityIcon image ={Regex3} hover={Regex3} active={Regex3}/>
+					</IconHolders>
+				</FakeInput>
+			</div>
+			<TagContainer>
 					{tag.map((t) => (
 						<Tags tagName={t} tag={tag} setTag={setTag} />
 					))}
 				</TagContainer>
-				<Input
-					type='text'
-					value={state.input}
-					onChange={(e) => {
-						set({
-							...state,
-							input: e.target.value,
-						});
-						setSuggestions(
-							Object.keys(dependencyMap).filter((key) => {
-								return key
-									.toLowerCase()
-									.includes(
-										e.target.value === "" || e.target.value === " "
-											? "A"
-											: e.target.value.toLowerCase()
-									);
-							})
-						);
-					}}
-				/>
-			</div>
 			{suggestions.length > 0 && (
 				<DropDownSuggestions>
 					{suggestions.map((suggestion) => (
