@@ -8,7 +8,10 @@ export const SearchBarContainer = styled.div`
 export const Input = styled.input`
 	background: inherit;
 	outline: none;
+	color: #efe8d9;
 	border: none;
+	padding-left: 5px;
+
 `;
 
 export const TagContainer = styled.div``;
@@ -27,4 +30,5 @@ export const FakeInput = styled.div`
 	margin: 0 auto;
 	justify-content: space-between;
 	align-items: center;
+	border: 1px #191a21 solid;
 `;
