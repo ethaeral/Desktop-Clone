@@ -62,6 +62,9 @@ export const FileDiv = styled.div`
 	&:hover {
 		background-color: rgba(255, 255, 255, 0.1);
 	}
+	.FileButton{
+		display: ${(props) => (props.isOpen ? "flex" : "none")};
+	}
 `;
 export const FolderDiv = styled.div`
 	margin-left: ${(props) => (props.topFolder ? "0px" : "-10px")};

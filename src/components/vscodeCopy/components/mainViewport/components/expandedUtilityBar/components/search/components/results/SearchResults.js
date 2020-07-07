@@ -1,6 +1,13 @@
 import React from "react";
 import { SearchResultContainer } from "./styles/searchResultStyle";
 
+
+import jsInactive from "../../../../../../../../../../assets/utilityBar/projects/jsInactive.png";
+import {
+	FileDiv,
+	SelectionIcon,
+} from "../../../selection/styles/selectionStyles";
+
 export default function SearchResults({
 	results,
 	currentProject,
@@ -10,12 +17,16 @@ export default function SearchResults({
 		<SearchResultContainer>
 			{results.length > 0
 				? results.map((r) => (
-						<p
-							onClick={() => {
-								setCurrentProject({ ...currentProject, current: r });
-							}}>
-							{r}
-						</p>
+						<FileDiv isOpen={true}>
+							<button
+								className='FileButton'
+								onClick={(e) => {
+									setCurrentProject({ ...currentProject, current: r });
+								}}>
+								<SelectionIcon className='file' inactive={jsInactive} />
+								<p>{r}</p>
+							</button>
+						</FileDiv>
 				  ))
 				: ""}
 		</SearchResultContainer>
