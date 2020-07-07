@@ -48,7 +48,7 @@ function Selection({
 	);
 }
 
-export default function SearchBar({ stateControl, dependencyMap }) {
+export default function SearchBar({ stateControl, dependencyMap , change}) {
 	const BarRef = useRef(null);
 
 	const { state, set } = stateControl;
@@ -78,7 +78,7 @@ export default function SearchBar({ stateControl, dependencyMap }) {
 			width: BarRef.current.offsetWidth,
 			height: BarRef.current.offsetHeight + BarRef.current.offsetTop,
 		});
-	}, [updateTag, BarRef]);
+	}, [updateTag, BarRef, change]);
 
 	return (
 		<SearchBarContainer>
