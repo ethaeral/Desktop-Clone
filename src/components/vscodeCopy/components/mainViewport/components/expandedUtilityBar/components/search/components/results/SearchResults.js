@@ -17,7 +17,7 @@ export default function SearchResults({
 		<SearchResultContainer>
 			{results.length > 0
 				? results.map((r) => (
-						<FileDiv isOpen={true}>
+						<FileDiv isOpen={"flex"}>
 							<button
 								className='FileButton'
 								onClick={(e) => {

@@ -7,6 +7,7 @@ import {
 	SettingIcon,
 	SettingIconHolder,
 	SettingMenu,
+	Bubble,
 } from "./styles/sideUtilityStyles";
 
 // import bug from "../../../../../../assets/sideNav/bug.png";
@@ -28,7 +29,7 @@ import setting from "../../../../../../assets/sideNav/setting.png";
 import settingActive from "../../../../../../assets/sideNav/settingActive.png";
 import settingHover from "../../../../../../assets/sideNav/settingHover.png";
 
-import {WindowsContext} from "../../../../../../modules/windowContext";
+import { WindowsContext } from "../../../../../../modules/windowContext";
 
 import ListItem from "../../../fileNavBar/components/navButton/components/listItems/ListItem";
 import { settingPopOutCode } from "../../../../../../data/fileNavBar";
@@ -80,8 +81,12 @@ export default function SideUtilityBar() {
 					onClick={(e) => {
 						e.stopPropagation();
 						switchActive("branch");
-					}}
-				/>
+					}}>
+					<Bubble>
+						<p>{statefulWindows.inProgress.length}</p>
+					</Bubble>
+				</SideIcon>
+
 				{/* <SideIcon
 					image={bug}
 					active={bugActive}

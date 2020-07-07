@@ -44,7 +44,7 @@ export default function Search(props) {
 	return (
 		<SearchSideContainer active={props.active}>
 			<SearchToolBar stateControl={stateControl} />
-			<SearchBar stateControl={stateControl} dependencyMap={dependencyMap} />
+			<SearchBar stateControl={stateControl} dependencyMap={dependencyMap} change={props.change}/>
 			<SearchResults
 				results={searchState.results}
 				currentProject={currentProject}

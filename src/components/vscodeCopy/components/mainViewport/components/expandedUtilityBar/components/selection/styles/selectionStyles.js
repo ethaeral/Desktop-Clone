@@ -34,10 +34,7 @@ export const SelectionContainer = styled.div`
 		align-items: center;
 		&:focus {
 			border-left: 1px #585858 solid;
-			/* background-color: rgba(255, 255, 255, 0.15);
-			.file {
-				background-image: ${(props) => `url(${props.innerActive})`};
-			} */
+
 		}
 		&:hover {
 			.file {
@@ -63,7 +60,7 @@ export const FileDiv = styled.div`
 		background-color: rgba(255, 255, 255, 0.1);
 	}
 	.FileButton{
-		display: ${(props) => (props.isOpen ? "flex" : "none")};
+		display: ${(props) => (props.isOpen)};
 	}
 `;
 export const FolderDiv = styled.div`

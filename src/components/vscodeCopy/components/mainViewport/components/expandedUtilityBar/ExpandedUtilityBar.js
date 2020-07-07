@@ -19,7 +19,7 @@ export default function ExpandedUtilityBar() {
 			{/* <Bug active={bug} /> */}
 			<Ext active={ext} />
 			<Projects active={projects} />
-			<Search active={search} />
+			<Search active={search} change={statefulWindows.sideNavActive}/>
 		</ExpandedUtility>
 	);
 }

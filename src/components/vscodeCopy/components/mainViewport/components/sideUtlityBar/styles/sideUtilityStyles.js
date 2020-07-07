@@ -19,7 +19,6 @@ export const SideIconHolder = styled.div`
 `;
 
 export const SideIcon = styled.span`
-	
 	border-left: ${(props) => (props.isActive ? `2px solid #97618a` : `none`)};
 	background-color: ${(props) => (props.isActive ? `#393c4d` : `#343746`)};
 	width: 90%;
@@ -66,4 +65,19 @@ export const SettingMenu = styled(DropDown)`
 	color: #e5e2d9;
 	font-family: "Ubuntu", sans-serif;
 	font-size: 0.85em;
+`;
+
+export const Bubble = styled.div`
+	border-radius: 100%;
+	border: 1px #211e28 solid;
+	width: 15px;
+	height: 15px;
+	background-color: #f286c4;
+	color: #f5f6f4;
+	text-align: center;
+	font-size: 0.7em;
+	font-weight: 700;
+	position: absolute;
+	top: 156px;
+	left: 2em;
 `;

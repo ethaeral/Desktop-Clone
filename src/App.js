@@ -41,6 +41,7 @@ function App() {
 		zCounter: 1,
 		firefoxTabs: ["1"],
 		tabbedWindows: [],
+		inProgress: allProjects.filter((p) => p.inProgress === true),
 		projects: allProjects.filter((project) => project.nonWeb === false),
 		exts: allProjects.filter((project) => project.isExt === true),
 		otherProjects: allProjects.filter(
@@ -48,11 +49,11 @@ function App() {
 		),
 		webPageProjects: allProjects.filter((project) => project.webPage === true),
 		sideNavActive: {
-			search: true,
-			branch: false,
+			search: false,
+			branch: true,
 			bug: false,
 			ext: false,
-			projects:false,
+			projects: false,
 			setting: false,
 		},
 		terminal: {
