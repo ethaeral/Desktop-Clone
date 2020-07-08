@@ -50,10 +50,10 @@ function App() {
 		webPageProjects: allProjects.filter((project) => project.webPage === true),
 		sideNavActive: {
 			search: false,
-			branch: false,
+			branch: true,
 			bug: false,
 			ext: false,
-			projects: true,
+			projects: false,
 			setting: false,
 		},
 		terminal: {
@@ -72,8 +72,8 @@ function App() {
 		},
 		homepage: {
 			minimized: false,
-			maximized: true,
-			closed: false,
+			maximized: false,
+			closed: true,
 			z: 1,
 		},
 		modalIsOpen: {
