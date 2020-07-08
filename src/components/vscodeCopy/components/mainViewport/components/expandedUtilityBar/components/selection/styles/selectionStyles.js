@@ -34,7 +34,6 @@ export const SelectionContainer = styled.div`
 		align-items: center;
 		&:focus {
 			border-left: 1px #585858 solid;
-
 		}
 		&:hover {
 			.file {
@@ -56,17 +55,27 @@ export const SelectionIcon = styled.div`
 export const FileDiv = styled.div`
 	margin-left: -10px;
 	padding-left: 20px;
+
 	&:hover {
 		background-color: rgba(255, 255, 255, 0.1);
 	}
-	.FileButton{
-		display: ${(props) => (props.isOpen)};
+	.FileButton {
+		display: ${(props) => props.isOpen};
+		align-items: center;
 	}
 `;
 export const FolderDiv = styled.div`
 	margin-left: ${(props) => (props.topFolder ? "0px" : "-10px")};
 	padding-left: ${(props) => (props.topFolder ? "0px" : "20px")};
-
+	.FolderButton {
+		display: ${(props) => props.isOpen};
+		align-items: center;
+		justify-content: ${(props) => props.justify};
+	}
+	.Change {
+		justify-content: space-between;
+		width: 100%;
+	}
 	&:hover {
 		background-color: rgba(255, 255, 255, 0.1);
 	}
