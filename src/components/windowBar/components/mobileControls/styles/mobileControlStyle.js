@@ -9,7 +9,7 @@ export const MobileOptions = styled.div`
 	.mobile {
 		display: flex;
 	}
-	@media (max-width: 767px) {
+	@media (max-width: 837px) {
 		display: flex;
 	}
 `;

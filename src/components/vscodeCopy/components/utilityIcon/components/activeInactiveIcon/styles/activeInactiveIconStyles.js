@@ -15,3 +15,5 @@ export const AIIconContainer = styled.div`
 			props.isActive ? `url(${props.active})` : `url(${props.hover})`};
 	}
 `;
+
+/* max-width: ${props=>} */

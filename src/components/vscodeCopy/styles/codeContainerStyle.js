@@ -5,9 +5,9 @@ export const CodeContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	position: absolute;
-	top: ${props=>props.y};
+	top: ${(props) => props.y};
 	bottom: 0;
-	left: ${props=>props.x};
+	left: ${(props) => props.x};
 	right: 0;
 	margin: auto;
 	width: ${(props) => (props.maximized ? "100%" : "85vw")};
@@ -16,8 +16,7 @@ export const CodeContainer = styled.div`
 	visibility: ${(props) => (props.hidden ? "hidden" : "visible")};
 	overflow: hidden;
 
-
-	@media (max-width: 760px) {
+	@media (max-width: 837px) {
 		display: none;
 	}
 `;

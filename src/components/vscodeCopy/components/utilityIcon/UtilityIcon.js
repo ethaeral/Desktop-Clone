@@ -5,7 +5,16 @@ import { FunctionContainer } from "../codeToolTip/styles/toolTipStyles";
 import ActiveInactiveIcon from "./components/activeInactiveIcon/ActiveInactiveIcon";
 
 export default function UtilityIcon(props) {
-	const { message, image, active, hover, isActive, onClickFunc, title, reg } = props;
+	const {
+		message,
+		image,
+		active,
+		hover,
+		isActive,
+		onClickFunc,
+		title,
+		reg,
+	} = props;
 
 	const [mousePos, setMousePos] = useState({ x: null, y: null });
 	const [visible, setVisible] = useState(false);
@@ -47,6 +56,7 @@ export default function UtilityIcon(props) {
 				{image ? (
 					<ActiveInactiveIcon
 						onClickFunc={onClickFunc ? onClickFunc : console.log}
+					
 						image={image}
 						active={active}
 						hover={hover}

@@ -10,10 +10,11 @@ export const WarningContainer = styled.div`
 	left: calc(50vw - 150px);
 	margin: 0 auto;
 	z-index: ${(props) => (props.full ? 6 : 0)};
-	button {
+	.x {
 		margin-right: 10px;
+		cursor: pointer;
 	}
-	@media (max-width: 767px) {
+	@media (max-width: 837px) {
 		display: ${(props) => (props.shown ? "flex" : "none")};
 		left: 10%;
 		justify-content: center;
@@ -37,7 +38,7 @@ export const WarningContent = styled.div`
 	height: calc(200px - 2em);
 	flex-direction: column;
 	justify-content: space-between;
-	button {
+	.cursor {
 		width: 50px;
 		text-align: center;
 		align-self: flex-end;
@@ -46,8 +47,7 @@ export const WarningContent = styled.div`
 		border: 1px #d79d86 solid;
 		margin-right: 1em;
 		margin-bottom: 1em;
-	}
-	.cursor {
+
 		cursor: pointer;
 		margin-right: 1em;
 	}

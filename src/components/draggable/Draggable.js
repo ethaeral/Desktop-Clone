@@ -1,8 +1,8 @@
 // Libaries
 import React, { useEffect, useRef, useState } from "react";
-
 // Styles
 import { DragContainer } from "./styles/draggableStyles";
+
 
 export default function Draggable(props) {
 	const childRef = useRef(null);
@@ -23,7 +23,7 @@ export default function Draggable(props) {
 	const cursorY = document.documentElement.scrollTop
 		? document.documentElement.scrollTop
 		: document.body.scrollTop;
-	const atBreakpoint = window.innerWidth < 767;
+	const atBreakpoint = window.innerWidth < 837;
 
 	const makeActive = () => {
 		const newCounter = state.zCounter + 1;

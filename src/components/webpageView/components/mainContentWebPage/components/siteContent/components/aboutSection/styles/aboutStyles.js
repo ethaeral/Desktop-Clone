@@ -12,7 +12,7 @@ export const AboutContainer = styled.div`
 		@media (max-width: 1130px) {
 			width: ${(props) => (props.maximized ? "30em" : "18em")};
 		}
-		@media (max-width: 760px) {
+		@media (max-width: 837px) {
 			width: ${(props) => (props.maximized ? "30em" : "10em")};
 		}
 	}

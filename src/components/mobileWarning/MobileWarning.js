@@ -23,7 +23,7 @@ export default function MobileWarning(props) {
 				<Bar>
 					<Title>Information</Title>
 					<button
-						className='cursor'
+						className='x'
 						onClick={(e) => {
 							e.stopPropagation();
 							setState(false);
