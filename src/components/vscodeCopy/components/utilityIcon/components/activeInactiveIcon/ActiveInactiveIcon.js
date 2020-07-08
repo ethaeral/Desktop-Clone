@@ -21,6 +21,7 @@ export default function ActiveInactiveIcon(props) {
 				e.stopPropagation();
 				onClickFunc();
 			}}
+	
 			height={height}
 			width={width}
 			image={image}

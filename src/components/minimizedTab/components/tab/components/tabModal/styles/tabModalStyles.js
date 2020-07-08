@@ -10,7 +10,7 @@ export const TabModalContainer = styled.div`
 	display: none;
 	bottom: 0;
 	left: 0;
-	@media (max-width: 767px) {
+	@media (max-width: 837px) {
 		display: ${(props) => (props.isOpen ? "block" : "none")};
 	}
 `;

@@ -1,38 +1,32 @@
 // Libraries
 import React, { useState } from "react";
-
-// Components
-import StripeContainer from "./components/stripes/StripeContainer";
-import VscodeContainer from "./components/vscodeCopy/VscodeContainer";
-import Terminal from "./components/terminal/Terminal";
-
 // Assets
 import terminal from "./assets/02-terminal.png";
+import firefox from "./assets/firefox.png";
 import mask from "./assets/mononoke.png";
 import code from "./assets/vscode.png";
-import firefox from "./assets/firefox.png";
-
-// Context
-import { WindowsContext } from "./modules/windowContext";
-
+import Draggable from "./components/draggable/Draggable";
+import MinimizedTab from "./components/minimizedTab/MinimizedTab";
+import MobileWarning from "./components/mobileWarning/MobileWarning";
+// Components
+import StripeContainer from "./components/stripes/StripeContainer";
+import Terminal from "./components/terminal/Terminal";
+import VscodeContainer from "./components/vscodeCopy/VscodeContainer";
+import WebPageView from "./components/webpageView/WebPageView";
 // Data
 import { allProjects } from "./data/projectsData";
-
+// Context
+import { WindowsContext } from "./modules/windowContext";
 import {
 	AppContainer,
 	Background,
-	TerminalIcon,
 	BackgroundImage,
-	Credit,
-	IconHolders,
-	FireFoxIcon,
 	CodeIcon,
+	Credit,
+	FireFoxIcon,
+	IconHolders,
+	TerminalIcon,
 } from "./styles/appStyles";
-
-import MinimizedTab from "./components/minimizedTab/MinimizedTab";
-import WebPageView from "./components/webpageView/WebPageView";
-import MobileWarning from "./components/mobileWarning/MobileWarning";
-import Draggable from "./components/draggable/Draggable";
 
 function App() {
 	const [warning, setWarning] = useState(true);
@@ -189,7 +183,7 @@ function App() {
 					state={warning}
 					setState={setWarning}
 					message={
-						"Unable to load full application. Resolution width must be larger than 767px."
+						"Unable to load full application. Resolution width must be larger than 837px."
 					}
 				/>
 

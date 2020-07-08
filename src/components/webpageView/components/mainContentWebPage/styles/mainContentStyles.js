@@ -52,7 +52,7 @@ export const LowerContainer = styled.div`
 		height: ${(props) =>
 			!props.maximized ? "4749px" : "calc(4749px - 630px)"};
 	}
-	@media (max-width: 767px) {
+	@media (max-width: 837px) {
 		height: ${(props) => (!props.maximized ? "5100px" : "calc(4900px - 20vh)")};
 	}
 `;
