@@ -25,7 +25,7 @@ export default function ChangedSection() {
 	const [isOpen, setIsOpen] = useState(true);
 	return (
 		<ChangedSectContainer>
-			<FolderDiv isOpen='flex' justify="space-between">
+			<FolderDiv isOpen='flex' justify='space-between'>
 				<button
 					className='FolderButton Change'
 					onClick={() => {
@@ -48,7 +48,7 @@ export default function ChangedSection() {
 			<FileContainer isOpen={isOpen}>
 				{inProgress.length > 0
 					? inProgress.map((r) => (
-							<FileDiv isOpen={"flex"}>
+							<FileDiv isOpen={"flex"} key={r.name}>
 								<button
 									className='FileButton'
 									onClick={(e) => {

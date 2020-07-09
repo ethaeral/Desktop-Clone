@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { UtilityIconContainer } from "./styles/utilityIconStyles";
 import CodeToolTip from "../codeToolTip/CodeToolTip";
 import { FunctionContainer } from "../codeToolTip/styles/toolTipStyles";
@@ -39,7 +39,12 @@ export default function UtilityIcon(props) {
 				: offsetHeight;
 		setMousePos({ x, y });
 	};
-
+	useEffect(() => {
+		if (mousePos === { x: null, y: null }) {
+			setMousePos({ x: 0, y: 0 })
+		}
+	// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [tipRef, currRef]);
 	return (
 		<FunctionContainer ref={tipRef}>
 			<UtilityIconContainer
@@ -56,7 +61,6 @@ export default function UtilityIcon(props) {
 				{image ? (
 					<ActiveInactiveIcon
 						onClickFunc={onClickFunc ? onClickFunc : console.log}
-					
 						image={image}
 						active={active}
 						hover={hover}

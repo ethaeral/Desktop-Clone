@@ -93,3 +93,17 @@ export const ScrollBar = styled.div`
 	width: 10px;
 	height: 20px;
 `;
+
+export const NumbBubble = styled.div`
+	margin-right: 5px;
+	border-radius: 100%;
+	border: 1px #211e28 solid;
+	width: 15px;
+	height: 15px;
+	font-size: 0.7em;
+	font-weight: 700;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #44475a;
+`;
