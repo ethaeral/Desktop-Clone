@@ -18,7 +18,7 @@ export default function VscodeContainer(props) {
 	const { statefulWindows, setWindowState } = useContext(WindowsContext);
 	const [currentProject, setCurrentProject] = useState(() => {
 		let projectState = { current: undefined };
-		statefulWindows.projects.forEach((project) => {
+		statefulWindows.all.forEach((project) => {
 			projectState[`${project.name}`] = { ...project };
 		});
 		return projectState;

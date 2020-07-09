@@ -50,6 +50,7 @@ export const SelectionIcon = styled.div`
 	background-repeat: no-repeat;
 	background-image: ${(props) =>
 		props.isOpen ? `url(${props.openInactive})` : `url(${props.inactive})`};
+		
 `;
 
 export const FileDiv = styled.div`

@@ -7,6 +7,11 @@ export const ProjectsSideContainer = styled.div`
 	font-family: "Ubuntu";
 
 	color: #efe8d9;
+	.message {
+		margin: 10px;
+		color: #8e8e8d;
+		line-height: 1.4em;
+	}
 `;
 
 export const TopBar = styled.div`

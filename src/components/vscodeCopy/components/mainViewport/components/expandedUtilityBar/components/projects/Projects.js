@@ -63,7 +63,7 @@ export default function Projects(props) {
 					]}
 				/>
 				<SectionsDividers
-					height={height*0.4}
+					height={height*0.5}
 					title={"PORTFOLIO"}
 					component={Portfolio}
 					openState={true}
@@ -78,7 +78,7 @@ export default function Projects(props) {
 					]}
 				/>
 				<SectionsDividers
-					height={height * 0.1}
+					height={height * 0.15}
 					title={"OUTLINE"}
 					component={Outline}
 					openState={true}
@@ -88,10 +88,10 @@ export default function Projects(props) {
 					]}
 				/>
 				<SectionsDividers
-					height={height * 0.1}
+					height={height * 0.15}
 					title={"TIMELINE"}
 					component={Timeline}
-					openState={true}
+					openState={false}
 					icons={[
 						{ src: ProjectTimelinePin, message: "Pin the Current Timeline" },
 						{ src: ProjectRefresh, message: "Refresh" },
@@ -99,7 +99,7 @@ export default function Projects(props) {
 					]}
 				/>
 				<SectionsDividers
-					height={height * 0.1}
+					height={height * 0.15}
 					lastChild={true}
 					title={"NPM SCRIPTS"}
 					component={NpmScripts}
