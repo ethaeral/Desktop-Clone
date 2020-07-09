@@ -63,6 +63,7 @@ export const CTAAuthor = styled.div`
 		border: 1px #191a21 solid;
 		background-color: #48935b;
 		font-size: 0.85em;
+    color: #e5e2d9;
 		padding: 0px 5px 0px 5px;
 	}
 `;

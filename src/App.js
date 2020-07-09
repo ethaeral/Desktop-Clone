@@ -46,8 +46,8 @@ function App() {
 			search: false,
 			branch: false,
 			bug: false,
-			ext: true,
-			projects: false ,
+			ext: false,
+			projects: true ,
 			setting: false,
 		},
 		terminal: {
@@ -66,8 +66,8 @@ function App() {
 		},
 		homepage: {
 			minimized: false,
-			maximized: false,
-			closed: true,
+			maximized: true,
+			closed: false,
 			z: 1,
 		},
 		modalIsOpen: {
