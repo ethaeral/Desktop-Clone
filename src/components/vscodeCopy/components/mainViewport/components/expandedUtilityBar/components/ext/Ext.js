@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
-import { ExtSideContainer, BubbleNum } from "./styles/extStyle";
+import { ExtSideContainer } from "./styles/extStyle";
 import SectionsDividers from "../sectionsDividers/SectionsDividers";
 import { WindowsContext } from "../../../../../../../../modules/windowContext";
+import Recommended from "./component/Recommended";
 export default function Ext(props) {
 	const { statefulWindows } = useContext(WindowsContext);
 	const { exts } = statefulWindows;
@@ -16,7 +17,7 @@ export default function Ext(props) {
 
 			<SectionsDividers
 				title={"RECOMENDED"}
-				component={ExtSideContainer}
+				component={Recommended}
 				openState={true}
 				bubbleText={exts.length}
 			/>
