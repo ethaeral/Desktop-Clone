@@ -11,6 +11,7 @@ import {
 	SectionContainer,
 	TitleCollaspe,
 	ScrollBar,
+	NumbBubble,
 } from "./styles/sectionDivStyles";
 
 // Assets
@@ -18,10 +19,18 @@ import expand from "../../../../../../../../assets/isExpand.png";
 import notExpanded from "../../../../../../../../assets/notExpand.png";
 
 export default function SectionsDividers(props) {
-	const { title, subscript, icons, openState, firstChild, lastChild } = props;
+	const {
+		title,
+		subscript,
+		icons,
+		openState,
+		firstChild,
+		lastChild,
+		bubbleText,
+	} = props;
 	const [isExpand, setIsExpand] = useState(openState ? true : false);
 	const [visible, setVisible] = useState(false);
-	
+
 	return (
 		<SectionContainer
 			onMouseOver={() => {
@@ -66,11 +75,12 @@ export default function SectionsDividers(props) {
 						  ))
 						: ""}
 				</DividerIconHolder>
+				{bubbleText ? <NumbBubble>{bubbleText}</NumbBubble> : ""}
 			</button>
-			<ExpandMenu isActive={isExpand} maxHeight={props.height} >
+			<ExpandMenu isActive={isExpand} maxHeight={props.height}>
 				<props.component />
 			</ExpandMenu>
-			<ScrollBar/>
+			<ScrollBar />
 		</SectionContainer>
 	);
 }
