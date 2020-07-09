@@ -35,6 +35,7 @@ function App() {
 		zCounter: 1,
 		firefoxTabs: ["1"],
 		tabbedWindows: [],
+		all: allProjects,
 		inProgress: allProjects.filter((p) => p.inProgress === true),
 		projects: allProjects.filter((project) => project.nonWeb === false),
 		exts: allProjects.filter((project) => project.isExt === true),
@@ -47,7 +48,7 @@ function App() {
 			branch: false,
 			bug: false,
 			ext: false,
-			projects: true ,
+			projects: true,
 			setting: false,
 		},
 		terminal: {
@@ -66,8 +67,8 @@ function App() {
 		},
 		homepage: {
 			minimized: false,
-			maximized: true,
-			closed: false,
+			maximized: false,
+			closed: true,
 			z: 1,
 		},
 		modalIsOpen: {
