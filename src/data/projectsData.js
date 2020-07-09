@@ -1,3 +1,5 @@
+import ParsnipIcon from "../assets/projects/parsnips.png";
+
 export const allProjects = [
 	{
 		type: "Team",
@@ -381,6 +383,7 @@ export const allProjects = [
 	{
 		type: "Personal",
 		name: "Parsnips",
+		version: "0.1.3",
 		tags: [
 			"eslint",
 			"glob",
@@ -402,7 +405,7 @@ export const allProjects = [
 			"Created graph to connect multifile trees",
 			"Store data in a table to make retrieval O(1)",
 		],
-		media: "",
+		media: ParsnipIcon,
 		codeSnippet: `function createASTNodeGraph(
 			obj,
 			graph,
