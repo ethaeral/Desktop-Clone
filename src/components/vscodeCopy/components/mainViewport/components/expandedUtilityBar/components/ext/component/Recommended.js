@@ -8,6 +8,7 @@ export default function Recommended() {
 		<div>
 			{exts.map((p) => (
 				<ExtSelect
+					linkGithub={p.linkGithub}
 					icon={p.media}
 					name={p.name}
 					version={p.version}
