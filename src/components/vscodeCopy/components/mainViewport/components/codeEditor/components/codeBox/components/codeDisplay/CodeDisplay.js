@@ -9,7 +9,7 @@ export default function CodeDisplay() {
 	return (
 		<Display>
 			<CodeTab/>
-			{currentProject.current ? (
+			{currentProject.current? (
 				<p>{currentProject[`${currentProject.current}`].name}</p>
 			) : (
 				""

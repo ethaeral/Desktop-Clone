@@ -19,7 +19,7 @@ export default function Search(props) {
 	const [dependencyMap] = useState(() => {
 		const map = {};
 		Object.keys(currentProject).forEach((key) => {
-			if (key !== "current") {
+			if (key !== "current" && key !== "Welcome" && key !== "tab") {
 				currentProject[`${key}`].tags.forEach((tag) => {
 					if (!map[`${tag}`]) {
 						map[`${tag}`] = [];
@@ -44,7 +44,11 @@ export default function Search(props) {
 	return (
 		<SearchSideContainer active={props.active}>
 			<SearchToolBar stateControl={stateControl} />
-			<SearchBar stateControl={stateControl} dependencyMap={dependencyMap} change={props.change}/>
+			<SearchBar
+				stateControl={stateControl}
+				dependencyMap={dependencyMap}
+				change={props.change}
+			/>
 			<SearchResults
 				results={searchState.results}
 				currentProject={currentProject}
