@@ -17,7 +17,11 @@ import { CodeContext } from "../../modules/codeContext";
 export default function VscodeContainer(props) {
 	const { statefulWindows, setWindowState } = useContext(WindowsContext);
 	const [currentProject, setCurrentProject] = useState(() => {
-		let projectState = { current: undefined };
+		let projectState = {
+			current: "Welcome",
+			tab: ["Welcome"],
+			Welcome: { name: "Welcome" },
+		};
 		statefulWindows.all.forEach((project) => {
 			projectState[`${project.name}`] = { ...project };
 		});

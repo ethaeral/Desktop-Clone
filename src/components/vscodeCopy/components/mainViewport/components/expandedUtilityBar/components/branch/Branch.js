@@ -8,7 +8,11 @@ export default function Branch(props) {
 	return (
 		<BranchSideContainer active={props.active}>
 			<BranchToolBar />
-      <CommitInput className="commitInput" placeholder="Message (Ctrl+Enter to commit on 'master')" disabled="disabled"/>
+			<CommitInput
+				className='commitInput'
+				placeholder="Message (Ctrl+Enter to commit on 'master')"
+				disabled='disabled'
+			/>
 			<ChangedSection />
 		</BranchSideContainer>
 	);

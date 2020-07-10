@@ -63,7 +63,7 @@ export default function Projects(props) {
 					]}
 				/>
 				<SectionsDividers
-					height={height*0.5}
+					height={height*0.45}
 					title={"PORTFOLIO"}
 					component={Portfolio}
 					openState={true}
@@ -78,7 +78,7 @@ export default function Projects(props) {
 					]}
 				/>
 				<SectionsDividers
-					height={height * 0.15}
+					height={height * 0.13}
 					title={"OUTLINE"}
 					component={Outline}
 					openState={true}
@@ -88,7 +88,7 @@ export default function Projects(props) {
 					]}
 				/>
 				<SectionsDividers
-					height={height * 0.15}
+					height={height * 0.13}
 					title={"TIMELINE"}
 					component={Timeline}
 					openState={false}

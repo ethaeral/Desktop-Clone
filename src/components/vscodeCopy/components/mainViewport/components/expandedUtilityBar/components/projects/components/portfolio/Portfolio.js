@@ -30,7 +30,6 @@ import jsHover from "../../../../../../../../../../assets/utilityBar/projects/js
 import {
 	DropDownContainer,
 	PortfolioContainer,
-
 } from "./styles/portfolioStyles";
 
 export default function Portfolio() {
@@ -75,7 +74,13 @@ export default function Portfolio() {
 						openIconActive={folderOpenActive}
 						openIconHover={folderOpenHover}
 						onClickFunc={() => {
-							setCurrentProject({ ...currentProject, current: project.name });
+							setCurrentProject({
+								...currentProject,
+								current: project.name,
+								tab: currentProject.tab.includes(`${project.name}`)
+									? currentProject.tab
+									: [...currentProject.tab, project.name],
+							});
 						}}
 						title={project.name}
 						innerTitle={`${project.name.split(" ").join("")}.js`}

@@ -6,12 +6,7 @@ export default function CodeTab() {
 	const { currentProject } = useContext(CodeContext);
 	return (
 		<CodeTabBar>
-			wassup
-			{currentProject.current ? (
-				<p>{currentProject[`${currentProject.current}`].name}</p>
-			) : (
-				""
-			)}
+			{currentProject.tab.map((p)=><p>{currentProject[`${p}`].name}</p>)}
 		</CodeTabBar>
 	);
 }

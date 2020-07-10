@@ -46,11 +46,12 @@ export const SelectionContainer = styled.div`
 export const SelectionIcon = styled.div`
 	width: 18px;
 	height: 18px;
+	margin-right: 5px;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-image: ${(props) =>
 		props.isOpen ? `url(${props.openInactive})` : `url(${props.inactive})`};
-		
+	background-image: ${(props) => props.editor};
 `;
 
 export const FileDiv = styled.div`
@@ -79,5 +80,11 @@ export const FolderDiv = styled.div`
 	}
 	&:hover {
 		background-color: rgba(255, 255, 255, 0.1);
+		.editor {
+			background-image: ${(props) => `url(${props.inactive})`};
+		}
+		.fileIcon {
+			background-image: ${(props) => `url(${props.inactiveIcon})`};
+		}
 	}
 `;
