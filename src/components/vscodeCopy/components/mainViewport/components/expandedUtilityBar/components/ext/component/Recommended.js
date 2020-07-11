@@ -13,7 +13,7 @@ export default function Recommended() {
 					currentProject={currentProject}
 					setCurrentProject={setCurrentProject}
 					linkGithub={p.linkGithub}
-					icon={p.media}
+					icon={p.icon}
 					name={p.name}
 					version={p.version}
 					description={p.description}

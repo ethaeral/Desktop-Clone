@@ -1,5 +1,5 @@
-import ParsnipIcon from "../assets/projects/parnsipbanner.png";
-
+import ParsnipBanner from "../assets/projects/parnsipbanner.png";
+import ParsnipIcon from "../assets/projects/parnsips.png";
 export const allProjects = [
 	{
 		type: "Team",
@@ -405,7 +405,8 @@ export const allProjects = [
 			"Created graph to connect multifile trees",
 			"Store data in a table to make retrieval O(1)",
 		],
-		media: ParsnipIcon,
+		media: ParsnipBanner,
+		icon: ParsnipIcon,
 		codeSnippet: `function createASTNodeGraph(
 			obj,
 			graph,
