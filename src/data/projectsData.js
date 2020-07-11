@@ -1,4 +1,4 @@
-import ParsnipIcon from "../assets/projects/parsnipbanner.png";
+import ParsnipIcon from "../assets/projects/parnsipbanner.png";
 
 export const allProjects = [
 	{
