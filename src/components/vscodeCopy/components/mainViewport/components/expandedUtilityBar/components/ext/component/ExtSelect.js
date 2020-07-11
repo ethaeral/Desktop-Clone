@@ -10,23 +10,44 @@ import {
 	Select,
 } from "./extSelectStyles";
 
-export default function ExtSelect({ name, version, description, icon,linkGithub }) {
+export default function ExtSelect({
+	name,
+	version,
+	description,
+	icon,
+	linkGithub,
+	currentProject,
+	setCurrentProject,
+}) {
 	return (
-		<a href={linkGithub} target="_blank" rel="noopener noreferrer">
-			<Select>
-				<img src={icon} alt={` icon`} />
-				<InformationHolder>
-					<Title>
-						<ExtTitle className='bold extitle'>{name}</ExtTitle>
-						<Version className='small'>{version}</Version>
-					</Title>
-					<Description>{description.short}</Description>
-					<CTAAuthor>
-						<Author className='bold'>Richany Nguon</Author>
-						<button className='install'>Install</button>
-					</CTAAuthor>
-				</InformationHolder>
-			</Select>
-		</a>
+		<Select
+			onClick={() => {
+				setCurrentProject({
+					...currentProject,
+					current: name,
+					tab: currentProject.tab.includes(`${name}`)
+						? currentProject.tab
+						: [...currentProject.tab, name],
+				});
+			}}>
+			<img src={icon} alt={` icon`} />
+			<InformationHolder>
+				<Title>
+					<ExtTitle className='bold extitle'>{name}</ExtTitle>
+					<Version className='small'>{version}</Version>
+				</Title>
+				<Description>{description.short}</Description>
+				<CTAAuthor>
+					<Author className='bold'>Richany Nguon</Author>
+					<button
+						onClick={() => {
+							window.open(`${linkGithub}`);
+						}}
+						className='install'>
+						Install
+					</button>
+				</CTAAuthor>
+			</InformationHolder>
+		</Select>
 	);
 }

@@ -14,13 +14,15 @@ import { CodeContainer } from "./styles/codeContainerStyle";
 import { WindowsContext } from "../../modules/windowContext";
 import { CodeContext } from "../../modules/codeContext";
 
+import Image from "../../assets/projects/image.png";
+
 export default function VscodeContainer(props) {
 	const { statefulWindows, setWindowState } = useContext(WindowsContext);
 	const [currentProject, setCurrentProject] = useState(() => {
 		let projectState = {
 			current: "Welcome",
 			tab: ["Welcome"],
-			Welcome: { name: "Welcome" },
+			Welcome: { name: "Welcome", media: Image },
 		};
 		statefulWindows.all.forEach((project) => {
 			projectState[`${project.name}`] = { ...project };

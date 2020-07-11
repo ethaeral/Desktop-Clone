@@ -44,7 +44,7 @@ export default function TabbedFile({ project, current, preview }) {
 					? `Preview ${project.name}`
 					: project.name
 				: preview
-				? `Preview${project.name}.js`
+				? `Preview ${project.name}.js`
 				: `${project.name}.js`}
 			<SelectionIcon
 				onClick={(e) => {

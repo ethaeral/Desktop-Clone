@@ -67,8 +67,8 @@ function App() {
 		},
 		homepage: {
 			minimized: false,
-			maximized: false,
-			closed: true,
+			maximized: true,
+			closed: false,
 			z: 1,
 		},
 		modalIsOpen: {
