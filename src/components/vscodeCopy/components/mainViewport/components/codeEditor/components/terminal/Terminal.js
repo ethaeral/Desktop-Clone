@@ -1,11 +1,15 @@
 import React from "react";
-import { TerminalContainer } from "./styles/terminalStyles";
+import { TerminalContainer, Container } from "./styles/terminalStyles";
 import REPL from "../../../../../../../repl/REPL";
 
-export default function Terminal({clear}) {
+import TerminalTop from "../../../../../../../../assets/utilityBar/terminalTop.png";
+export default function Terminal({ clear }) {
 	return (
-		<TerminalContainer>
-			<REPL clear={clear} />
-		</TerminalContainer>
+		<Container>
+			<img src={TerminalTop} alt={"vscode terminal options"} />
+			<TerminalContainer>
+				<REPL clear={clear} />
+			</TerminalContainer>
+		</Container>
 	);
 }

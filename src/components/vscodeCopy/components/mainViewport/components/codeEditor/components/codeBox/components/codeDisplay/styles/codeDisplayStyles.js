@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Display = styled.div`
 	background: #282a36;
-	width: 50%;
-	height: 100%;
-
+	max-width: 50%;
+	overflow: hidden;
 `;

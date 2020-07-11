@@ -1,5 +1,5 @@
 // Libraries
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { CodeContext } from "../../../../../../../../../../modules/codeContext";
 import { Change, Grouped } from "./openStyles";
 import XHover from "../../../../../../../../../../assets/utilityBar/projects/xHoverWindow.png";
@@ -14,10 +14,7 @@ import {
 } from "../../../selection/styles/selectionStyles";
 export default function OpenEditors() {
 	const { currentProject, setCurrentProject } = useContext(CodeContext);
-	
-	useEffect(() => {
-		console.log(currentProject.tab);
-	}, [currentProject]);
+
 	return (
 		<div>
 			{currentProject.tab.map((p) => (

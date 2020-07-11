@@ -1,11 +1,10 @@
 import React from "react";
 import { DisplayCodeContainer } from "./styles/displayCodeStyles";
-import ReleaseNotes from "./components/releaseNotes/ReleaseNotes";
 
-export default function DisplayCode() {
+export default function DisplayCode(props) {
 	return (
 		<DisplayCodeContainer>
-			{/* <ReleaseNotes /> */}
+			<props.component data={props.data} />
 		</DisplayCodeContainer>
 	);
 }

@@ -8,8 +8,8 @@ import JSTabActive from "../../../../../../../../../../../../../../assets/utilit
 import JSTabInactive from "../../../../../../../../../../../../../../assets/utilityBar/projects/JSTabInactive.png";
 import TabWindowActive from "../../../../../../../../../../../../../../assets/utilityBar/projects/TabWindowActive.png";
 import TabWindowInactive from "../../../../../../../../../../../../../../assets/utilityBar/projects/TabWindowInactive.png";
-
-export default function TabbedFile({ project, current }) {
+import Preview from "../../../../../../../../../../../../../../assets/utilityBar/preview.png";
+export default function TabbedFile({ project, current, preview }) {
 	const { currentProject, setCurrentProject } = useContext(CodeContext);
 	return (
 		<TabbedFileContainer
@@ -23,11 +23,29 @@ export default function TabbedFile({ project, current }) {
 			inactive={XTabAcitve}>
 			<SelectionIcon
 				isActive={project.name === current}
-				inactive={project.name === "Welcome" ? TabWindowActive : JSTabActive}
-				active={project.name === "Welcome" ? TabWindowInactive : JSTabInactive}
+				inactive={
+					preview
+						? Preview
+						: project.name === "Welcome"
+						? TabWindowActive
+						: JSTabActive
+				}
+				active={
+					preview
+						? Preview
+						: project.name === "Welcome"
+						? TabWindowInactive
+						: JSTabInactive
+				}
 				className='fileIcon'
 			/>
-			{project.name === "Welcome" ? project.name : `${project.name}.js`}
+			{project.name === "Welcome"
+				? preview
+					? `Preview ${project.name}`
+					: project.name
+				: preview
+				? `Preview${project.name}.js`
+				: `${project.name}.js`}
 			<SelectionIcon
 				onClick={(e) => {
 					e.stopPropagation();
@@ -37,7 +55,7 @@ export default function TabbedFile({ project, current }) {
 					if (newTab.length > 0) {
 						setCurrentProject({
 							...currentProject,
-							current: newTab[newTab.length-1],
+							current: newTab[newTab.length - 1],
 							tab: currentProject.tab.filter((r) => {
 								return r !== project.name;
 							}),

@@ -85,7 +85,7 @@ export default function SearchBar({ stateControl, dependencyMap , change}) {
 			<div>
 				<FakeInput ref={BarRef}>
 					<Input
-					placeholder="Search"
+					placeholder="Search by dependency or tech stack"
 						type='text'
 						value={state.input}
 						onChange={(e) => {
