@@ -1,5 +1,5 @@
 import ParsnipBanner from "../assets/projects/parnsipbanner.png";
-import ParsnipIcon from "../assets/projects/parnsips.png";
+import ParsnipIcon from "../assets/projects/parsnips.png";
 export const allProjects = [
 	{
 		type: "Team",
