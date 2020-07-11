@@ -17,7 +17,7 @@ export const ProjectsSideContainer = styled.div`
 export const TopBar = styled.div`
 	padding: 1em;
 	h3 {
-		font-size: 0.7em;
+		font-size: 0.8em;
 		margin-left: 0.5em;
 	}
 `;
