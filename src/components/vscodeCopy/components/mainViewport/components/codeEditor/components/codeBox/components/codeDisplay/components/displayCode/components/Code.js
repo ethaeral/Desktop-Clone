@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect, useContext } from "react";
-import { CodeContainer, Counter, Content } from "./codeStyles";
+import { CodeContainer, Counter, Content, CodeContent } from "./codeStyles";
 import { CodeContext } from "../../../../../../../../../../../../../modules/codeContext";
 
 export default function Code({ data }) {
@@ -27,20 +27,57 @@ export default function Code({ data }) {
 				))}
 			</Counter>
 			<Content ref={contentRef}>
-				/*
-				{Object.keys(project).map((key) => (
+				<p>/*</p>
+				<CodeContent>
+					<a
+						href={project.linkDeployed}
+						target='_blank'
+						rel='noopener noreferrer'>
+						<p>{project.name}</p>
+					</a>
+					<br />
+					<p>{project.role}</p>
+					<p>{project.date}</p>
+					<a
+						href={project.linkGithub}
+						target='_blank'
+						rel='noopener noreferrer'>
+						Github
+					</a>
+					<br />
+					<br />
+					<p>{project.description.long}</p>
+					<br />
 					<div>
-						{key}
-						{typeof project === "object"
-							? Object.keys(project[key]).map((innerKey) => (
-									<div>
-										{innerKey} {project[key][innerKey]}
-									</div>
-							  ))
-							: project[key]}
+						<p>Contributions</p>
+						<CodeContent>
+							{project.contributions.map((c) => (
+								<p>*{c}</p>
+							))}
+						</CodeContent>
 					</div>
-				))}
-				*/
+					<br />
+					<div>
+						<p>Tech Stack</p>
+						<CodeContent>
+							{project.techStack.map((c) => (
+								<p>*{c}</p>
+							))}
+						</CodeContent>
+					</div>
+					<br />
+					<div>
+						<p>Dependencies</p>
+						<CodeContent>
+							{project.tags.map((c) => (
+								<p>*{c}</p>
+							))}
+						</CodeContent>
+					</div>
+					<br />
+					<p>{project.type}</p>
+				</CodeContent>
+				<p>*/</p>
 			</Content>
 		</CodeContainer>
 	);
