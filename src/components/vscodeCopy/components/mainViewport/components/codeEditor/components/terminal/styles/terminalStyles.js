@@ -27,5 +27,7 @@ export const Container = styled.div`
 	flex-direction: column;
 	img {
 		width: 40%;
+		min-width: 40%;
+		max-width: 40%;
 	}
 `;

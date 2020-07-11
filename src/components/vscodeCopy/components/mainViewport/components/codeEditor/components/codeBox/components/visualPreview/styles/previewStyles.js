@@ -7,6 +7,11 @@ export const Preview = styled.div`
 	min-width: 50%;
 `;
 export const PreviewContainer = styled.div`
+	display: flex;
+	padding-left: 15px;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
 	overflow-y: scroll;
 	&::-webkit-scrollbar {
 		background-color: #282a36;
@@ -16,6 +21,9 @@ export const PreviewContainer = styled.div`
 		&::-webkit-scrollbar-thumb {
 			background-color: rgba(255, 255, 255, 0.1);
 		}
+	}
+	iframe {
+		height: 60%;
 	}
 `;
 /*
