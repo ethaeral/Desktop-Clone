@@ -4,6 +4,7 @@ import { DropDown } from "../../../../fileNavBar/components/navButton/styles/nav
 export const SideUtility = styled.div`
 	background-color: #343746;
 	width: 4.5em;
+	min-width: 3em;
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
