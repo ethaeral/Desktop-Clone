@@ -3,7 +3,6 @@ import React from "react";
 
 // Styles
 
-
 import {
 	ProjectItemConatiner,
 	ContribList,
@@ -65,11 +64,14 @@ export default function ProjectItem(props) {
 							allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
 							allowFullScreen
 							title='project video'></iframe>
-					) : (
+					) : data.media ===
+					  "https://drive.google.com/file/d/1nfTHazTGidg04HaQ1zJS5L9FtLkb2nEh/preview" ? (
 						<iframe
-							src='https://drive.google.com/file/d/1nfTHazTGidg04HaQ1zJS5L9FtLkb2nEh/preview'
+							src={data.media}
 							width='100%'
 							title='project presentation'></iframe>
+					) : (
+						<img src={data.media} alt={data.name} width='100%' />
 					)}
 				</MediaDescription>
 				<TechStack>
