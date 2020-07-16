@@ -1,5 +1,5 @@
 // Libraries
-import React from "react";
+import React, { useState } from "react";
 
 // Styles
 import {
@@ -24,10 +24,12 @@ import {
 import SiteContent from "./components/siteContent/SiteContent";
 
 export default function MainContentWebPaged(props) {
+	const { maximized } = props.state;
+	const [height, setHeight] = useState(0);
 	const { state, counter } = props;
 	return (
 		<StripedContainer id='scroll' isActive={state.z === counter}>
-			<SiteContent state={state} />
+			<SiteContent state={state} maximized={maximized} setHeight={setHeight} />
 			<UpperContainer>
 				<DarkBlueTop>
 					<WhiteTop>
@@ -49,7 +51,7 @@ export default function MainContentWebPaged(props) {
 					</WhiteTop>
 				</DarkBlueTop>
 			</UpperContainer>
-			<LowerContainer maximized={props.state.maximized}>
+			<LowerContainer maximized={maximized} height={height}>
 				<OrangeBottom>
 					<WhiteBottom>
 						<LightOrangeBottom>

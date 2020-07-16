@@ -1,5 +1,5 @@
 // Libraries
-import React from "react";
+import React, { useRef, useEffect } from "react";
 
 // Styles
 import {
@@ -23,8 +23,18 @@ import ProjectSection from "./components/projectSection/ProjectSection";
 import AboutSection from "./components/aboutSection/AboutSection";
 
 export default function SiteContent(props) {
+	const { maximized, setHeight } = props;
+	const { innerHeight, innerWidth } = window;
+	const contentRef = useRef(null);
+	useEffect(() => {
+		if (contentRef.current) {
+			const height = contentRef.current.offsetHeight;
+			setHeight(height);
+		}
+	// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [maximized, innerHeight, innerWidth]);
 	return (
-		<ContentContainer id='container'>
+		<ContentContainer id='container' ref={contentRef}>
 			<ContactBlock state={props.state} fixed={true} />
 			<header>
 				<ContactBlock state={props.state} fixed={false} top={true} />

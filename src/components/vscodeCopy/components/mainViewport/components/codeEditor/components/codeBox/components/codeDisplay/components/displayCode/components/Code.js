@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 import React, { useRef, useState, useEffect, useContext } from "react";
 import { CodeContainer, Counter, Content, CodeContent } from "./codeStyles";
 import { CodeContext } from "../../../../../../../../../../../../../modules/codeContext";

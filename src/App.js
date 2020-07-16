@@ -1,5 +1,5 @@
 // Libraries
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 // Assets
 import terminal from "./assets/02-terminal.png";
 import firefox from "./assets/firefox.png";
@@ -61,13 +61,13 @@ function App() {
 		code: {
 			minimized: false,
 			maximized: false,
-			closed: false,
+			closed: true,
 			clear: false,
 			z: 0,
 		},
 		homepage: {
 			minimized: false,
-			maximized: true,
+			maximized: false,
 			closed: false,
 			z: 1,
 		},
@@ -76,12 +76,11 @@ function App() {
 			tabbedBar: false,
 		},
 	});
-
-	// useEffect(() => {
-	// 	setTimeout(function () {
-	// 		setWelcome(true);
-	// 	}, 10003);
-	// }, []);
+	const { zCounter } = statefulWindows;
+	useEffect(() => {
+		console.log(zCounter);
+		console.log(statefulWindows.terminal.z);
+	}, [statefulWindows.terminal.z, zCounter]);
 
 	return (
 		<AppContainer>
@@ -95,7 +94,7 @@ function App() {
 					<button
 						onClick={(e) => {
 							e.stopPropagation();
-							const addCounter = statefulWindows.zCounter++;
+							const addCounter = statefulWindows.zCounter+1;
 							setWindowState({
 								...statefulWindows,
 								zCounter: addCounter,
@@ -115,7 +114,7 @@ function App() {
 					<button
 						onClick={(e) => {
 							e.stopPropagation();
-							const addCounter = statefulWindows.zCounter++;
+							const addCounter = statefulWindows.zCounter+1;
 							setWindowState({
 								...statefulWindows,
 								zCounter: addCounter,
@@ -137,7 +136,7 @@ function App() {
 							let { firefoxTabs, zCounter } = statefulWindows;
 							e.stopPropagation();
 							const nextNum = parseInt(firefoxTabs[firefoxTabs.length - 1]) + 1;
-							const addCounter = zCounter++;
+							const addCounter = zCounter+1;
 							setWindowState({
 								...statefulWindows,
 								zCounter: addCounter,
@@ -194,6 +193,7 @@ function App() {
 					message={"The curious are always the most rewarded..."}
 					full={true}
 				/>
+
 				<Credit>
 					<a href='https://icons8.com/'>Icon Credit - Icons8</a>
 				</Credit>

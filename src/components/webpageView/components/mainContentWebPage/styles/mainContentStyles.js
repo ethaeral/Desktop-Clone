@@ -43,18 +43,14 @@ export const UpperContainer = styled.div`
 	}
 `;
 export const LowerContainer = styled.div`
-	height: ${(props) => (!props.maximized ? "3749px" : "calc(4749px - 1330px)")};
+	height: ${(props) =>
+		!props.maximized
+			? `${props.height + props.height * 0.15}px`
+			: `${props.height}px`};
 	position: absolute;
 	top: 365px;
 	width: 594px;
 	background-color: #fff;
-	@media (max-width: 1130px) {
-		height: ${(props) =>
-			!props.maximized ? "4749px" : "calc(4749px - 630px)"};
-	}
-	@media (max-width: 837px) {
-		height: ${(props) => (!props.maximized ? "5100px" : "calc(4900px - 20vh)")};
-	}
 `;
 
 export const DarkBlueTop = styled.div`

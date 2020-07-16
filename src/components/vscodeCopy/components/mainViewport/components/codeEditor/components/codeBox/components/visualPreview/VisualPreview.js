@@ -6,7 +6,6 @@ import TabbedFile from "../codeDisplay/components/codeTab/components/tabbedFile/
 
 export default function VisualPreview() {
 	const { currentProject } = useContext(CodeContext);
-	console.log(currentProject[`${currentProject.current}`].media);
 	return (
 		<Preview>
 			<CodeTabBar>

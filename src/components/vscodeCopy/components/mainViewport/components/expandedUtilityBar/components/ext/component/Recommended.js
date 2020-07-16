@@ -10,6 +10,7 @@ export default function Recommended() {
 		<div>
 			{exts.map((p) => (
 				<ExtSelect
+					key={`${p.iconRecommend}`}
 					currentProject={currentProject}
 					setCurrentProject={setCurrentProject}
 					linkGithub={p.linkGithub}
