@@ -20,6 +20,7 @@ export const SideIconHolder = styled.div`
 `;
 
 export const SideIcon = styled.span`
+	cursor: pointer;
 	border-left: ${(props) => (props.isActive ? `2px solid #97618a` : `none`)};
 	background-color: ${(props) => (props.isActive ? `#393c4d` : `#343746`)};
 	width: 90%;
