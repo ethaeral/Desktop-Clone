@@ -135,12 +135,11 @@ function App() {
 						onClick={(e) => {
 							let { firefoxTabs, zCounter } = statefulWindows;
 							e.stopPropagation();
-							const nextNum = parseInt(firefoxTabs[firefoxTabs.length - 1]) + 1;
 							const addCounter = zCounter+1;
 							setWindowState({
 								...statefulWindows,
 								zCounter: addCounter,
-								firefoxTabs: [...firefoxTabs, nextNum.toString()],
+								firefoxTabs: [...firefoxTabs,],
 								homepage: {
 									...statefulWindows.homepage,
 									closed: false,
