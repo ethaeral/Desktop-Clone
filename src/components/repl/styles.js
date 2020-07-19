@@ -27,9 +27,10 @@ export const PTerm = styled.p`
 	font-weight: ${(props) => (props.color === "#f6f6f4" ? 400 : 700)};
 	font-family: "Droid Sans Mono";
 	margin-left: ${(props) => props.margin};
+
 `;
 
 export const Path = styled.div`
 	display: flex;
-	align-items: center;I
+	align-items: center;
 `;

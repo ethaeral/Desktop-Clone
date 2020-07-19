@@ -12,4 +12,5 @@ export const DragContainer = styled.div`
 	width: ${(props) => (props.maximized ? "100%" : `${props.width}px`)};
 	z-index: ${(props) => props.z};
 	border-radius: 10px 10px 0px 0px;
+	
 `;

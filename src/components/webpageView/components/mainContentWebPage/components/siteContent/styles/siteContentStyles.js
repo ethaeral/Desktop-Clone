@@ -120,14 +120,28 @@ export const H4 = styled.h4`
 	line-height: 2em;
 	font-size: 0.8em;
 	font-weight: ${(props) => (props.bold ? 700 : 400)};
+	-moz-user-select: text;
+	-khtml-user-select: text;
+	-webkit-user-select: text;
+	-ms-user-select: text;
+	user-select: text;
 `;
 
 export const H6 = styled.h6`
 	line-height: 1.25em;
 	font-size: 0.7em;
+	-moz-user-select: text;
+	-khtml-user-select: text;
+	-webkit-user-select: text;
+	-ms-user-select: text;
+	user-select: text;
 `;
 
-export const P = styled.p``;
+export const P = styled.p`	-moz-user-select: text;
+-khtml-user-select: text;
+-webkit-user-select: text;
+-ms-user-select: text;
+user-select: text;`;
 
 export const GradientSplitter = styled.div`
 	margin-bottom: 1em;
