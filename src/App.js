@@ -68,7 +68,7 @@ function App() {
 		homepage: {
 			minimized: false,
 			maximized: false,
-			closed: true,
+			closed: false,
 			z: 1,
 		},
 		modalIsOpen: {
