@@ -8,7 +8,7 @@ export default function ListItem(props) {
 			active={active}
 			onClick={(e) => {
 				e.stopPropagation()
-				cb ? cb(state, setState) : console.log();
+				cb ? cb(state, setState) : console.log(cb);
 			}}>
 			<div>{actionTitle}</div>
 			<div>{shortCut}</div>

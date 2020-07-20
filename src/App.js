@@ -1,5 +1,5 @@
 // Libraries
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 // Assets
 import terminal from "./assets/02-terminal.png";
 import firefox from "./assets/firefox.png";

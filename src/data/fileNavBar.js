@@ -26,6 +26,10 @@ const twitter = () => {
 	window.open("https://twitter.com/Richanynguon", "_blank");
 };
 
+const linkedIn = () => {
+	window.open("https://www.linkedin.com/in/richany-nguon/", "_blank");
+};
+
 export const codeFile = [
 	"File",
 	{
@@ -608,7 +612,7 @@ export const codeHelp = [
 	{
 		actionTitle: "Welcome",
 		shortCut: "",
-		active: true,
+		active: false,
 	},
 	{
 		actionTitle: "Interactive Playground",
@@ -618,7 +622,7 @@ export const codeHelp = [
 	{
 		actionTitle: "Documentation",
 		shortCut: "",
-		active: true,
+		active: false,
 	},
 	{
 		actionTitle: "Release Notes",
@@ -633,7 +637,7 @@ export const codeHelp = [
 	{
 		actionTitle: "Introductory Videos",
 		shortCut: "",
-		active: true,
+		active: false,
 	},
 	{
 		actionTitle: "Tips and Tricks",
@@ -654,7 +658,7 @@ export const codeHelp = [
 	{
 		actionTitle: "Report Issue",
 		shortCut: "",
-		active: true,
+		active: false,
 	},
 	{
 		actionTitle: "View License",
@@ -685,6 +689,7 @@ export const codeHelp = [
 		actionTitle: "About",
 		shortCut: "",
 		active: true,
+		callback: linkedIn,
 	},
 ];
 export const terminalFile = [
@@ -749,7 +754,7 @@ export const terminalView = [
 	{
 		actionTitle: "Full Screen",
 		shortCut: "F11",
-		active: true,
+		active: false,
 	},
 	{
 		actionTitle: "Zoom In",
@@ -759,7 +764,7 @@ export const terminalView = [
 	{
 		actionTitle: "Normal Size",
 		shortCut: "Ctrl+0",
-		active: true,
+		active: false,
 	},
 	{
 		actionTitle: "Zoom Out",
@@ -828,7 +833,7 @@ export const terminalHelp = [
 	{
 		actionTitle: "About",
 		shortCut: "",
-		active: true,
+		active: false,
 	},
 ];
 

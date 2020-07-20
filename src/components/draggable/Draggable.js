@@ -51,9 +51,7 @@ export default function Draggable(props) {
 			setPosition({ x: 0, y: 0 });
 		}
 	}, [childRef, maximized, minimized, atBreakpoint, closed]);
-	useEffect(() => {
-		console.log(position);
-	}, [position]);
+
 	return (
 		<Container
 			onClick={() => {
