@@ -76,11 +76,6 @@ function App() {
 			tabbedBar: false,
 		},
 	});
-	const { zCounter } = statefulWindows;
-	useEffect(() => {
-		console.log(zCounter);
-		console.log(statefulWindows.terminal.z);
-	}, [statefulWindows.terminal.z, zCounter]);
 
 	return (
 		<AppContainer>
@@ -94,7 +89,7 @@ function App() {
 					<button
 						onClick={(e) => {
 							e.stopPropagation();
-							const addCounter = statefulWindows.zCounter+1;
+							const addCounter = statefulWindows.zCounter + 1;
 							setWindowState({
 								...statefulWindows,
 								zCounter: addCounter,
@@ -114,7 +109,7 @@ function App() {
 					<button
 						onClick={(e) => {
 							e.stopPropagation();
-							const addCounter = statefulWindows.zCounter+1;
+							const addCounter = statefulWindows.zCounter + 1;
 							setWindowState({
 								...statefulWindows,
 								zCounter: addCounter,
@@ -135,11 +130,11 @@ function App() {
 						onClick={(e) => {
 							let { firefoxTabs, zCounter } = statefulWindows;
 							e.stopPropagation();
-							const addCounter = zCounter+1;
+							const addCounter = zCounter + 1;
 							setWindowState({
 								...statefulWindows,
 								zCounter: addCounter,
-								firefoxTabs: [...firefoxTabs,],
+								firefoxTabs: [...firefoxTabs],
 								homepage: {
 									...statefulWindows.homepage,
 									closed: false,

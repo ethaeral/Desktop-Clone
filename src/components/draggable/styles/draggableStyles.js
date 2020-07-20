@@ -8,6 +8,7 @@ export const DragContainer = styled.div`
 	height: ${(props) => (props.maximized ? "100%" : `${props.height}px`)};
 	width: ${(props) => (props.maximized ? "100%" : `${props.width}px`)};
 	z-index: ${(props) => props.z + 1};
+	cursor: grab;
 `;
 
 export const Container = styled.div`

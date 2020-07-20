@@ -51,7 +51,9 @@ export default function Draggable(props) {
 			setPosition({ x: 0, y: 0 });
 		}
 	}, [childRef, maximized, minimized, atBreakpoint, closed]);
-
+	useEffect(() => {
+		console.log(position);
+	}, [position]);
 	return (
 		<Container
 			onClick={() => {
@@ -84,9 +86,20 @@ export default function Draggable(props) {
 				onDragEnd={(e) => {
 					const deltaX = e.clientX + cursorX - mousePos.x;
 					const deltaY = e.clientY + cursorY - mousePos.y;
+
 					setPosition({
-						x: position.x + deltaX,
-						y: position.y + deltaY,
+						x:
+							position.x + deltaX < 0
+								? 0
+								: position.x + deltaX > window.innerWidth - width
+								? window.innerWidth - width
+								: position.x + deltaX,
+						y:
+							position.y + deltaY < 0
+								? 0
+								: position.y + deltaY > window.innerHeight - height
+								? window.innerHeight - height
+								: position.y + deltaY,
 					});
 				}}></DragContainer>
 			<props.component
