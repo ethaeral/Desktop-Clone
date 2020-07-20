@@ -61,14 +61,14 @@ function App() {
 		code: {
 			minimized: false,
 			maximized: false,
-			closed: true,
+			closed: false,
 			clear: false,
 			z: 0,
 		},
 		homepage: {
 			minimized: false,
 			maximized: false,
-			closed: false,
+			closed: true,
 			z: 1,
 		},
 		modalIsOpen: {

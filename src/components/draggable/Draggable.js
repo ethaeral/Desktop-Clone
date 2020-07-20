@@ -72,7 +72,7 @@ export default function Draggable(props) {
 				y={y}
 				z={z}
 				height={30}
-				width={width}
+				width={width-70}
 				onDragStart={(e) => {
 					const crt = e.target.cloneNode(true);
 					crt.style.opacity = 1;

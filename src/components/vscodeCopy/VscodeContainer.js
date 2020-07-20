@@ -23,6 +23,7 @@ export default function VscodeContainer(props) {
 			current: "Welcome",
 			tab: ["Welcome"],
 			Welcome: { name: "Welcome", media: Image },
+			
 		};
 		statefulWindows.all.forEach((project) => {
 			projectState[`${project.name}`] = { ...project };

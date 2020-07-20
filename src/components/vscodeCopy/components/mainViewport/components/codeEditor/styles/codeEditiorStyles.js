@@ -6,3 +6,11 @@ export const CodeContainer = styled.div`
 	height: 100%;
 	border-left: 1px solid #191a21;
 `;
+
+export const Empty = styled.div`
+	height: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #282a36;
+`;
