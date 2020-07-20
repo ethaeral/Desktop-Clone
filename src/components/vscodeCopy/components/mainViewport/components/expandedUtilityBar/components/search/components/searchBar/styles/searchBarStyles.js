@@ -20,6 +20,7 @@ export const TagContainer = styled.div`
 `;
 
 export const DropDownSuggestions = styled.div`
+	cursor: pointer;
 	width: ${(props) => (props.barWidth ? `${props.barWidth}px` : "0px")};
 	display: flex;
 	flex-direction: column;
@@ -35,12 +36,10 @@ export const DropDownSuggestions = styled.div`
 	left: calc(3.33% + 4.5em / 2.1);
 	top: ${(props) => (props.height ? `${props.height}px` : "0px")};
 	&::-webkit-scrollbar {
-    background: #282a36;
-
+		background: #282a36;
 	}
-	&::-webkit-scrollbar-thumb{
-		background:  rgba(246,246,260,0.1);
-		
+	&::-webkit-scrollbar-thumb {
+		background: rgba(246, 246, 260, 0.1);
 	}
 `;
 // F6  | F6 | F4

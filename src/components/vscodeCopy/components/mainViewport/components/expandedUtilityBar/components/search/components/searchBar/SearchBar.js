@@ -48,7 +48,7 @@ function Selection({
 	);
 }
 
-export default function SearchBar({ stateControl, dependencyMap , change}) {
+export default function SearchBar({ stateControl, dependencyMap, change }) {
 	const BarRef = useRef(null);
 
 	const { state, set } = stateControl;
@@ -85,7 +85,7 @@ export default function SearchBar({ stateControl, dependencyMap , change}) {
 			<div>
 				<FakeInput ref={BarRef}>
 					<Input
-					placeholder="Search by dependency or tech stack"
+						placeholder='Search by dependency or tech stack'
 						type='text'
 						value={state.input}
 						onChange={(e) => {
@@ -120,9 +120,10 @@ export default function SearchBar({ stateControl, dependencyMap , change}) {
 			</TagContainer>
 
 			{suggestions.length > 0 && (
-				<DropDownSuggestions barWidth={bar.width-2} height={bar.height}>
+				<DropDownSuggestions barWidth={bar.width - 2} height={bar.height}>
 					{suggestions.map((suggestion) => (
 						<Selection
+							key={`${suggestion}selection`}
 							selectionName={suggestion}
 							tag={tag}
 							setTag={setTag}

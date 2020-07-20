@@ -54,7 +54,9 @@ export default function ChangedSection() {
 									onClick={(e) => {
 										setCurrentProject({
 											...currentProject,
-											tab: [...currentProject.tab, r.name],
+											tab: currentProject.tab.includes(`${r.name}`)
+												? currentProject.tab
+												: [...currentProject.tab, r.name],
 											current: r.name,
 										});
 									}}>

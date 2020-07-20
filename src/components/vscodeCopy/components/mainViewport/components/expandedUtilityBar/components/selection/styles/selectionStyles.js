@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SelectionContainer = styled.div`
 	display: flex;
-
+	cursor: pointer;
 	flex-direction: column;
 	.FolderButton {
 		margin: 0;
