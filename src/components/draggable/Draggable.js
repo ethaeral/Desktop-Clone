@@ -1,13 +1,10 @@
 // Libaries
 import React, { useEffect, useRef, useState } from "react";
 // Styles
-import { DragContainer } from "./styles/draggableStyles";
-
+import { DragContainer, Container } from "./styles/draggableStyles";
 
 export default function Draggable(props) {
 	const childRef = useRef(null);
-	const parentRef = useRef(null);
-
 	const [dimensions, setDemensions] = useState({ height: null, width: null });
 	const [position, setPosition] = useState({ x: 0, y: 0 });
 	const [mousePos, setMousePos] = useState({ x: null, y: null });
@@ -56,43 +53,48 @@ export default function Draggable(props) {
 	}, [childRef, maximized, minimized, atBreakpoint, closed]);
 
 	return (
-		<DragContainer
-			ref={parentRef}
-			hidden={state[type].closed || state[type].minimized}
-			maximized={maximized}
-			draggable
-			height={height}
-			width={width}
-			x={x}
-			y={y}
-			z={z}
+		<Container
 			onClick={() => {
 				makeActive();
 			}}
-			onDragStart={(e) => {
-				const crt = e.target.cloneNode(true);
-				crt.style.opacity = 1;
-				e.dataTransfer.setDragImage(crt, 0, 0);
-				setMousePos({
-					x: e.clientX + cursorX,
-					y: e.clientY + cursorY,
-				});
-				makeActive();
-			}}
-			onDragEnd={(e) => {
-				const deltaX = e.clientX + cursorX - mousePos.x;
-				const deltaY = e.clientY + cursorY - mousePos.y;
-				setPosition({
-					x: position.x + deltaX,
-					y: position.y + deltaY,
-				});
-			}}>
+			height={height}
+			width={width}
+			hidden={state[type].closed || state[type].minimized}
+			maximized={maximized}
+			x={x}
+			y={y}
+			z={z}>
+			<DragContainer
+				draggable
+				x={x}
+				y={y}
+				z={z}
+				height={30}
+				width={width}
+				onDragStart={(e) => {
+					const crt = e.target.cloneNode(true);
+					crt.style.opacity = 1;
+					e.dataTransfer.setDragImage(crt, 0, 0);
+					setMousePos({
+						x: e.clientX + cursorX,
+						y: e.clientY + cursorY,
+					});
+					makeActive();
+				}}
+				onDragEnd={(e) => {
+					const deltaX = e.clientX + cursorX - mousePos.x;
+					const deltaY = e.clientY + cursorY - mousePos.y;
+					setPosition({
+						x: position.x + deltaX,
+						y: position.y + deltaY,
+					});
+				}}></DragContainer>
 			<props.component
 				reference={childRef}
 				clear={
 					state[type].hasOwnProperty("clear") ? state[type].clear : undefined
 				}
 			/>
-		</DragContainer>
+		</Container>
 	);
 }

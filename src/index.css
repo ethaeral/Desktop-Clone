@@ -120,11 +120,7 @@ ul {
 }
 blockquote,
 q {
-	-moz-user-select: text;
-	-khtml-user-select: text;
-	-webkit-user-select: text;
-	-ms-user-select: text;
-	user-select: text;
+
 	quotes: none;
 }
 blockquote:before,
@@ -151,10 +147,4 @@ body {
 	src: local("Droid Sans Mono"),
 		url(./assets/droidsansmono.ttf) format("truetype");
 }
-h1, h2, h3, h4, h5, h6 {
-	-moz-user-select: text;
-	-khtml-user-select: text;
-	-webkit-user-select: text;
-	-ms-user-select: text;
-	user-select: text;
-}
+
