@@ -52,7 +52,11 @@ export default function ChangedSection() {
 								<button
 									className='FileButton'
 									onClick={(e) => {
-										setCurrentProject({ ...currentProject, current: r.name });
+										setCurrentProject({
+											...currentProject,
+											tab: [...currentProject.tab, r.name],
+											current: r.name,
+										});
 									}}>
 									<SelectionIcon className='file' inactive={jsInactive} />
 									<TitleContainer>

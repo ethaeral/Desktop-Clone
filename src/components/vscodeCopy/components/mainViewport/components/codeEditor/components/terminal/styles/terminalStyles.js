@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const TerminalContainer = styled.div`
+	padding-left: 20px;
 	display: flex;
 	background: #282a36;
 	flex-direction: column-reverse;
@@ -26,8 +27,8 @@ export const Container = styled.div`
 	display: flex;
 	flex-direction: column;
 	img {
-		width: 40%;
-		min-width: 40%;
-		max-width: 40%;
+		width: 350px;
+		min-width: 350px;
+		max-width: 350px;
 	}
 `;
