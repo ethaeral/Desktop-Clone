@@ -54,7 +54,7 @@ export default function SearchBar({ stateControl, dependencyMap, change }) {
 	const { state, set } = stateControl;
 	const [tag, setTag] = useState([]);
 	const [suggestions, setSuggestions] = useState([]);
-
+	const [left, setLeft] = useState(0);
 	const [bar, setBar] = useState({ width: 0, height: 0 });
 	const updateTag = useCallback(() => {
 		const foundProjects = tag.map((t) => {
@@ -78,6 +78,7 @@ export default function SearchBar({ stateControl, dependencyMap, change }) {
 			width: BarRef.current.offsetWidth,
 			height: BarRef.current.offsetHeight + BarRef.current.offsetTop,
 		});
+		setLeft(BarRef.current.offsetLeft);
 	}, [updateTag, BarRef, change]);
 
 	return (
@@ -120,7 +121,10 @@ export default function SearchBar({ stateControl, dependencyMap, change }) {
 			</TagContainer>
 
 			{suggestions.length > 0 && (
-				<DropDownSuggestions barWidth={bar.width - 2} height={bar.height}>
+				<DropDownSuggestions
+					barWidth={bar.width - 2}
+					height={bar.height}
+					left={left}>
 					{suggestions.map((suggestion) => (
 						<Selection
 							key={`${suggestion}selection`}

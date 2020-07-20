@@ -33,7 +33,7 @@ export const DropDownSuggestions = styled.div`
 	position: absolute;
 	max-height: 200px;
 	overflow-y: scroll;
-	left: calc(3.33% + 4.5em / 2.1);
+	left: ${(props) => `${props.left}px`};
 	top: ${(props) => (props.height ? `${props.height}px` : "0px")};
 	&::-webkit-scrollbar {
 		background: #282a36;
