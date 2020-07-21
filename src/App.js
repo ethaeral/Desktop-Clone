@@ -67,7 +67,7 @@ function App() {
 		},
 		homepage: {
 			minimized: false,
-			maximized: true,
+			maximized: false,
 			closed: false,
 			z: 1,
 		},

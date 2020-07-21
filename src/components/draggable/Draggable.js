@@ -37,15 +37,42 @@ export default function Draggable(props) {
 		const halfVW = window.innerWidth / 2;
 		const halfVH = window.innerHeight / 2;
 		setDemensions({ height, width });
+
 		if (childRef.current && !atBreakpoint) {
 			const midPosX = halfVW - width / 2;
 			const midPosY = halfVH - height / 2;
-			setPosition({ x: midPosX, y: midPosY });
+			setPosition({
+				x:
+					midPosX < 0
+						? 0
+						: midPosX > window.innerWidth - width
+						? window.innerWidth - width
+						: midPosX,
+				y:
+					midPosY < 0
+						? 0
+						: midPosY > window.innerHeight - height
+						? window.innerHeight - height
+						: midPosY,
+			});
 		}
 		if (atBreakpoint && !maximized) {
 			const midPosX = halfVW - width / 1.5;
 			const midPosY = halfVH - height / 1.5;
-			setPosition({ x: midPosX, y: midPosY });
+			setPosition({
+				x:
+					midPosX < 0
+						? 0
+						: midPosX > window.innerWidth - width
+						? window.innerWidth - width
+						: midPosX,
+				y:
+					midPosY < 0
+						? 0
+						: midPosY > window.innerHeight - height
+						? window.innerHeight - height
+						: midPosY,
+			});
 		}
 		if (maximized) {
 			setPosition({ x: 0, y: 0 });
@@ -70,7 +97,7 @@ export default function Draggable(props) {
 				y={y}
 				z={z}
 				height={30}
-				width={width-70}
+				width={width - 70}
 				onDragStart={(e) => {
 					const crt = e.target.cloneNode(true);
 					crt.style.opacity = 1;
