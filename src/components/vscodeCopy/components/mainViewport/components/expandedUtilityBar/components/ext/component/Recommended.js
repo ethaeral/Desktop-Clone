@@ -8,7 +8,8 @@ export default function Recommended() {
 	const { exts } = statefulWindows;
 	return (
 		<div>
-			{exts.map((p) => (
+			<p>There are no recommended extensions</p>
+			{/* {exts.map((p) => (
 				<ExtSelect
 					key={`${p.iconRecommend}`}
 					currentProject={currentProject}
@@ -19,7 +20,7 @@ export default function Recommended() {
 					version={p.version}
 					description={p.description}
 				/>
-			))}
+			))} */}
 		</div>
 	);
 }

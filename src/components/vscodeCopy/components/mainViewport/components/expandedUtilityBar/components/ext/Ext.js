@@ -19,7 +19,7 @@ export default function Ext(props) {
 				title={"RECOMENDED"}
 				component={Recommended}
 				openState={true}
-				bubbleText={exts.length}
+				bubbleText={"0"}
 			/>
 
 			<SectionsDividers
