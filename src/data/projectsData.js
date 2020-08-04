@@ -298,88 +298,7 @@ export const allProjects = [
 		webPage: true,
 		video: false,
 	},
-	{
-		type: "Team",
-		name: "Enviro",
-		tags: [
-			"Google Cloud Platform",
-			"Google App Engine",
-			"AutoML",
-			"@google-cloud/automl",
-			"@hapi/joi",
-			"bcrypt",
-			"cors",
-			"crypto-random-string",
-			"dotenv",
-			"express",
-			"helmet",
-			"jsonwebtoken",
-			"knex",
-			"passport",
-			"passport-google-oauth",
-			"pg",
-			"uuid",
-			"eslint",
-			"eslint-config-airbnb",
-			"eslint-config-airbnb-base",
-			"eslint-config-prettier",
-			"eslint-plugin-import",
-			"eslint-plugin-jest",
-			"eslint-plugin-prettier",
-			"nodemon",
-			"prettier",
-			"@testing-library/jest-dom",
-			"@testing-library/react",
-			"@testing-library/user-event",
-			"axios",
-			"dotenv",
-			"formik",
-			"jwt-decode",
-			"react",
-			"react-dom",
-			"react-redux",
-			"react-router",
-			"react-router-dom",
-			"react-scripts",
-			"react-spinners",
-			"react-webcam",
-			"redux",
-			"redux-thunk",
-			"styled-components",
-			"yup",
-		],
-		description: {
-			short:
-				"A web application that uses machine vision to identify wastes and then presents a logic tree to the users on how to recycle that item. Built by a 4 member team over 3 days.",
-			long:
-				"A web application that uses machine vision to identify wastes and then presents a logic tree to the users on how to recycle that item.The goal was to gamify the action of properly disposing waste. Initially created a flask backend to host a model as it trains - but switched to using AutoML due to time constraints.",
-		},
-		techStack: [
-			"ReactJS",
-			"NodeJS",
-			"Javascript",
-			"Express",
-			"Postgresql",
-			"Python",
-			"Flask",
-		],
-		linkDeployed: "https://saveenviro.netlify.app/",
-		linkGithub: "https://github.com/Tech-Corgies",
-		contributions: [
-			"Winner of Tech Together Boston Best Environmental Sustainability Hack",
-			" Created and designed state management and created structure of the components and how they will render",
-			"Created a Node REST API, created two flask APIs one to ease GCP authentication and another to host machine learning model, created documentation for backend",
-		],
-		media: "https://drive.google.com/file/d/1nfTHazTGidg04HaQ1zJS5L9FtLkb2nEh/preview",
-		codeSnippet: "",
-		date: "01/31/20",
-		role: "Full Stack Developer",
-		nonWeb: false,
-		inProgress: true,
-		isExt: false,
-		webPage: true,
-		video: false,
-	},
+	
 	{
 		type: "Personal",
 		name: "Parsnips",
@@ -535,7 +454,144 @@ export const allProjects = [
 		isExt: true,
 		webPage: false,
 	},
+	
 	{
+		type: "Personal",
+		name: "Boston House Predictor",
+		tags: [
+			"Python",
+			"Flask",
+			"Jupyter Notebook",
+			"Sklearn",
+			"Pandas",
+			"Matplotlib",
+			"Seaborn",
+			"Statsmodels",
+		],
+		description: {
+			short:
+				"A predictive model using multi-variable linear regression to predict house values based on features using boston housing data used for a study to determine if air pollution affected house prices. Credit: https://www.udemy.com/course/python-data-science-machine-learning-bootcamp/",
+			long:
+				"A predictive model using multi-variable linear regression to predict house values based on features using boston housing data used for a study to determine if air pollution affected house prices. Credit: https://www.udemy.com/course/python-data-science-machine-learning-bootcamp/ ",
+		},
+		techStack: ["Python", "Flask"],
+
+		contributions: [
+			"Clean data and remove entries with missing data,calculated  feature correlation, probability values, multicollinearity, and calculated bayesian information criterion - data included quantitative and qualitative information",
+			"Check for normality in distribution of residuals and Determine standard deviation in predicted results ",
+			"Created flask backend to host the model",
+		],
+
+		codeSnippet: "",
+		date: "12/27/19",
+		role: "Data Scientist / Data Engineer",
+		nonWeb: true,
+		inProgress: false,
+		isExt: false,
+		webPage: false,
+	},
+];
+
+/*
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/StnuSti2IS4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+code snippets
+<pre class="line-numbers">
+  <code class="language-javascript">
+    p { color: red }
+  </code>
+</pre>
+
+language-python
+
+<iframe src=”/pdf/sample-3pp.pdf#page=2" width=”100%” height=”100%”>
+This browser does not support PDFs. Please download the PDF to view it: Download PDF
+</iframe>
+
+{
+		type: "Team",
+		name: "Enviro",
+		tags: [
+			"Google Cloud Platform",
+			"Google App Engine",
+			"AutoML",
+			"@google-cloud/automl",
+			"@hapi/joi",
+			"bcrypt",
+			"cors",
+			"crypto-random-string",
+			"dotenv",
+			"express",
+			"helmet",
+			"jsonwebtoken",
+			"knex",
+			"passport",
+			"passport-google-oauth",
+			"pg",
+			"uuid",
+			"eslint",
+			"eslint-config-airbnb",
+			"eslint-config-airbnb-base",
+			"eslint-config-prettier",
+			"eslint-plugin-import",
+			"eslint-plugin-jest",
+			"eslint-plugin-prettier",
+			"nodemon",
+			"prettier",
+			"@testing-library/jest-dom",
+			"@testing-library/react",
+			"@testing-library/user-event",
+			"axios",
+			"dotenv",
+			"formik",
+			"jwt-decode",
+			"react",
+			"react-dom",
+			"react-redux",
+			"react-router",
+			"react-router-dom",
+			"react-scripts",
+			"react-spinners",
+			"react-webcam",
+			"redux",
+			"redux-thunk",
+			"styled-components",
+			"yup",
+		],
+		description: {
+			short:
+				"A web application that uses machine vision to identify wastes and then presents a logic tree to the users on how to recycle that item. Built by a 4 member team over 3 days.",
+			long:
+				"A web application that uses machine vision to identify wastes and then presents a logic tree to the users on how to recycle that item.The goal was to gamify the action of properly disposing waste. Initially created a flask backend to host a model as it trains - but switched to using AutoML due to time constraints.",
+		},
+		techStack: [
+			"ReactJS",
+			"NodeJS",
+			"Javascript",
+			"Express",
+			"Postgresql",
+			"Python",
+			"Flask",
+		],
+		linkDeployed: "https://saveenviro.netlify.app/",
+		linkGithub: "https://github.com/Tech-Corgies",
+		contributions: [
+			"Winner of Tech Together Boston Best Environmental Sustainability Hack",
+			" Created and designed state management and created structure of the components and how they will render",
+			"Created a Node REST API, created two flask APIs one to ease GCP authentication and another to host machine learning model, created documentation for backend",
+		],
+		media: "https://drive.google.com/file/d/1nfTHazTGidg04HaQ1zJS5L9FtLkb2nEh/preview",
+		codeSnippet: "",
+		date: "01/31/20",
+		role: "Full Stack Developer",
+		nonWeb: false,
+		inProgress: true,
+		isExt: false,
+		webPage: true,
+		video: false,
+	},
+{
 		type: "Personal",
 		name: "Mosaic",
 		tags: [
@@ -612,58 +668,5 @@ export const allProjects = [
 		webPage: true,
 		video: true,
 	},
-	{
-		type: "Personal",
-		name: "Boston House Predictor",
-		tags: [
-			"Python",
-			"Flask",
-			"Jupyter Notebook",
-			"Sklearn",
-			"Pandas",
-			"Matplotlib",
-			"Seaborn",
-			"Statsmodels",
-		],
-		description: {
-			short:
-				"A predictive model using multi-variable linear regression to predict house values based on features using boston housing data used for a study to determine if air pollution affected house prices. Credit: https://www.udemy.com/course/python-data-science-machine-learning-bootcamp/",
-			long:
-				"A predictive model using multi-variable linear regression to predict house values based on features using boston housing data used for a study to determine if air pollution affected house prices. Credit: https://www.udemy.com/course/python-data-science-machine-learning-bootcamp/ ",
-		},
-		techStack: ["Python", "Flask"],
-
-		contributions: [
-			"Clean data and remove entries with missing data,calculated  feature correlation, probability values, multicollinearity, and calculated bayesian information criterion - data included quantitative and qualitative information",
-			"Check for normality in distribution of residuals and Determine standard deviation in predicted results ",
-			"Created flask backend to host the model",
-		],
-
-		codeSnippet: "",
-		date: "12/27/19",
-		role: "Data Scientist / Data Engineer",
-		nonWeb: true,
-		inProgress: false,
-		isExt: false,
-		webPage: false,
-	},
-];
-
-/*
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/StnuSti2IS4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-code snippets
-<pre class="line-numbers">
-  <code class="language-javascript">
-    p { color: red }
-  </code>
-</pre>
-
-language-python
-
-<iframe src=”/pdf/sample-3pp.pdf#page=2" width=”100%” height=”100%”>
-This browser does not support PDFs. Please download the PDF to view it: Download PDF
-</iframe>
 
 */
