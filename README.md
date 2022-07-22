@@ -1,7 +1,9 @@
 # Ubuntu UI Mock App Portfolio Site  
 
 ### Deployed  
-https://www.richanynguon.com/  
+https://www.richanynguon.com/   
+
+![Screenshot of portfolio](./portfolio.gif)
 
 ### Trello  
 https://trello.com/b/RjEB8dt6/desktop-portfolio  
