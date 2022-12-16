@@ -13,10 +13,8 @@ import StripeContainer from "./components/stripes/StripeContainer";
 import Terminal from "./components/terminal/Terminal";
 import VscodeContainer from "./components/vscodeCopy/VscodeContainer";
 import WebPageView from "./components/webpageView/WebPageView";
-// Data
-import { allProjects } from "./data/projectsData";
 // Context
-import { WindowsContext } from "./modules/windowContext";
+import { WindowsContext, WindowsState } from "./modules/windowContext";
 import {
 	AppContainer,
 	Background,
@@ -31,51 +29,7 @@ import {
 function App() {
 	const [warning, setWarning] = useState(true);
 	const [welcome, setWelcome] = useState(false);
-	const [statefulWindows, setWindowState] = useState({
-		zCounter: 1,
-		firefoxTabs: ["1"],
-		tabbedWindows: [],
-		all: allProjects,
-		inProgress: allProjects.filter((p) => p.inProgress === true),
-		projects: allProjects.filter((project) => project.nonWeb === false),
-		exts: allProjects.filter((project) => project.isExt === true),
-		otherProjects: allProjects.filter(
-			(project) => project.nonWeb === true && project.isExt === false
-		),
-		webPageProjects: allProjects.filter((project) => project.webPage === true),
-		sideNavActive: {
-			search: true,
-			branch: false,
-			bug: false,
-			ext: false,
-			projects: false,
-			setting: false,
-		},
-		terminal: {
-			minimized: false,
-			maximized: false,
-			closed: true,
-			clear: false,
-			z: 0,
-		},
-		code: {
-			minimized: false,
-			maximized: false,
-			closed: false,
-			clear: false,
-			z: 0,
-		},
-		homepage: {
-			minimized: false,
-			maximized: false,
-			closed: false,
-			z: 1,
-		},
-		modalIsOpen: {
-			windowBar: false,
-			tabbedBar: false,
-		},
-	});
+	const [statefulWindows, setWindowState] = useState(new WindowsState());
 
 	return (
 		<AppContainer>
