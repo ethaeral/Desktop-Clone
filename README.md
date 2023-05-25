@@ -1,7 +1,7 @@
 # Ubuntu UI Mock App Portfolio Site  
 
 ### Deployed  
-https://www.richanynguon.com/   
+https://portfolio-31gb9jfih-alinanguon.vercel.app/
 
 ![Screenshot of portfolio](./portfolio.gif)
 
